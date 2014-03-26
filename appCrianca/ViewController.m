@@ -67,7 +67,7 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    
+    _tempDrawImage.image = [UIImage imageNamed:@"ligaFigura.png"];
     
 }
 
