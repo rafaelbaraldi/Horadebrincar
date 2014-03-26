@@ -17,7 +17,7 @@
 
     CGFloat brush;
 
-    
+    UIImage* anterior;
     
     
 }

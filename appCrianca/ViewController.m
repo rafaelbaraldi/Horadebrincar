@@ -29,6 +29,8 @@
 //    [self.view addSubview:myView];
     
 
+    anterior = [UIImage imageNamed:@"ligaFigura.png"];;
+    
     brush = 10.0;
     
     [super viewDidLoad];
@@ -67,8 +69,8 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    _tempDrawImage.image = [UIImage imageNamed:@"ligaFigura.png"];
-    
+    _tempDrawImage.image = anterior;
+
 }
 
 @end

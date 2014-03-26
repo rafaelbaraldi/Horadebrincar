@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>877B37A6-A724-49B4-A81A-6B1B1BF87144</string>
+	<key>IDESourceControlProjectName</key>
+	<string>appCrianca</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>17E72849-7758-4303-89CB-F7CE86866D11</key>
+		<string>https://github.com/rafaelcardososilva/appCrianca.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>appCrianca.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>17E72849-7758-4303-89CB-F7CE86866D11</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rafaelcardososilva/appCrianca.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>17E72849-7758-4303-89CB-F7CE86866D11</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>17E72849-7758-4303-89CB-F7CE86866D11</string>
+			<key>IDESourceControlWCCName</key>
+			<string>appCrianca</string>
+		</dict>
+	</array>
+</dict>
+</plist>
