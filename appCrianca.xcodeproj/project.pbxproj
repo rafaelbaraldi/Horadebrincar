@@ -22,7 +22,6 @@
 		3106691D18E2110900B48195 /* ligaFigura.png in Resources */ = {isa = PBXBuildFile; fileRef = 3106691C18E2110900B48195 /* ligaFigura.png */; };
 		3106692118E2132200B48195 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3106691F18E2132200B48195 /* ViewController.m */; };
 		3106692218E2132200B48195 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3106692018E2132200B48195 /* ViewController.xib */; };
-		3106692818E218FD00B48195 /* Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = 3106692718E218FD00B48195 /* Draw.m */; };
 		31189DEB18E358E00072D5CB /* Figura.m in Sources */ = {isa = PBXBuildFile; fileRef = 31189DEA18E358E00072D5CB /* Figura.m */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +56,6 @@
 		3106691E18E2132200B48195 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3106691F18E2132200B48195 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3106692018E2132200B48195 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		3106692618E218FD00B48195 /* Draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Draw.h; sourceTree = "<group>"; };
-		3106692718E218FD00B48195 /* Draw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Draw.m; sourceTree = "<group>"; };
 		31189DE918E358E00072D5CB /* Figura.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Figura.h; sourceTree = "<group>"; };
 		31189DEA18E358E00072D5CB /* Figura.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Figura.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,16 +119,14 @@
 			children = (
 				310668E618E20BA800B48195 /* AppDelegate.h */,
 				310668E718E20BA800B48195 /* AppDelegate.m */,
+				31189DE918E358E00072D5CB /* Figura.h */,
+				31189DEA18E358E00072D5CB /* Figura.m */,
 				3106691E18E2132200B48195 /* ViewController.h */,
 				3106691F18E2132200B48195 /* ViewController.m */,
 				3106692018E2132200B48195 /* ViewController.xib */,
-				3106692618E218FD00B48195 /* Draw.h */,
-				3106692718E218FD00B48195 /* Draw.m */,
 				3106690B18E20C1600B48195 /* ligaFigura */,
 				310668E918E20BA800B48195 /* Images.xcassets */,
 				310668DE18E20BA800B48195 /* Supporting Files */,
-				31189DE918E358E00072D5CB /* Figura.h */,
-				31189DEA18E358E00072D5CB /* Figura.m */,
 			);
 			path = appCrianca;
 			sourceTree = "<group>";
@@ -274,7 +269,6 @@
 				31189DEB18E358E00072D5CB /* Figura.m in Sources */,
 				3106692118E2132200B48195 /* ViewController.m in Sources */,
 				310668E418E20BA800B48195 /* main.m in Sources */,
-				3106692818E218FD00B48195 /* Draw.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

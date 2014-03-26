@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Figura : NSObject{
-    int x1;
-    int x2;
-    int y1;
-    int y2;
-    NSString *nome;
-    
-}
+@interface Figura : NSObject
+
+@property int x1;
+@property int x2;
+@property int y1;
+@property int y2;
+@property NSString *tag;
+
++(NSMutableArray*)retornaFiguraFase1;
+
+-(id)initWithX1:(int)x1 y1:(int)y1 x2:(int)x2 y2:(int)y2 tag:(NSString*)tag;
 
 @end

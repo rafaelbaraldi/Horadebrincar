@@ -7,25 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "draw.h"
+#import "Figura.h"
 
-@interface ViewController : UIViewController{
-    
-    CGPoint lastPoint;
-    BOOL mouseSwiped;
-    
-    CGFloat brush;
-
-    UIImage* anterior;
-
-    
-}
+@interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *tempDrawImage;
 
-@property BOOL acertouFarinha;
-@property BOOL acertouGalinha;
-@property BOOL acertouAbelha;
-@property BOOL acertouCana;
+
+@property CGPoint lastPoint;
+@property UIImage* anterior;
+
+@property NSMutableArray* figuras;
+
+@property BOOL acertou1;
+@property BOOL acertou2;
+@property BOOL acertou3;
+@property BOOL acertou4;
 
 @end
