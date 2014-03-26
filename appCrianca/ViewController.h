@@ -14,13 +14,18 @@
     CGPoint lastPoint;
     BOOL mouseSwiped;
     
-
     CGFloat brush;
 
     UIImage* anterior;
-    
+
     
 }
+
 @property (strong, nonatomic) IBOutlet UIImageView *tempDrawImage;
+
+@property BOOL acertouFarinha;
+@property BOOL acertouGalinha;
+@property BOOL acertouAbelha;
+@property BOOL acertouCana;
 
 @end
