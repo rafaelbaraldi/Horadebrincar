@@ -130,9 +130,20 @@
     
     //Verifica se Ganhou
     if([[self figuras] count] == 0 && ![self ganhou]){
-        NSLog(@"ganhou");
+
+        //Set Alpha do Jogo
         [[self tempDrawImage] setAlpha:0.2];
         [self setGanhou:YES];
+        
+        //Adiciona arco-iris
+        UIImageView *arcoiris = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arcoiris.png"]];
+        [arcoiris setFrame:CGRectMake(35,300,700,343)];
+        [self.view addSubview:arcoiris];
+        
+        //Adiciona o dedo
+//        UIImageView *dedo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finger.png"]];
+//        [dedo setFrame:CGRectMake(90,600,156,250)];
+//        [self.view addSubview:dedo];
     }
     
 }
