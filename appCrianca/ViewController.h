@@ -17,12 +17,9 @@
 @property CGPoint lastPoint;
 @property UIImage* anterior;
 
-@property NSMutableArray* figuras;
+@property BOOL ganhou;
 
-@property BOOL acertou1;
-@property BOOL acertou2;
-@property BOOL acertou3;
-@property BOOL acertou4;
+@property NSMutableArray* figuras;
 
 @property Figura* figuraInicial;
 

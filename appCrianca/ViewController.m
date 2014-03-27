@@ -28,14 +28,12 @@
     [self setFiguras:[Figura retornaFiguraFase1]];
 
     [self setAnterior:[UIImage imageNamed:@"ligaFigura.png"]];
+    
+    [self setGanhou:NO];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     
-    [self setAcertou1: NO]; // cada vez que a view for aparecer, ele iniciou o jogo novamente,
-    [self setAcertou2: NO]; // entao setamos as variavel de controle (se ganhou ou nao) para NO/False
-    [self setAcertou3: NO];
-    [self setAcertou4: NO];
 }
 
 - (void)didReceiveMemoryWarning{
@@ -60,27 +58,30 @@
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     
-    UITouch *touch = [touches anyObject];
-    CGPoint currentPoint = [touch locationInView:self.view];
-    
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    
-    [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    
-    CGContextMoveToPoint(UIGraphicsGetCurrentContext(), [self lastPoint].x, [self lastPoint].y);
-    CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
-    CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-    CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 10.0);
-    
-    CGContextStrokePath(UIGraphicsGetCurrentContext());
-    
-    [[self tempDrawImage] setImage:UIGraphicsGetImageFromCurrentImageContext()];
-    
-    [self setLastPoint:currentPoint];
+    if([[self figuras]count] != 0){
+        UITouch *touch = [touches anyObject];
+        CGPoint currentPoint = [touch locationInView:self.view];
+        
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        
+        [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        
+        CGContextMoveToPoint(UIGraphicsGetCurrentContext(), [self lastPoint].x, [self lastPoint].y);
+        CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
+        CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
+        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 10.0);
+        
+        CGContextStrokePath(UIGraphicsGetCurrentContext());
+        
+        [[self tempDrawImage] setImage:UIGraphicsGetImageFromCurrentImageContext()];
+        
+        [self setLastPoint:currentPoint];
+    }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     
+    //Remove linha do usuario
     [[self tempDrawImage]setImage:[self anterior]];
     
     UITouch *touch = [touches anyObject];
@@ -94,6 +95,7 @@
         }
     }
     
+    //Verifica se o usuario acertou as imagens
     if(figuraFinal != nil && [self figuraInicial] != nil){
         
         if([[[self figuraInicial] tag] isEqualToString:[figuraFinal tag]]){
@@ -108,12 +110,25 @@
             
             CGPoint centro2 = CGPointMake(x2, y2);
             
+            //Remove figuras acertadas do vetor
+            [[self figuras] removeObject:figuraFinal];
+            [[self figuras] removeObject:[self figuraInicial]];
+            
+            //Desenha linha acertada entre os itens corretos
             [self  desenhaLinha:centro1 :centro2];
         }
     }
     
-    
+    //Altera image anterior
     [self setAnterior:[[self tempDrawImage] image]];
+    
+    //Verifica se Ganhou
+    if([[self figuras] count] == 0 && ![self ganhou]){
+        NSLog(@"ganhou");
+        [[self tempDrawImage] setAlpha:0.2];
+        [self setGanhou:YES];
+    }
+    
 }
 
 -(void)desenhaLinha:(CGPoint) inicial :(CGPoint) final{
