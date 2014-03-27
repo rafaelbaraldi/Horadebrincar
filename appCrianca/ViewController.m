@@ -30,6 +30,10 @@
     [self setAnterior:[UIImage imageNamed:@"ligaFigura.png"]];
     
     [self setGanhou:NO];
+    
+    GestoArcoIris* gesto = [[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)];
+    [[self view] addGestureRecognizer:gesto];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -130,6 +134,11 @@
         [[self tempDrawImage] setAlpha:0.2];
         [self setGanhou:YES];
     }
+    
+}
+
+
+-(void)metodoDogesto{
     
 }
 
