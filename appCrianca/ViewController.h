@@ -24,4 +24,6 @@
 @property BOOL acertou3;
 @property BOOL acertou4;
 
+@property Figura* figuraInicial;
+
 @end

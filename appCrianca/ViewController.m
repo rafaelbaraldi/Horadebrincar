@@ -46,6 +46,16 @@
     
     UITouch *touch = [touches anyObject];
     [self setLastPoint:[touch locationInView:self.view]];
+    
+    CGPoint toque = [touch locationInView:[self view]];
+    
+    [self setFiguraInicial:nil];
+    
+    for (Figura* f in [self figuras]) {
+        if([f x1] < toque.x && toque.x < [f x2] && [f y1] < toque.y && toque.y < [f y2]){
+            [self setFiguraInicial:f];
+        }
+    }
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -73,7 +83,35 @@
     
     [[self tempDrawImage]setImage:[self anterior]];
     
-    [self  desenhaLinha:CGPointMake(arc4random()%100, arc4random()%400) :CGPointMake(arc4random()%100, arc4random()%400)];
+    UITouch *touch = [touches anyObject];
+    CGPoint toque = [touch locationInView:[self view]];
+    
+    Figura* figuraFinal = nil;
+    
+    for (Figura* f in [self figuras]) {
+        if([f x1] < toque.x && toque.x < [f x2] && [f y1] < toque.y && toque.y < [f y2]){
+            figuraFinal = f;
+        }
+    }
+    
+    if(figuraFinal != nil && [self figuraInicial] != nil){
+        
+        if([[[self figuraInicial] tag] isEqualToString:[figuraFinal tag]]){
+            
+            int x1 = ([[self figuraInicial] x1] + ( ([[self figuraInicial] x2] - [[self figuraInicial] x1]) / 2) );
+            int y1 = ([[self figuraInicial] y1] + [[self figuraInicial] y2]) / 2;
+            
+            CGPoint centro1 = CGPointMake(x1, y1);
+            
+            int x2 = ([figuraFinal x1] + [figuraFinal x2]) / 2;
+            int y2 = ([figuraFinal y1] + [figuraFinal y2]) / 2;
+            
+            CGPoint centro2 = CGPointMake(x2, y2);
+            
+            [self  desenhaLinha:centro1 :centro2];
+        }
+    }
+    
     
     [self setAnterior:[[self tempDrawImage] image]];
 }
