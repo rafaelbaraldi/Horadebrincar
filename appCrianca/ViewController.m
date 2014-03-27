@@ -76,7 +76,6 @@
     [self  desenhaLinha:CGPointMake(arc4random()%100, arc4random()%400) :CGPointMake(arc4random()%100, arc4random()%400)];
     
     [self setAnterior:[[self tempDrawImage] image]];
-
 }
 
 -(void)desenhaLinha:(CGPoint) inicial :(CGPoint) final{
