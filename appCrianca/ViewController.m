@@ -99,23 +99,25 @@
     if(figuraFinal != nil && [self figuraInicial] != nil){
         
         if([[[self figuraInicial] tag] isEqualToString:[figuraFinal tag]]){
+            if([[self figuraInicial] x1] != [figuraFinal x1]){
             
-            int x1 = ([[self figuraInicial] x1] + ( ([[self figuraInicial] x2] - [[self figuraInicial] x1]) / 2) );
-            int y1 = ([[self figuraInicial] y1] + [[self figuraInicial] y2]) / 2;
-            
-            CGPoint centro1 = CGPointMake(x1, y1);
-            
-            int x2 = ([figuraFinal x1] + [figuraFinal x2]) / 2;
-            int y2 = ([figuraFinal y1] + [figuraFinal y2]) / 2;
-            
-            CGPoint centro2 = CGPointMake(x2, y2);
-            
-            //Remove figuras acertadas do vetor
-            [[self figuras] removeObject:figuraFinal];
-            [[self figuras] removeObject:[self figuraInicial]];
-            
-            //Desenha linha acertada entre os itens corretos
-            [self  desenhaLinha:centro1 :centro2];
+                int x1 = ([[self figuraInicial] x1] + ( ([[self figuraInicial] x2] - [[self figuraInicial] x1]) / 2) );
+                int y1 = ([[self figuraInicial] y1] + [[self figuraInicial] y2]) / 2;
+                
+                CGPoint centro1 = CGPointMake(x1, y1);
+                
+                int x2 = ([figuraFinal x1] + [figuraFinal x2]) / 2;
+                int y2 = ([figuraFinal y1] + [figuraFinal y2]) / 2;
+                
+                CGPoint centro2 = CGPointMake(x2, y2);
+                
+                //Remove figuras acertadas do vetor
+                [[self figuras] removeObject:figuraFinal];
+                [[self figuras] removeObject:[self figuraInicial]];
+                
+                //Desenha linha acertada entre os itens corretos
+                [self  desenhaLinha:centro1 :centro2];
+            }
         }
     }
     
