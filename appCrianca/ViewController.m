@@ -137,13 +137,41 @@
         
         //Adiciona arco-iris
         UIImageView *arcoiris = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arcoiris.png"]];
-        [arcoiris setFrame:CGRectMake(35,300,700,343)];
+        [arcoiris setFrame:CGRectMake(35, 300, 700, 343)];
         [self.view addSubview:arcoiris];
         
         //Adiciona o dedo
-//        UIImageView *dedo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finger.png"]];
-//        [dedo setFrame:CGRectMake(90,600,156,250)];
-//        [self.view addSubview:dedo];
+        UIImageView *dedo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finger.png"]];
+        [dedo setFrame:CGRectMake(95, 560, 156, 250)];
+        [dedo setTransform:CGAffineTransformMakeRotation(-(M_PI / 4))];
+        
+        [self.view addSubview:dedo];
+        
+        
+        CABasicAnimation *animRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+        animRotation.toValue  = @(M_PI / 4);
+        animRotation.duration = 5;
+        animRotation.removedOnCompletion = NO;
+        animRotation.fillMode = kCAFillModeForwards;
+        [dedo.layer addAnimation:animRotation forKey:@"position.z"];
+        
+        
+        [UIView animateWithDuration:6 animations:^{
+            [[dedo layer] setPosition:CGPointMake(610, [[dedo layer] position].y)];
+        }];
+        
+        
+        //        CGPoint pointInicial = dedo.layer.position;
+        //        CGPoint pointFinal = CGPointMake(pointInicial.y+200, pointInicial.y);
+//        anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+        
+        // First we update the model layer's property.
+//        dedo.layer.position = pointInicial;
+        
+        // Now we attach the animation.
+
+        
+
     }
     
 }
