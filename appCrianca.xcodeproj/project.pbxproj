@@ -23,6 +23,7 @@
 		3106692118E2132200B48195 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3106691F18E2132200B48195 /* ViewController.m */; };
 		3106692218E2132200B48195 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3106692018E2132200B48195 /* ViewController.xib */; };
 		31189DEB18E358E00072D5CB /* Figura.m in Sources */ = {isa = PBXBuildFile; fileRef = 31189DEA18E358E00072D5CB /* Figura.m */; };
+		3189376E18E4A88B0033B277 /* arcoiris.png in Resources */ = {isa = PBXBuildFile; fileRef = 3189376D18E4A88B0033B277 /* arcoiris.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		3106692018E2132200B48195 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		31189DE918E358E00072D5CB /* Figura.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Figura.h; sourceTree = "<group>"; };
 		31189DEA18E358E00072D5CB /* Figura.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Figura.m; sourceTree = "<group>"; };
+		3189376D18E4A88B0033B277 /* arcoiris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcoiris.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +126,7 @@
 				3106691E18E2132200B48195 /* ViewController.h */,
 				3106691F18E2132200B48195 /* ViewController.m */,
 				3106692018E2132200B48195 /* ViewController.xib */,
-				3106690B18E20C1600B48195 /* ligaFigura */,
+				3106690B18E20C1600B48195 /* imagens */,
 				310668E918E20BA800B48195 /* Images.xcassets */,
 				310668DE18E20BA800B48195 /* Supporting Files */,
 			);
@@ -160,12 +162,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3106690B18E20C1600B48195 /* ligaFigura */ = {
+		3106690B18E20C1600B48195 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
 				3106691C18E2110900B48195 /* ligaFigura.png */,
+				3189376D18E4A88B0033B277 /* arcoiris.png */,
 			);
-			name = ligaFigura;
+			name = imagens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3189376E18E4A88B0033B277 /* arcoiris.png in Resources */,
 				3106692218E2132200B48195 /* ViewController.xib in Resources */,
 				3106691D18E2110900B48195 /* ligaFigura.png in Resources */,
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
