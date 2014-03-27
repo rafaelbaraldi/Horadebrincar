@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Figura.h"
+#include "GestoArcoIris.h"
 
 @interface ViewController : UIViewController
 

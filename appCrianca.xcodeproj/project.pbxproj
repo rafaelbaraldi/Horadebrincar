@@ -24,6 +24,7 @@
 		3106692218E2132200B48195 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3106692018E2132200B48195 /* ViewController.xib */; };
 		31189DEB18E358E00072D5CB /* Figura.m in Sources */ = {isa = PBXBuildFile; fileRef = 31189DEA18E358E00072D5CB /* Figura.m */; };
 		3189376E18E4A88B0033B277 /* arcoiris.png in Resources */ = {isa = PBXBuildFile; fileRef = 3189376D18E4A88B0033B277 /* arcoiris.png */; };
+		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		31189DE918E358E00072D5CB /* Figura.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Figura.h; sourceTree = "<group>"; };
 		31189DEA18E358E00072D5CB /* Figura.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Figura.m; sourceTree = "<group>"; };
 		3189376D18E4A88B0033B277 /* arcoiris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcoiris.png; sourceTree = "<group>"; };
+		F6B0ABBA18E4A971004F3C42 /* GestoArcoIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoArcoIris.h; sourceTree = "<group>"; };
+		F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoArcoIris.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				3106691E18E2132200B48195 /* ViewController.h */,
 				3106691F18E2132200B48195 /* ViewController.m */,
 				3106692018E2132200B48195 /* ViewController.xib */,
+				F6B0ABBA18E4A971004F3C42 /* GestoArcoIris.h */,
+				F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */,
 				3106690B18E20C1600B48195 /* imagens */,
 				310668E918E20BA800B48195 /* Images.xcassets */,
 				310668DE18E20BA800B48195 /* Supporting Files */,
@@ -272,6 +277,7 @@
 				310668E818E20BA800B48195 /* AppDelegate.m in Sources */,
 				31189DEB18E358E00072D5CB /* Figura.m in Sources */,
 				3106692118E2132200B48195 /* ViewController.m in Sources */,
+				F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */,
 				310668E418E20BA800B48195 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
