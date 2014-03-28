@@ -103,23 +103,25 @@
     if(figuraFinal != nil && [self figuraInicial] != nil){
         
         if([[[self figuraInicial] tag] isEqualToString:[figuraFinal tag]]){
+            if([[self figuraInicial] x1] != [figuraFinal x1]){
             
-            int x1 = ([[self figuraInicial] x1] + ( ([[self figuraInicial] x2] - [[self figuraInicial] x1]) / 2) );
-            int y1 = ([[self figuraInicial] y1] + [[self figuraInicial] y2]) / 2;
-            
-            CGPoint centro1 = CGPointMake(x1, y1);
-            
-            int x2 = ([figuraFinal x1] + [figuraFinal x2]) / 2;
-            int y2 = ([figuraFinal y1] + [figuraFinal y2]) / 2;
-            
-            CGPoint centro2 = CGPointMake(x2, y2);
-            
-            //Remove figuras acertadas do vetor
-            [[self figuras] removeObject:figuraFinal];
-            [[self figuras] removeObject:[self figuraInicial]];
-            
-            //Desenha linha acertada entre os itens corretos
-            [self  desenhaLinha:centro1 :centro2];
+                int x1 = ([[self figuraInicial] x1] + ( ([[self figuraInicial] x2] - [[self figuraInicial] x1]) / 2) );
+                int y1 = ([[self figuraInicial] y1] + [[self figuraInicial] y2]) / 2;
+                
+                CGPoint centro1 = CGPointMake(x1, y1);
+                
+                int x2 = ([figuraFinal x1] + [figuraFinal x2]) / 2;
+                int y2 = ([figuraFinal y1] + [figuraFinal y2]) / 2;
+                
+                CGPoint centro2 = CGPointMake(x2, y2);
+                
+                //Remove figuras acertadas do vetor
+                [[self figuras] removeObject:figuraFinal];
+                [[self figuras] removeObject:[self figuraInicial]];
+                
+                //Desenha linha acertada entre os itens corretos
+                [self  desenhaLinha:centro1 :centro2];
+            }
         }
     }
     
@@ -128,10 +130,67 @@
     
     //Verifica se Ganhou
     if([[self figuras] count] == 0 && ![self ganhou]){
-        NSLog(@"ganhou");
+
+        //Set Alpha do Jogo
         [[self tempDrawImage] setAlpha:0.2];
         [self setGanhou:YES];
+        
+        //Adiciona arco-iris
+        UIImageView *arcoiris = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arcoiris.png"]];
+        [arcoiris setFrame:CGRectMake(35, 300, 700, 343)];
+        [self.view addSubview:arcoiris];
+        
+        //Adiciona o dedo
+        _dedo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finger.png"]];
+        [_dedo setFrame:CGRectMake(95, 560, 156, 250)];
+        [_dedo setTransform:CGAffineTransformMakeRotation(-(M_PI / 4))];
+        [self.view addSubview:_dedo];
+        
+        //Roda dedo
+        CABasicAnimation *animRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+        animRotation.toValue  = @(M_PI / 4);
+        animRotation.duration = 4;
+        animRotation.removedOnCompletion = NO;
+        animRotation.fillMode = kCAFillModeForwards;
+        [_dedo.layer addAnimation:animRotation forKey:@"position.z"];
+        
+        //Anda pra cima
+        CABasicAnimation *animAndar1 = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+        animAndar1.toValue  = [NSNumber numberWithInt:480];
+        animAndar1.duration = 5;
+        animAndar1.removedOnCompletion = NO;
+        animAndar1.fillMode = kCAFillModeForwards;
+        [_dedo.layer addAnimation:animAndar1 forKey:nil];
+        
+        //Anda ate a metade
+        CABasicAnimation *animAndar2 = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
+        animAndar2.toValue  = [NSNumber numberWithInt:-250];
+        animAndar2.duration = 2.5;
+        animAndar2.removedOnCompletion = NO;
+        animAndar2.fillMode = kCAFillModeForwards;
+        [animAndar2 setValue:@"subir" forKey:@"animaSubir"];
+        animAndar2.delegate = self;
+        [_dedo.layer addAnimation:animAndar2 forKey:nil];
     }
+    
+}
+
+-(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    
+    //Anda ate o final
+    NSString *value = [anim valueForKey:@"animaSubir"];
+    if([value isEqual:@"subir"]){
+        CABasicAnimation *animAndar3 = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
+        animAndar3.toValue  = [NSNumber numberWithInt:-10];
+        animAndar3.duration = 2.5;
+        animAndar3.removedOnCompletion = NO;
+        animAndar3.fillMode = kCAFillModeForwards;
+        [_dedo.layer addAnimation:animAndar3 forKey:nil];
+    }
+}
+
+
+-(void)metodoDogesto{
     
 }
 

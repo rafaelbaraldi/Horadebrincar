@@ -24,4 +24,6 @@
 
 @property Figura* figuraInicial;
 
+@property UIImageView *dedo;
+
 @end

@@ -17,10 +17,14 @@
     self = [super initWithTarget:target action:action];
     
     if(self){
+<<<<<<< HEAD
 //        self.largec = [[UIView alloc] init];
 //        self.smallc = [[UIView alloc] init];
 //        self.startc = [[UIView alloc] init];
 //        self.finalc = [[UIView alloc] init];
+=======
+        
+>>>>>>> master
     }
     return self;
 }
@@ -30,6 +34,7 @@
     
     //quando ha um toque, usamos a coordenadas do mesmo para definir os outros pontos
     //com o valores pre-definidos e arbitrarios para o gesto de semi-circulo
+<<<<<<< HEAD
     [self setXInicial: 35+60 ];
     [self setYInicial: 300+343];
     
@@ -43,6 +48,23 @@
     // a area valida para o gesto
     [self setRaioMenor: 230];  // 100 - 30
     [self setRaioMaior: 350]; // 100 + 30
+=======
+    [self setXInicial: [touch locationInView:self.view].x];
+    [self setYInicial: [touch locationInView:self.view].y];
+    
+    [self setXFinal: [touch locationInView:self.view].x + 200];
+    [self setYFinal: [touch locationInView:self.view].y]; //yinicial  eh igual ao yfinal
+    
+    [self setCentroX:[touch locationInView:self.view].x + 100];
+    [self setCentroY:[touch locationInView:self.view].y];
+    
+    // valores arbitrarios dos raios(30 pixels) dos circulos de que delimitam
+    // a area valida para o gesto
+    [self setRaioMenor: 70];  // 100 - 30
+    [self setRaioMaior: 130]; // 100 + 30
+    
+    
+>>>>>>> master
     
 //    //definindo a posicao das UIviews "gambiarra" que auxilia na visualizacao dde onde o gesto de semi-circulo deve ocorrer
 //    [[self largec]setFrame:CGRectMake([self centroX] - [self raioMaior], [self centroY] - [self raioMaior], [self raioMaior]*2, [self raioMaior]*2)];
@@ -73,6 +95,7 @@
 //    [[self startc]setHidden:NO];
 //    [[self finalc]setHidden:NO];
     
+<<<<<<< HEAD
     if ( pow( ([touch locationInView:self.view].x - [self centroX]), 2) +
         pow( ([touch locationInView:self.view].y - [self centroY]), 2) < pow([self raioMaior], 2)  &&
         
@@ -106,12 +129,32 @@
         
         [touch locationInView:self.view].y < (300 +343) ) {
 
+=======
+    
+}
+
+
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [touches anyObject];
+    
+    // se a posicao do toque estiver dentro da area entre os 2 circulos demilitadores
+    // esta ok
+    if ( pow( ([touch locationInView:self.view].x - [self centroX]), 2) +
+        pow( ([touch locationInView:self.view].y - [self centroY]), 2) < pow([self raioMaior], 2)  &&
+        // (x - xo)^2 + (y - yo)^2 < r2
+        
+        pow( ([touch locationInView:self.view].x - [self centroX]), 2) +
+        pow( ([touch locationInView:self.view].y - [self centroY]), 2) > pow([self raioMenor], 2) ) {
+        
+>>>>>>> master
     }
     // se a posicao do toque NAO estiver dentro da area entre os 2 circulos demilitadores
     // o gesto de semi-circulo falhou
     else{
         NSLog(@"saiu da area de tolerancia");
         self.state = UIGestureRecognizerStateFailed;
+<<<<<<< HEAD
 //        [[self largec]setHidden:YES];
 //        [[self smallc]setHidden:YES];
 //        [[self startc]setHidden:YES];
@@ -127,10 +170,36 @@
 //        [[self finalc]setHidden:YES];
         self.state = UIGestureRecognizerStateRecognized;
     }
+=======
+        [[self largec]setHidden:YES];
+        [[self smallc]setHidden:YES];
+        [[self startc]setHidden:YES];
+        [[self finalc]setHidden:YES];
+    }
+    
+    if ( pow( ([touch locationInView:self.view].x - [self xFinal]), 2) +
+        pow( ([touch locationInView:self.view].y - [self yFinal]), 2) < pow(30, 2) ){
+        
+        [self.view setBackgroundColor: [UIColor colorWithRed: (arc4random()%255)/255.0 green:(arc4random()%255)/255.0 blue:(arc4random()%255)/255.0 alpha:1.0]];
+        //muda  a cor do fundo para reconhecimento visual para o usuario ver que o gesto foi reconhecido
+        
+        self.state = UIGestureRecognizerStateRecognized;
+        [[self largec]setHidden:YES];
+        [[self smallc]setHidden:YES];
+        [[self startc]setHidden:YES];
+        [[self finalc]setHidden:YES];
+        
+        
+    }
+    
+    
+    
+>>>>>>> master
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch *touch = [touches anyObject];
+<<<<<<< HEAD
     //se ao remover o dedo da tela, as coordenadas que o toque estava estivarem dentro da area para validacao (UIview "gambiarra" vermelha)
     if ( pow( ([touch locationInView:self.view].x - [self xFinal]), 2) +
         pow( ([touch locationInView:self.view].y - [self yFinal]), 2) < pow(60, 2) ){
@@ -138,10 +207,24 @@
         self.state = UIGestureRecognizerStateRecognized;
 //        [self.view setBackgroundColor: [UIColor colorWithRed: (arc4random()%255)/255.0 green:(arc4random()%255)/255.0 blue:(arc4random()%255)/255.0 alpha:1.0]];
 //        //muda  a cor do fundo para reconhecimento visual para o usuario ver que o gesto foi reconhecido
+=======
+    
+    //se ao remover o dedo da tela, as coordenadas que o toque estava estivarem dentro da area para validacao (UIview "gambiarra" vermelha)
+    if ( pow( ([touch locationInView:self.view].x - [self xFinal]), 2) +
+        pow( ([touch locationInView:self.view].y - [self yFinal]), 2) < pow(30, 2) ){
+        
+        
+        self.state = UIGestureRecognizerStateRecognized;
+        
+        [self.view setBackgroundColor: [UIColor colorWithRed: (arc4random()%255)/255.0 green:(arc4random()%255)/255.0 blue:(arc4random()%255)/255.0 alpha:1.0]];
+        //muda  a cor do fundo para reconhecimento visual para o usuario ver que o gesto foi reconhecido
+        
+>>>>>>> master
     }
     else{
         NSLog(@"falho pra finalizar");
         self.state = UIGestureRecognizerStateFailed;
+<<<<<<< HEAD
     }
 //    
 //    // esconde as UIview "gambiarra" de auxilio
@@ -155,6 +238,25 @@
     self.state = UIGestureRecognizerStateCancelled;
 }
 
+=======
+        
+    }
+    
+    // esconde as UIview "gambiarra" de auxilio
+    [[self largec]setHidden:YES];
+    [[self smallc]setHidden:YES];
+    [[self startc]setHidden:YES];
+    [[self finalc]setHidden:YES];
+    
+}
+
+
+
+
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
+    self.state = UIGestureRecognizerStateCancelled;
+}
+>>>>>>> master
 -(void)reset{
     // so simple there's no reset
 }
