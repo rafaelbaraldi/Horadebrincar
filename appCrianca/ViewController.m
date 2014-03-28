@@ -141,39 +141,52 @@
         [self.view addSubview:arcoiris];
         
         //Adiciona o dedo
-        UIImageView *dedo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finger.png"]];
-        [dedo setFrame:CGRectMake(95, 560, 156, 250)];
-        [dedo setTransform:CGAffineTransformMakeRotation(-(M_PI / 4))];
+        _dedo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finger.png"]];
+        [_dedo setFrame:CGRectMake(95, 560, 156, 250)];
+        [_dedo setTransform:CGAffineTransformMakeRotation(-(M_PI / 4))];
+        [self.view addSubview:_dedo];
         
-        [self.view addSubview:dedo];
-        
-        
+        //Roda dedo
         CABasicAnimation *animRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
         animRotation.toValue  = @(M_PI / 4);
-        animRotation.duration = 5;
+        animRotation.duration = 4;
         animRotation.removedOnCompletion = NO;
         animRotation.fillMode = kCAFillModeForwards;
-        [dedo.layer addAnimation:animRotation forKey:@"position.z"];
+        [_dedo.layer addAnimation:animRotation forKey:@"position.z"];
         
+        //Anda pra cima
+        CABasicAnimation *animAndar1 = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+        animAndar1.toValue  = [NSNumber numberWithInt:480];
+        animAndar1.duration = 5;
+        animAndar1.removedOnCompletion = NO;
+        animAndar1.fillMode = kCAFillModeForwards;
+        [_dedo.layer addAnimation:animAndar1 forKey:nil];
         
-        [UIView animateWithDuration:6 animations:^{
-            [[dedo layer] setPosition:CGPointMake(610, [[dedo layer] position].y)];
-        }];
-        
-        
-        //        CGPoint pointInicial = dedo.layer.position;
-        //        CGPoint pointFinal = CGPointMake(pointInicial.y+200, pointInicial.y);
-//        anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-        
-        // First we update the model layer's property.
-//        dedo.layer.position = pointInicial;
-        
-        // Now we attach the animation.
-
-        
-
+        //Anda ate a metade
+        CABasicAnimation *animAndar2 = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
+        animAndar2.toValue  = [NSNumber numberWithInt:-250];
+        animAndar2.duration = 2.5;
+        animAndar2.removedOnCompletion = NO;
+        animAndar2.fillMode = kCAFillModeForwards;
+        [animAndar2 setValue:@"subir" forKey:@"animaSubir"];
+        animAndar2.delegate = self;
+        [_dedo.layer addAnimation:animAndar2 forKey:nil];
     }
     
+}
+
+-(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    
+    //Anda ate o final
+    NSString *value = [anim valueForKey:@"animaSubir"];
+    if([value isEqual:@"subir"]){
+        CABasicAnimation *animAndar3 = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
+        animAndar3.toValue  = [NSNumber numberWithInt:-10];
+        animAndar3.duration = 2.5;
+        animAndar3.removedOnCompletion = NO;
+        animAndar3.fillMode = kCAFillModeForwards;
+        [_dedo.layer addAnimation:animAndar3 forKey:nil];
+    }
 }
 
 
