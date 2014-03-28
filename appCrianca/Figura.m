@@ -42,4 +42,22 @@
     return figurasFase1;
 }
 
++(NSMutableArray*)retornaFiguraFase2{
+    
+    Figura* f1 = [[Figura alloc] initWithX1:20 y1:61 x2:180 y2:255 tag:@"Chave-Cadeado"];
+    Figura* f2 = [[Figura alloc] initWithX1:47 y1:285 x2:207 y2:558 tag:@"Regador-Flor"];
+    Figura* f3 = [[Figura alloc] initWithX1:50 y1:599 x2:169 y2:799 tag:@"Osso-Cao"];
+    Figura* f4 = [[Figura alloc] initWithX1:75 y1:814 x2:243 y2:999 tag:@"Aquario-Peixe"];
+    Figura* f5 = [[Figura alloc] initWithX1:494 y1:88 x2:706 y2:266 tag:@"Coelho-Cenoura"];
+    Figura* f6 = [[Figura alloc] initWithX1:542 y1:381 x2:666 y2:519 tag:@"Regador-Flor"];
+    Figura* f7 = [[Figura alloc] initWithX1:530 y1:591 x2:660 y2:729 tag:@"Aquario-Peixe"];
+    Figura* f8 = [[Figura alloc] initWithX1:567 y1:812 x2:655 y2:976 tag:@"Coelho-Cenoura"];
+    Figura* f9 = [[Figura alloc] initWithX1:530 y1:591 x2:660 y2:729 tag:@"Chave-Cadeado"];
+    Figura* f10 = [[Figura alloc] initWithX1:567 y1:812 x2:655 y2:976 tag:@"Osso-Cao"];
+    
+    NSMutableArray* figurasFase1 = [[NSMutableArray alloc] initWithObjects:f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, nil];
+    
+    return figurasFase1;
+}
+
 @end

@@ -17,7 +17,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+        [self setFaseAtual:1];
     }
     return self;
 }
@@ -25,14 +25,23 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    [self setFiguras:[Figura retornaFiguraFase1]];
-
-    [self setAnterior:[UIImage imageNamed:@"fase1.png"]];
+    switch ([self faseAtual]) {
+        case 1:
+            [self setFiguras:[Figura retornaFiguraFase1]];
+            [self setAnterior:[UIImage imageNamed:@"fase1.png"]];
+            break;
+            
+        case 2:
+            [self setFiguras:[Figura retornaFiguraFase1]];
+            [self setAnterior:[UIImage imageNamed:@"fase2.png"]];
+            break;
+            
+        default:
+            break;
+    }
+    
     
     [self setGanhou:NO];
-    
-    GestoArcoIris* gesto = [[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)];
-    [[self view] addGestureRecognizer:gesto];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -129,23 +138,26 @@
     
     //Verifica se Ganhou
     if([[self figuras] count] == 0 && ![self ganhou]){
+        
+        _gesto = [[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)];
+        [[self view] addGestureRecognizer:_gesto];
 
         //Set Alpha do Jogo
         [[self tempDrawImage] setAlpha:0.2];
         [self setGanhou:YES];
         
         //OK
-        UIImageView *ok = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ok.png"]];
-        [ok setFrame:CGRectMake([[self view] bounds].size.width/2-75, CGRectGetMidY([self view].frame), 150, 150)];
-        [self.view addSubview:ok];
-        [[ok layer] setOpacity:0];
+        _ok = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ok.png"]];
+        [_ok setFrame:CGRectMake([[self view] bounds].size.width/2-75, CGRectGetMidY([self view].frame), 150, 150)];
+        [self.view addSubview:_ok];
+        [[_ok layer] setOpacity:0];
         
         CABasicAnimation *animacao = [CABasicAnimation animationWithKeyPath:@"opacity"];
         animacao.duration = 3;
         animacao.removedOnCompletion = NO;
         animacao.fillMode = kCAFillModeForwards;
         animacao.toValue = [NSNumber numberWithFloat:1.0f];
-        [[ok layer] addAnimation:animacao forKey:nil];
+        [[_ok layer] addAnimation:animacao forKey:nil];
         
 
         [self performSelector:@selector(animaArcoComDedo) withObject:nil afterDelay:1.2];
@@ -155,9 +167,9 @@
 -(void)animaArcoComDedo{
     
     //Adiciona arco-iris
-    UIImageView *arcoiris = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arcoiris.png"]];
-    [arcoiris setFrame:CGRectMake(35, 300, 700, 343)];
-    [self.view addSubview:arcoiris];
+    _arcoiris = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arcoiris.png"]];
+    [_arcoiris setFrame:CGRectMake(35, 300, 700, 343)];
+    [self.view addSubview:_arcoiris];
     
     //Adiciona o dedo
     _dedo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finger.png"]];
@@ -209,7 +221,21 @@
 
 
 -(void)metodoDogesto{
+    [_ok removeFromSuperview];
+    [_arcoiris removeFromSuperview];
+    [_dedo removeFromSuperview];
     
+    [[self view] removeGestureRecognizer:_gesto];
+    
+    _faseAtual++;
+    if(_faseAtual > 2){
+        _faseAtual = 1;
+    }
+    
+    [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
+    [[self tempDrawImage] setAlpha:1];
+    
+    [self viewDidLoad];
 }
 
 -(void)desenhaLinha:(CGPoint) inicial :(CGPoint) final{

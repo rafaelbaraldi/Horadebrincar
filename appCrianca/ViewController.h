@@ -26,4 +26,12 @@
 
 @property UIImageView *dedo;
 
+@property int faseAtual;
+
+@property UIImageView *ok;
+
+@property UIImageView *arcoiris;
+
+@property GestoArcoIris* gesto;
+
 @end

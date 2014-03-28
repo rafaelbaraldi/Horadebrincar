@@ -80,7 +80,7 @@
     }
     
     if ( [touch locationInView:self.view].x > (35 + 350 +290/2) ){
-        [self.view setBackgroundColor: [UIColor colorWithRed: (arc4random()%255)/255.0 green:(arc4random()%255)/255.0 blue:(arc4random()%255)/255.0 alpha:1.0]];
+//        [self.view setBackgroundColor: [UIColor colorWithRed: (arc4random()%255)/255.0 green:(arc4random()%255)/255.0 blue:(arc4random()%255)/255.0 alpha:1.0]];
        //muda  a cor do fundo para reconhecimento visual para o usuario ver que o gesto foi reconhecido
 
         self.state = UIGestureRecognizerStateRecognized;
@@ -94,7 +94,7 @@
         pow( ([touch locationInView:self.view].y - [self yFinal]), 2) < pow(60, 2) ){
         
         self.state = UIGestureRecognizerStateRecognized;
-       [self.view setBackgroundColor: [UIColor colorWithRed: (arc4random()%255)/255.0 green:(arc4random()%255)/255.0 blue:(arc4random()%255)/255.0 alpha:1.0]];
+//       [self.view setBackgroundColor: [UIColor colorWithRed: (arc4random()%255)/255.0 green:(arc4random()%255)/255.0 blue:(arc4random()%255)/255.0 alpha:1.0]];
         //        //muda  a cor do fundo para reconhecimento visual para o usuario ver que o gesto foi reconhecido
     }
     else{
