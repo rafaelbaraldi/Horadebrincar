@@ -19,11 +19,13 @@
 		310668F318E20BA800B48195 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310668DB18E20BA800B48195 /* UIKit.framework */; };
 		310668FB18E20BA800B48195 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 310668F918E20BA800B48195 /* InfoPlist.strings */; };
 		310668FD18E20BA800B48195 /* appCriancaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 310668FC18E20BA800B48195 /* appCriancaTests.m */; };
-		3106691D18E2110900B48195 /* ligaFigura.png in Resources */ = {isa = PBXBuildFile; fileRef = 3106691C18E2110900B48195 /* ligaFigura.png */; };
+		3106691D18E2110900B48195 /* fase1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3106691C18E2110900B48195 /* fase1.png */; };
 		3106692118E2132200B48195 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3106691F18E2132200B48195 /* ViewController.m */; };
 		3106692218E2132200B48195 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3106692018E2132200B48195 /* ViewController.xib */; };
 		31189DEB18E358E00072D5CB /* Figura.m in Sources */ = {isa = PBXBuildFile; fileRef = 31189DEA18E358E00072D5CB /* Figura.m */; };
 		3189376E18E4A88B0033B277 /* arcoiris.png in Resources */ = {isa = PBXBuildFile; fileRef = 3189376D18E4A88B0033B277 /* arcoiris.png */; };
+		31A1648318E5F8B400FA391E /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648218E5F8B400FA391E /* ok.png */; };
+		31A1648518E60AF800FA391E /* CBL in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648418E60AF800FA391E /* CBL */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
 /* End PBXBuildFile section */
 
@@ -54,13 +56,15 @@
 		310668F818E20BA800B48195 /* appCriancaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "appCriancaTests-Info.plist"; sourceTree = "<group>"; };
 		310668FA18E20BA800B48195 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		310668FC18E20BA800B48195 /* appCriancaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appCriancaTests.m; sourceTree = "<group>"; };
-		3106691C18E2110900B48195 /* ligaFigura.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ligaFigura.png; sourceTree = "<group>"; };
+		3106691C18E2110900B48195 /* fase1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fase1.png; sourceTree = "<group>"; };
 		3106691E18E2132200B48195 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3106691F18E2132200B48195 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3106692018E2132200B48195 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		31189DE918E358E00072D5CB /* Figura.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Figura.h; sourceTree = "<group>"; };
 		31189DEA18E358E00072D5CB /* Figura.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Figura.m; sourceTree = "<group>"; };
 		3189376D18E4A88B0033B277 /* arcoiris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcoiris.png; sourceTree = "<group>"; };
+		31A1648218E5F8B400FA391E /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
+		31A1648418E60AF800FA391E /* CBL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBL; sourceTree = "<group>"; };
 		F6B0ABBA18E4A971004F3C42 /* GestoArcoIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoArcoIris.h; sourceTree = "<group>"; };
 		F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoArcoIris.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +126,7 @@
 		310668DD18E20BA800B48195 /* appCrianca */ = {
 			isa = PBXGroup;
 			children = (
+				31A1648418E60AF800FA391E /* CBL */,
 				310668E618E20BA800B48195 /* AppDelegate.h */,
 				310668E718E20BA800B48195 /* AppDelegate.m */,
 				31189DE918E358E00072D5CB /* Figura.h */,
@@ -170,8 +175,9 @@
 		3106690B18E20C1600B48195 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
-				3106691C18E2110900B48195 /* ligaFigura.png */,
+				3106691C18E2110900B48195 /* fase1.png */,
 				3189376D18E4A88B0033B277 /* arcoiris.png */,
+				31A1648218E5F8B400FA391E /* ok.png */,
 			);
 			name = imagens;
 			sourceTree = "<group>";
@@ -253,9 +259,11 @@
 			files = (
 				3189376E18E4A88B0033B277 /* arcoiris.png in Resources */,
 				3106692218E2132200B48195 /* ViewController.xib in Resources */,
-				3106691D18E2110900B48195 /* ligaFigura.png in Resources */,
+				3106691D18E2110900B48195 /* fase1.png in Resources */,
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
 				310668EA18E20BA800B48195 /* Images.xcassets in Resources */,
+				31A1648518E60AF800FA391E /* CBL in Resources */,
+				31A1648318E5F8B400FA391E /* ok.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

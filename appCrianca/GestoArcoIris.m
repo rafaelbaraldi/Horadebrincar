@@ -74,7 +74,7 @@
     // se a posicao do toque NAO estiver dentro da area entre os 2 circulos demilitadores
     // o gesto de semi-circulo falhou
     else{
-        NSLog(@"saiu da area de tolerancia");
+//        NSLog(@"saiu da area de tolerancia");
         self.state = UIGestureRecognizerStateFailed;
 
     }

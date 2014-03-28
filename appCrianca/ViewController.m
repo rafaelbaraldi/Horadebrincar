@@ -27,13 +27,12 @@
     
     [self setFiguras:[Figura retornaFiguraFase1]];
 
-    [self setAnterior:[UIImage imageNamed:@"ligaFigura.png"]];
+    [self setAnterior:[UIImage imageNamed:@"fase1.png"]];
     
     [self setGanhou:NO];
     
     GestoArcoIris* gesto = [[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)];
     [[self view] addGestureRecognizer:gesto];
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -135,43 +134,62 @@
         [[self tempDrawImage] setAlpha:0.2];
         [self setGanhou:YES];
         
-        //Adiciona arco-iris
-        UIImageView *arcoiris = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arcoiris.png"]];
-        [arcoiris setFrame:CGRectMake(35, 300, 700, 343)];
-        [self.view addSubview:arcoiris];
+        //OK
+        UIImageView *ok = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ok.png"]];
+        [ok setFrame:CGRectMake([[self view] bounds].size.width/2-75, CGRectGetMidY([self view].frame), 150, 150)];
+        [self.view addSubview:ok];
+        [[ok layer] setOpacity:0];
         
-        //Adiciona o dedo
-        _dedo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finger.png"]];
-        [_dedo setFrame:CGRectMake(95, 560, 156, 250)];
-        [_dedo setTransform:CGAffineTransformMakeRotation(-(M_PI / 4))];
-        [self.view addSubview:_dedo];
+        CABasicAnimation *animacao = [CABasicAnimation animationWithKeyPath:@"opacity"];
+        animacao.duration = 3;
+        animacao.removedOnCompletion = NO;
+        animacao.fillMode = kCAFillModeForwards;
+        animacao.toValue = [NSNumber numberWithFloat:1.0f];
+        [[ok layer] addAnimation:animacao forKey:nil];
         
-        //Roda dedo
-        CABasicAnimation *animRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-        animRotation.toValue  = @(M_PI / 4);
-        animRotation.duration = 4;
-        animRotation.removedOnCompletion = NO;
-        animRotation.fillMode = kCAFillModeForwards;
-        [_dedo.layer addAnimation:animRotation forKey:@"position.z"];
-        
-        //Anda pra cima
-        CABasicAnimation *animAndar1 = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
-        animAndar1.toValue  = [NSNumber numberWithInt:480];
-        animAndar1.duration = 5;
-        animAndar1.removedOnCompletion = NO;
-        animAndar1.fillMode = kCAFillModeForwards;
-        [_dedo.layer addAnimation:animAndar1 forKey:nil];
-        
-        //Anda ate a metade
-        CABasicAnimation *animAndar2 = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
-        animAndar2.toValue  = [NSNumber numberWithInt:-250];
-        animAndar2.duration = 2.5;
-        animAndar2.removedOnCompletion = NO;
-        animAndar2.fillMode = kCAFillModeForwards;
-        [animAndar2 setValue:@"subir" forKey:@"animaSubir"];
-        animAndar2.delegate = self;
-        [_dedo.layer addAnimation:animAndar2 forKey:nil];
+
+        [self performSelector:@selector(animaArcoComDedo) withObject:nil afterDelay:1.2];
     }
+}
+
+-(void)animaArcoComDedo{
+    
+    //Adiciona arco-iris
+    UIImageView *arcoiris = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arcoiris.png"]];
+    [arcoiris setFrame:CGRectMake(35, 300, 700, 343)];
+    [self.view addSubview:arcoiris];
+    
+    //Adiciona o dedo
+    _dedo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finger.png"]];
+    [_dedo setFrame:CGRectMake(95, 560, 156, 250)];
+    [_dedo setTransform:CGAffineTransformMakeRotation(-(M_PI / 4))];
+    [self.view addSubview:_dedo];
+    
+    //Roda dedo
+    CABasicAnimation *animRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animRotation.toValue  = @(M_PI / 4);
+    animRotation.duration = 4;
+    animRotation.removedOnCompletion = NO;
+    animRotation.fillMode = kCAFillModeForwards;
+    [_dedo.layer addAnimation:animRotation forKey:@"position.z"];
+    
+    //Anda pra cima
+    CABasicAnimation *animAndar1 = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+    animAndar1.toValue  = [NSNumber numberWithInt:480];
+    animAndar1.duration = 5;
+    animAndar1.removedOnCompletion = NO;
+    animAndar1.fillMode = kCAFillModeForwards;
+    [_dedo.layer addAnimation:animAndar1 forKey:nil];
+    
+    //Anda ate a metade
+    CABasicAnimation *animAndar2 = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
+    animAndar2.toValue  = [NSNumber numberWithInt:-250];
+    animAndar2.duration = 2.5;
+    animAndar2.removedOnCompletion = NO;
+    animAndar2.fillMode = kCAFillModeForwards;
+    [animAndar2 setValue:@"subir" forKey:@"animaSubir"];
+    animAndar2.delegate = self;
+    [_dedo.layer addAnimation:animAndar2 forKey:nil];
     
 }
 
@@ -187,11 +205,6 @@
         animAndar3.fillMode = kCAFillModeForwards;
         [_dedo.layer addAnimation:animAndar3 forKey:nil];
     }
-}
-
-
--(void)metodoDogesto{
-    
 }
 
 
