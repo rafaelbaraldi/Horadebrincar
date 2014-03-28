@@ -37,12 +37,6 @@
 @property int centroX;
 @property int centroY;
 
-//Uiviews "gambiarra" para mostrar o tamanho aproximado e onde o gesto de semi-circulo deve acontecer
-@property UIView *largec;
-@property UIView *smallc;
-@property UIView *startc;
-@property UIView *finalc;
-
 
 
 @end
