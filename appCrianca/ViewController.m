@@ -32,7 +32,7 @@
             break;
             
         case 2:
-            [self setFiguras:[Figura retornaFiguraFase1]];
+            [self setFiguras:[Figura retornaFiguraFase2]];
             [self setAnterior:[UIImage imageNamed:@"fase2.png"]];
             break;
             
