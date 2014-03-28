@@ -194,6 +194,11 @@
     
 }
 
+
+-(void)metodoDogesto{
+    
+}
+
 -(void)desenhaLinha:(CGPoint) inicial :(CGPoint) final{
     
     //Desenha a linha reta da farinha ao pao quando a crianca tracar certo

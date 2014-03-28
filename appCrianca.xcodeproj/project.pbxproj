@@ -24,7 +24,6 @@
 		3106692218E2132200B48195 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3106692018E2132200B48195 /* ViewController.xib */; };
 		31189DEB18E358E00072D5CB /* Figura.m in Sources */ = {isa = PBXBuildFile; fileRef = 31189DEA18E358E00072D5CB /* Figura.m */; };
 		3189376E18E4A88B0033B277 /* arcoiris.png in Resources */ = {isa = PBXBuildFile; fileRef = 3189376D18E4A88B0033B277 /* arcoiris.png */; };
-		3189377618E4B94E0033B277 /* finger.png in Resources */ = {isa = PBXBuildFile; fileRef = 3189377518E4B94E0033B277 /* finger.png */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +61,6 @@
 		31189DE918E358E00072D5CB /* Figura.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Figura.h; sourceTree = "<group>"; };
 		31189DEA18E358E00072D5CB /* Figura.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Figura.m; sourceTree = "<group>"; };
 		3189376D18E4A88B0033B277 /* arcoiris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcoiris.png; sourceTree = "<group>"; };
-		3189377518E4B94E0033B277 /* finger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finger.png; sourceTree = "<group>"; };
 		F6B0ABBA18E4A971004F3C42 /* GestoArcoIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoArcoIris.h; sourceTree = "<group>"; };
 		F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoArcoIris.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,7 +172,6 @@
 			children = (
 				3106691C18E2110900B48195 /* ligaFigura.png */,
 				3189376D18E4A88B0033B277 /* arcoiris.png */,
-				3189377518E4B94E0033B277 /* finger.png */,
 			);
 			name = imagens;
 			sourceTree = "<group>";
@@ -258,7 +255,6 @@
 				3106692218E2132200B48195 /* ViewController.xib in Resources */,
 				3106691D18E2110900B48195 /* ligaFigura.png in Resources */,
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
-				3189377618E4B94E0033B277 /* finger.png in Resources */,
 				310668EA18E20BA800B48195 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
