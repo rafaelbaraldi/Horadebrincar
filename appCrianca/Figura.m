@@ -49,7 +49,7 @@
     Figura* f3 = [[Figura alloc] initWithX1:48 y1:434 x2:165 y2:546 tag:@"Osso-Cao"];
     Figura* f4 = [[Figura alloc] initWithX1:55 y1:596 x2:172 y2:716 tag:@"Aquario-Peixe"];
     Figura* f5 = [[Figura alloc] initWithX1:38 y1:776 x2:155 y2:971 tag:@"Coelho-Cenoura"];
-    Figura* f6 = [[Figura alloc] initWithX1:549 y1:26 x2:683 y2:683 tag:@"Regador-Flor"];
+    Figura* f6 = [[Figura alloc] initWithX1:549 y1:26 x2:683 y2:173 tag:@"Regador-Flor"];
     Figura* f7 = [[Figura alloc] initWithX1:539 y1:279 x2:694 y2:402 tag:@"Aquario-Peixe"];
     Figura* f8 = [[Figura alloc] initWithX1:532 y1:456 x2:714 y2:560 tag:@"Coelho-Cenoura"];
     Figura* f9 = [[Figura alloc] initWithX1:540 y1:627 x2:676 y2:735 tag:@"Chave-Cadeado"];
