@@ -28,6 +28,8 @@
 		3189376E18E4A88B0033B277 /* arcoiris.png in Resources */ = {isa = PBXBuildFile; fileRef = 3189376D18E4A88B0033B277 /* arcoiris.png */; };
 		31A1648318E5F8B400FA391E /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648218E5F8B400FA391E /* ok.png */; };
 		31A1648518E60AF800FA391E /* CBL in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648418E60AF800FA391E /* CBL */; };
+		F6A763F018E9DE4C005B30A1 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A763EE18E9DE4C005B30A1 /* MenuViewController.m */; };
+		F6A763F118E9DE4C005B30A1 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A763EF18E9DE4C005B30A1 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,9 @@
 		3189376D18E4A88B0033B277 /* arcoiris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcoiris.png; sourceTree = "<group>"; };
 		31A1648218E5F8B400FA391E /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 		31A1648418E60AF800FA391E /* CBL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBL; sourceTree = "<group>"; };
+		F6A763ED18E9DE4C005B30A1 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		F6A763EE18E9DE4C005B30A1 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		F6A763EF18E9DE4C005B30A1 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		F6B0ABBA18E4A971004F3C42 /* GestoArcoIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoArcoIris.h; sourceTree = "<group>"; };
 		F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoArcoIris.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +138,9 @@
 				31A1648418E60AF800FA391E /* CBL */,
 				310668E618E20BA800B48195 /* AppDelegate.h */,
 				310668E718E20BA800B48195 /* AppDelegate.m */,
+				F6A763ED18E9DE4C005B30A1 /* MenuViewController.h */,
+				F6A763EE18E9DE4C005B30A1 /* MenuViewController.m */,
+				F6A763EF18E9DE4C005B30A1 /* MenuViewController.xib */,
 				31189DE918E358E00072D5CB /* Figura.h */,
 				31189DEA18E358E00072D5CB /* Figura.m */,
 				3106691E18E2132200B48195 /* ViewController.h */,
@@ -270,6 +278,7 @@
 				3106691D18E2110900B48195 /* fase1.png in Resources */,
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
 				310668EA18E20BA800B48195 /* Images.xcassets in Resources */,
+				F6A763F118E9DE4C005B30A1 /* MenuViewController.xib in Resources */,
 				31A1648518E60AF800FA391E /* CBL in Resources */,
 				31A1648318E5F8B400FA391E /* ok.png in Resources */,
 			);
@@ -291,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				310668E818E20BA800B48195 /* AppDelegate.m in Sources */,
+				F6A763F018E9DE4C005B30A1 /* MenuViewController.m in Sources */,
 				31189DEB18E358E00072D5CB /* Figura.m in Sources */,
 				3106692118E2132200B48195 /* ViewController.m in Sources */,
 				F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */,
@@ -417,6 +427,7 @@
 				GCC_PREFIX_HEADER = "appCrianca/appCrianca-Prefix.pch";
 				INFOPLIST_FILE = "appCrianca/appCrianca-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -430,6 +441,7 @@
 				GCC_PREFIX_HEADER = "appCrianca/appCrianca-Prefix.pch";
 				INFOPLIST_FILE = "appCrianca/appCrianca-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

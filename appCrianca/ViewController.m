@@ -28,11 +28,15 @@
     switch ([self faseAtual]) {
         case 1:
             [self setFiguras:[Figura retornaFiguraFase1]];
+            [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
+            [[self tempDrawImage] setAlpha:1];
             [self setAnterior:[UIImage imageNamed:@"fase1.png"]];
             break;
             
         case 2:
             [self setFiguras:[Figura retornaFiguraFase2]];
+            [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
+            [[self tempDrawImage] setAlpha:1];
             [self setAnterior:[UIImage imageNamed:@"fase2.png"]];
             break;
             
@@ -231,9 +235,6 @@
     if(_faseAtual > 2){
         _faseAtual = 1;
     }
-    
-    [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
-    [[self tempDrawImage] setAlpha:1];
     
     [self viewDidLoad];
 }
