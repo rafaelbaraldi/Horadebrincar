@@ -42,11 +42,15 @@
             
         case 3:
             [self setFiguras:[Figura retornaFiguraFase3]];
+            [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
+            [[self tempDrawImage] setAlpha:1];
             [self setAnterior:[UIImage imageNamed:@"fase3.png"]];
             break;
             
         case 4:
             [self setFiguras:[Figura retornaFiguraFase4]];
+            [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
+            [[self tempDrawImage] setAlpha:1];
             [self setAnterior:[UIImage imageNamed:@"fase4.png"]];
             break;
             
