@@ -259,4 +259,7 @@
 
 - (IBAction)go:(id)sender {
 }
+
+- (IBAction)goHome:(id)sender {
+}
 @end

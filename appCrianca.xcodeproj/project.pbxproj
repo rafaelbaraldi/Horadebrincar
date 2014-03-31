@@ -30,6 +30,7 @@
 		3106692218E2132200B48195 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3106692018E2132200B48195 /* ViewController.xib */; };
 		31189DEB18E358E00072D5CB /* Figura.m in Sources */ = {isa = PBXBuildFile; fileRef = 31189DEA18E358E00072D5CB /* Figura.m */; };
 		3189376E18E4A88B0033B277 /* arcoiris.png in Resources */ = {isa = PBXBuildFile; fileRef = 3189376D18E4A88B0033B277 /* arcoiris.png */; };
+		3199B7E418E9FBF6003F0E2E /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E318E9FBF6003F0E2E /* home.png */; };
 		31A1648318E5F8B400FA391E /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648218E5F8B400FA391E /* ok.png */; };
 		31A1648518E60AF800FA391E /* CBL in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648418E60AF800FA391E /* CBL */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
@@ -76,6 +77,7 @@
 		31189DE918E358E00072D5CB /* Figura.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Figura.h; sourceTree = "<group>"; };
 		31189DEA18E358E00072D5CB /* Figura.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Figura.m; sourceTree = "<group>"; };
 		3189376D18E4A88B0033B277 /* arcoiris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcoiris.png; sourceTree = "<group>"; };
+		3199B7E318E9FBF6003F0E2E /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		31A1648218E5F8B400FA391E /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 		31A1648418E60AF800FA391E /* CBL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBL; sourceTree = "<group>"; };
 		F6B0ABBA18E4A971004F3C42 /* GestoArcoIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoArcoIris.h; sourceTree = "<group>"; };
@@ -143,10 +145,10 @@
 				310668E618E20BA800B48195 /* AppDelegate.h */,
 				310668E718E20BA800B48195 /* AppDelegate.m */,
 				31189DE918E358E00072D5CB /* Figura.h */,
+				31189DEA18E358E00072D5CB /* Figura.m */,
 				1B8AC79E18E9F7550083EBDD /* MenuViewController.h */,
 				1B8AC79F18E9F7550083EBDD /* MenuViewController.m */,
 				1B8AC7A018E9F7550083EBDD /* MenuViewController.xib */,
-				31189DEA18E358E00072D5CB /* Figura.m */,
 				3106691E18E2132200B48195 /* ViewController.h */,
 				3106691F18E2132200B48195 /* ViewController.m */,
 				3106692018E2132200B48195 /* ViewController.xib */,
@@ -191,6 +193,7 @@
 		3106690B18E20C1600B48195 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				3199B7E318E9FBF6003F0E2E /* home.png */,
 				1B8AC79C18E9F31C0083EBDD /* fase4.png */,
 				1B8AC79A18E9E0E30083EBDD /* fase3.png */,
 				1BC90EA018E611C7002E91E3 /* finger.png */,
@@ -290,6 +293,7 @@
 				1B8AC7A218E9F7550083EBDD /* MenuViewController.xib in Resources */,
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
 				310668EA18E20BA800B48195 /* Images.xcassets in Resources */,
+				3199B7E418E9FBF6003F0E2E /* home.png in Resources */,
 				31A1648518E60AF800FA391E /* CBL in Resources */,
 				31A1648318E5F8B400FA391E /* ok.png in Resources */,
 			);
