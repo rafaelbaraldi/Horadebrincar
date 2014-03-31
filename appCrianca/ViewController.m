@@ -180,43 +180,29 @@
     //Roda dedo
     CABasicAnimation *animRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     animRotation.toValue  = @(M_PI / 4);
-    animRotation.duration = 4;
-    animRotation.removedOnCompletion = NO;
-    animRotation.fillMode = kCAFillModeForwards;
-    [_dedo.layer addAnimation:animRotation forKey:@"position.z"];
+    animRotation.duration = 3;
+    animRotation.repeatCount = 3;
+    [[self dedo].layer addAnimation:animRotation forKey:@"position.z"];
     
-    //Anda pra cima
-    CABasicAnimation *animAndar1 = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
-    animAndar1.toValue  = [NSNumber numberWithInt:480];
-    animAndar1.duration = 5;
-    animAndar1.removedOnCompletion = NO;
-    animAndar1.fillMode = kCAFillModeForwards;
-    [_dedo.layer addAnimation:animAndar1 forKey:nil];
+    CGMutablePathRef caminho = CGPathCreateMutable();
+    CGPathMoveToPoint(caminho, NULL, 160, 700);
+    CGPathAddCurveToPoint(caminho, NULL, 260, 400, 530, 400, 590, 670);
     
-    //Anda ate a metade
-    CABasicAnimation *animAndar2 = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
-    animAndar2.toValue  = [NSNumber numberWithInt:-250];
-    animAndar2.duration = 2.5;
-    animAndar2.removedOnCompletion = NO;
-    animAndar2.fillMode = kCAFillModeForwards;
-    [animAndar2 setValue:@"subir" forKey:@"animaSubir"];
-    animAndar2.delegate = self;
-    [_dedo.layer addAnimation:animAndar2 forKey:nil];
-    
+    CAKeyframeAnimation *animaDedo = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    [animaDedo setPath:caminho];
+    [animaDedo setDuration:3];
+    [animaDedo setRepeatCount:3];
+    [animaDedo setRemovedOnCompletion:NO];
+    [animaDedo setFillMode:kCAFillModeForwards];
+    [[[self dedo] layer]addAnimation:animaDedo forKey:nil];
+
+    //Gamb para sumir com o Dedo
+    [self performSelector:@selector(hiddenDedo) withObject:nil afterDelay:9];
 }
 
--(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
-    
-    //Anda ate o final
-    NSString *value = [anim valueForKey:@"animaSubir"];
-    if([value isEqual:@"subir"]){
-        CABasicAnimation *animAndar3 = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
-        animAndar3.toValue  = [NSNumber numberWithInt:-10];
-        animAndar3.duration = 2.5;
-        animAndar3.removedOnCompletion = NO;
-        animAndar3.fillMode = kCAFillModeForwards;
-        [_dedo.layer addAnimation:animAndar3 forKey:nil];
-    }
+//some com o dedo
+-(void)hiddenDedo{
+    [[self dedo]setHidden:YES];
 }
 
 
