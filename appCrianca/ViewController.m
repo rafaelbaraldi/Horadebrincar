@@ -234,10 +234,12 @@
     
     _faseAtual++;
     if(_faseAtual > 4){
+        [self dismissViewControllerAnimated:YES completion:Nil];
         _faseAtual = 1;
     }
-    
-    [self viewDidLoad];
+    else{
+        [self viewDidLoad];
+    }
 }
 
 -(void)desenhaLinha:(CGPoint) inicial :(CGPoint) final{
