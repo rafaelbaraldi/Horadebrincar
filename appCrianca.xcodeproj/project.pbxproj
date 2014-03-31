@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		1B8AC79B18E9E0E30083EBDD /* fase3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8AC79A18E9E0E30083EBDD /* fase3.png */; };
 		1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8AC79C18E9F31C0083EBDD /* fase4.png */; };
-		1B8AC7A118E9F7550083EBDD /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8AC79F18E9F7550083EBDD /* MenuViewController.m */; };
-		1B8AC7A218E9F7550083EBDD /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8AC7A018E9F7550083EBDD /* MenuViewController.xib */; };
 		1BC90EA118E611C7002E91E3 /* finger.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC90EA018E611C7002E91E3 /* finger.png */; };
 		1BC90EA318E6125D002E91E3 /* fase2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC90EA218E6125D002E91E3 /* fase2.png */; };
 		310668D818E20BA800B48195 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310668D718E20BA800B48195 /* Foundation.framework */; };
@@ -34,6 +32,8 @@
 		3199B7E618E9FE86003F0E2E /* menu_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E518E9FE86003F0E2E /* menu_background.jpg */; };
 		31A1648318E5F8B400FA391E /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648218E5F8B400FA391E /* ok.png */; };
 		31A1648518E60AF800FA391E /* CBL in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648418E60AF800FA391E /* CBL */; };
+		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
+		F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A85CAD18EA013C00819310 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
 /* End PBXBuildFile section */
 
@@ -50,9 +50,6 @@
 /* Begin PBXFileReference section */
 		1B8AC79A18E9E0E30083EBDD /* fase3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fase3.png; sourceTree = "<group>"; };
 		1B8AC79C18E9F31C0083EBDD /* fase4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fase4.png; sourceTree = "<group>"; };
-		1B8AC79E18E9F7550083EBDD /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		1B8AC79F18E9F7550083EBDD /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		1B8AC7A018E9F7550083EBDD /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		1BC90EA018E611C7002E91E3 /* finger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finger.png; sourceTree = "<group>"; };
 		1BC90EA218E6125D002E91E3 /* fase2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fase2.png; sourceTree = "<group>"; };
 		310668D418E20BA800B48195 /* appCrianca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appCrianca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +79,9 @@
 		3199B7E518E9FE86003F0E2E /* menu_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = menu_background.jpg; sourceTree = "<group>"; };
 		31A1648218E5F8B400FA391E /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 		31A1648418E60AF800FA391E /* CBL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBL; sourceTree = "<group>"; };
+		F6A85CAB18EA013C00819310 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		F6A85CAC18EA013C00819310 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		F6A85CAD18EA013C00819310 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		F6B0ABBA18E4A971004F3C42 /* GestoArcoIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoArcoIris.h; sourceTree = "<group>"; };
 		F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoArcoIris.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,9 +148,9 @@
 				310668E718E20BA800B48195 /* AppDelegate.m */,
 				31189DE918E358E00072D5CB /* Figura.h */,
 				31189DEA18E358E00072D5CB /* Figura.m */,
-				1B8AC79E18E9F7550083EBDD /* MenuViewController.h */,
-				1B8AC79F18E9F7550083EBDD /* MenuViewController.m */,
-				1B8AC7A018E9F7550083EBDD /* MenuViewController.xib */,
+				F6A85CAB18EA013C00819310 /* MenuViewController.h */,
+				F6A85CAC18EA013C00819310 /* MenuViewController.m */,
+				F6A85CAD18EA013C00819310 /* MenuViewController.xib */,
 				3106691E18E2132200B48195 /* ViewController.h */,
 				3106691F18E2132200B48195 /* ViewController.m */,
 				3106692018E2132200B48195 /* ViewController.xib */,
@@ -291,10 +291,10 @@
 				1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */,
 				3106692218E2132200B48195 /* ViewController.xib in Resources */,
 				1BC90EA318E6125D002E91E3 /* fase2.png in Resources */,
+				F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */,
 				3106691D18E2110900B48195 /* fase1.png in Resources */,
 				3199B7E618E9FE86003F0E2E /* menu_background.jpg in Resources */,
 				1B8AC79B18E9E0E30083EBDD /* fase3.png in Resources */,
-				1B8AC7A218E9F7550083EBDD /* MenuViewController.xib in Resources */,
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
 				310668EA18E20BA800B48195 /* Images.xcassets in Resources */,
 				3199B7E418E9FBF6003F0E2E /* home.png in Resources */,
@@ -319,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				310668E818E20BA800B48195 /* AppDelegate.m in Sources */,
-				1B8AC7A118E9F7550083EBDD /* MenuViewController.m in Sources */,
+				F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */,
 				31189DEB18E358E00072D5CB /* Figura.m in Sources */,
 				3106692118E2132200B48195 /* ViewController.m in Sources */,
 				F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */,
