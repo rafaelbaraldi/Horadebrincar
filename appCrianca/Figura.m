@@ -37,9 +37,9 @@
     Figura* f7 = [[Figura alloc] initWithX1:530 y1:591 x2:660 y2:729 tag:@"Cana-Acucar"];
     Figura* f8 = [[Figura alloc] initWithX1:567 y1:812 x2:655 y2:976 tag:@"Abelha-Mel"];
     
-    NSMutableArray* figurasFase1 = [[NSMutableArray alloc] initWithObjects:f1, f2, f3, f4, f5, f6, f7, f8, nil];
+    NSMutableArray* figurasFase = [[NSMutableArray alloc] initWithObjects:f1, f2, f3, f4, f5, f6, f7, f8, nil];
     
-    return figurasFase1;
+    return figurasFase;
 }
 
 +(NSMutableArray*)retornaFiguraFase2{
@@ -55,9 +55,27 @@
     Figura* f9 = [[Figura alloc] initWithX1:540 y1:627 x2:676 y2:735 tag:@"Chave-Cadeado"];
     Figura* f10 = [[Figura alloc] initWithX1:503 y1:786 x2:708 y2:984 tag:@"Osso-Cao"];
     
-    NSMutableArray* figurasFase1 = [[NSMutableArray alloc] initWithObjects:f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, nil];
+    NSMutableArray* figurasFase = [[NSMutableArray alloc] initWithObjects:f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, nil];
     
-    return figurasFase1;
+    return figurasFase;
+}
+
++(NSMutableArray*)retornaFiguraFase3{
+    
+    Figura* f1 = [[Figura alloc] initWithX1:28 y1:11 x2:353 y2:172 tag:@"Balao-5"];
+    Figura* f2 = [[Figura alloc] initWithX1:13 y1:218 x2:338 y2:379 tag:@"Foca-3"];
+    Figura* f3 = [[Figura alloc] initWithX1:0 y1:389 x2:325 y2:550 tag:@"Circo-1"];
+    Figura* f4 = [[Figura alloc] initWithX1:3 y1:594 x2:328 y2:755 tag:@"Palhaco-2"];
+    Figura* f5 = [[Figura alloc] initWithX1:25 y1:789 x2:272 y2:952 tag:@"Urso-4"];
+    Figura* f6 = [[Figura alloc] initWithX1:588 y1:12 x2:739 y2:182 tag:@"Foca-3"];
+    Figura* f7 = [[Figura alloc] initWithX1:588 y1:219 x2:739 y2:389 tag:@"Palhaco-2"];
+    Figura* f8 = [[Figura alloc] initWithX1:588 y1:422 x2:739 y2:592 tag:@"Urso-4"];
+    Figura* f9 = [[Figura alloc] initWithX1:588 y1:630 x2:739 y2:800 tag:@"Circo-1"];
+    Figura* f10 = [[Figura alloc] initWithX1:588 y1:830 x2:739 y2:1000 tag:@"Balao-5"];
+    
+    NSMutableArray* figurasFase = [[NSMutableArray alloc] initWithObjects:f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, nil];
+    
+    return figurasFase;
 }
 
 @end

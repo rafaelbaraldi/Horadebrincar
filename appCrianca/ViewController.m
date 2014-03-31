@@ -36,6 +36,11 @@
             [self setAnterior:[UIImage imageNamed:@"fase2.png"]];
             break;
             
+        case 3:
+            [self setFiguras:[Figura retornaFiguraFase3]];
+            [self setAnterior:[UIImage imageNamed:@"fase3.png"]];
+            break;
+            
         default:
             break;
     }
@@ -214,7 +219,7 @@
     [[self view] removeGestureRecognizer:_gesto];
     
     _faseAtual++;
-    if(_faseAtual > 2){
+    if(_faseAtual > 3){
         _faseAtual = 1;
     }
     

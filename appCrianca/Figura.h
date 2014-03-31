@@ -18,6 +18,7 @@
 
 +(NSMutableArray*)retornaFiguraFase1;
 +(NSMutableArray*)retornaFiguraFase2;
++(NSMutableArray*)retornaFiguraFase3;
 
 -(id)initWithX1:(int)x1 y1:(int)y1 x2:(int)x2 y2:(int)y2 tag:(NSString*)tag;
 
