@@ -224,7 +224,6 @@
     [[self dedo]setHidden:YES];
 }
 
-
 -(void)metodoDogesto{
     [_ok removeFromSuperview];
     [_arcoiris removeFromSuperview];
@@ -261,5 +260,6 @@
 }
 
 - (IBAction)goHome:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:Nil];
 }
 @end
