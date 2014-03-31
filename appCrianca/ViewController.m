@@ -76,6 +76,8 @@
             [self setFiguraInicial:f];
         }
     }
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -84,7 +86,6 @@
         UITouch *touch = [touches anyObject];
         CGPoint currentPoint = [touch locationInView:self.view];
         
-        UIGraphicsBeginImageContext(self.view.frame.size);
         
         [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
         
