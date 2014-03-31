@@ -15,6 +15,8 @@
 @property UIButton *buttonFase3;
 @property UIButton *buttonFase4;
 
+@property NSMutableArray* estrelas;
+
 @end
 
 

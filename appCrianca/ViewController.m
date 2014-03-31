@@ -158,6 +158,10 @@
     //Verifica se Ganhou
     if([[self figuras] count] == 0 && ![self ganhou]){
         
+        //Salva a fase vencida
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setBool:TRUE forKey:[NSString stringWithFormat:@"%d", [self faseAtual]]];
+        
         _gesto = [[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)];
         [[self view] addGestureRecognizer:_gesto];
 
