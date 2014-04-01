@@ -27,10 +27,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
+    //Alloc Array de Estrelas
     [self setEstrelas:[[NSMutableArray alloc]init]];
     
+    //Frase - Selecione o nivel
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 160, [self view].bounds.size.width, 30)];
+    [title setText:@"Selecione um nivel"];
+    [title setFont:[UIFont fontWithName:@"Chalkduster" size:40.0f]];
+    [title setTextAlignment:NSTextAlignmentCenter];
+    [[self view]addSubview:title];
     
+    
+    //Button 1
     [self setButtonFase1: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
                                                                      [self view].bounds.size.height*2/8, 100, 100)] ];
     [[[self buttonFase1]titleLabel]setFont:[UIFont fontWithName:@"Chalkduster" size:36.0f]];
@@ -43,6 +51,7 @@
     [[self view] addSubview: [self buttonFase1]];
     [self controlaEstrela:[self  buttonFase1]];
     
+     //Button 2
     [self setButtonFase2: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
                                                                      [self view].bounds.size.height*3/8, 100, 100)]];
     [[[self buttonFase2]titleLabel]setFont:[UIFont fontWithName:@"Chalkduster" size:36.0f]];
@@ -55,6 +64,7 @@
     [[self view] addSubview: [self buttonFase2]];
     [self controlaEstrela:[self  buttonFase2]];
     
+    //Button 3
     [self setButtonFase3: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
                                                                      [self view].bounds.size.height*4/8, 100, 100)]];
     [[[self buttonFase3]titleLabel]setFont:[UIFont fontWithName:@"Chalkduster" size:36.0f]];
@@ -67,6 +77,7 @@
     [[self view] addSubview: [self buttonFase3]];
     [self controlaEstrela:[self  buttonFase3]];
     
+    //Button 4
     [self setButtonFase4: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
                                                                      [self view].bounds.size.height*5/8, 100, 100)]];
     [[[self buttonFase4]titleLabel]setFont:[UIFont fontWithName:@"Chalkduster" size:36.0f]];
@@ -101,7 +112,6 @@
     [[star layer]setFrame:CGRectMake(fase.bounds.size.width - 10, fase.bounds.size.height - 20, 20, 20)];
     [fase addSubview: star];
     [[self estrelas] addObject:star];
-    
 }
 
 -(void)botaoIrFaseSelecionada: (id) sender {
