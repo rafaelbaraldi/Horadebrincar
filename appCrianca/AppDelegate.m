@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MenuViewController.h"
+#import "GameViewController.h"
 
 @implementation AppDelegate
 
@@ -17,7 +17,7 @@
     // Override point for customization after application launch.
     
     //ViewController *lvc = [[ViewController alloc] init];
-    MenuViewController *menu = [[MenuViewController alloc] init];
+    GameViewController *menu = [[GameViewController alloc] init];
     
     [self.window setRootViewController:menu];
     

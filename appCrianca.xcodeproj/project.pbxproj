@@ -28,6 +28,8 @@
 		3106692218E2132200B48195 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3106692018E2132200B48195 /* ViewController.xib */; };
 		31189DEB18E358E00072D5CB /* Figura.m in Sources */ = {isa = PBXBuildFile; fileRef = 31189DEA18E358E00072D5CB /* Figura.m */; };
 		312A54B918EB3EAF0016DD32 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 312A54B818EB3EAF0016DD32 /* background.png */; };
+		312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 312A54BB18EB5C0C0016DD32 /* GameViewController.m */; };
+		312A54BE18EB5C0C0016DD32 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 312A54BC18EB5C0C0016DD32 /* GameViewController.xib */; };
 		3189376E18E4A88B0033B277 /* arcoiris.png in Resources */ = {isa = PBXBuildFile; fileRef = 3189376D18E4A88B0033B277 /* arcoiris.png */; };
 		3199B7E418E9FBF6003F0E2E /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E318E9FBF6003F0E2E /* home.png */; };
 		3199B7E918EA06C9003F0E2E /* starBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E718EA06C9003F0E2E /* starBlack.png */; };
@@ -77,6 +79,9 @@
 		31189DE918E358E00072D5CB /* Figura.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Figura.h; sourceTree = "<group>"; };
 		31189DEA18E358E00072D5CB /* Figura.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Figura.m; sourceTree = "<group>"; };
 		312A54B818EB3EAF0016DD32 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		312A54BA18EB5C0C0016DD32 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		312A54BB18EB5C0C0016DD32 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		312A54BC18EB5C0C0016DD32 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		3189376D18E4A88B0033B277 /* arcoiris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcoiris.png; sourceTree = "<group>"; };
 		3199B7E318E9FBF6003F0E2E /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		3199B7E718EA06C9003F0E2E /* starBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starBlack.png; sourceTree = "<group>"; };
@@ -152,6 +157,9 @@
 				310668E718E20BA800B48195 /* AppDelegate.m */,
 				31189DE918E358E00072D5CB /* Figura.h */,
 				31189DEA18E358E00072D5CB /* Figura.m */,
+				312A54BA18EB5C0C0016DD32 /* GameViewController.h */,
+				312A54BB18EB5C0C0016DD32 /* GameViewController.m */,
+				312A54BC18EB5C0C0016DD32 /* GameViewController.xib */,
 				F6A85CAB18EA013C00819310 /* MenuViewController.h */,
 				F6A85CAC18EA013C00819310 /* MenuViewController.m */,
 				F6A85CAD18EA013C00819310 /* MenuViewController.xib */,
@@ -305,6 +313,7 @@
 				1B8AC79B18E9E0E30083EBDD /* fase3.png in Resources */,
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
 				310668EA18E20BA800B48195 /* Images.xcassets in Resources */,
+				312A54BE18EB5C0C0016DD32 /* GameViewController.xib in Resources */,
 				3199B7E418E9FBF6003F0E2E /* home.png in Resources */,
 				31A1648518E60AF800FA391E /* CBL in Resources */,
 				31A1648318E5F8B400FA391E /* ok.png in Resources */,
@@ -328,6 +337,7 @@
 			files = (
 				310668E818E20BA800B48195 /* AppDelegate.m in Sources */,
 				F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */,
+				312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */,
 				31189DEB18E358E00072D5CB /* Figura.m in Sources */,
 				3106692118E2132200B48195 /* ViewController.m in Sources */,
 				F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */,
