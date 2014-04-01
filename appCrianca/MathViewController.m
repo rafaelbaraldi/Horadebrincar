@@ -98,6 +98,8 @@
         UITouch *touch = [touches anyObject];
         CGPoint currentPoint = [touch locationInView:self.view];
         
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        
         [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
         
         CGContextMoveToPoint(UIGraphicsGetCurrentContext(), [self lastPoint].x, [self lastPoint].y);
@@ -112,6 +114,7 @@
         [self setLastPoint:currentPoint];
     }
 }
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     
     //Remove linha do usuario
@@ -222,9 +225,11 @@
     [self performSelector:@selector(hiddenDedo) withObject:nil afterDelay:9];
 }
 
+
 -(void)hiddenDedo{
     [[self dedo]setHidden:YES];
 }
+
 
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     
