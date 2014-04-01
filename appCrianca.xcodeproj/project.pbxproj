@@ -34,6 +34,9 @@
 		3199B7EA18EA06C9003F0E2E /* starYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E818EA06C9003F0E2E /* starYellow.png */; };
 		31A1648318E5F8B400FA391E /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648218E5F8B400FA391E /* ok.png */; };
 		31A1648518E60AF800FA391E /* CBL in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648418E60AF800FA391E /* CBL */; };
+		F69272C418EB58E800DDBE8F /* Contas.m in Sources */ = {isa = PBXBuildFile; fileRef = F69272C318EB58E800DDBE8F /* Contas.m */; };
+		F69272CB18EB592100DDBE8F /* MathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F69272C918EB592100DDBE8F /* MathViewController.m */; };
+		F69272CC18EB592100DDBE8F /* MathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69272CA18EB592100DDBE8F /* MathViewController.xib */; };
 		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
 		F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A85CAD18EA013C00819310 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
@@ -83,6 +86,11 @@
 		3199B7E818EA06C9003F0E2E /* starYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starYellow.png; sourceTree = "<group>"; };
 		31A1648218E5F8B400FA391E /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 		31A1648418E60AF800FA391E /* CBL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBL; sourceTree = "<group>"; };
+		F69272C218EB58E800DDBE8F /* Contas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contas.h; sourceTree = "<group>"; };
+		F69272C318EB58E800DDBE8F /* Contas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contas.m; sourceTree = "<group>"; };
+		F69272C818EB592100DDBE8F /* MathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathViewController.h; sourceTree = "<group>"; };
+		F69272C918EB592100DDBE8F /* MathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathViewController.m; sourceTree = "<group>"; };
+		F69272CA18EB592100DDBE8F /* MathViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MathViewController.xib; sourceTree = "<group>"; };
 		F6A85CAB18EA013C00819310 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F6A85CAC18EA013C00819310 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F6A85CAD18EA013C00819310 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -150,8 +158,11 @@
 				31A1648418E60AF800FA391E /* CBL */,
 				310668E618E20BA800B48195 /* AppDelegate.h */,
 				310668E718E20BA800B48195 /* AppDelegate.m */,
-				31189DE918E358E00072D5CB /* Figura.h */,
-				31189DEA18E358E00072D5CB /* Figura.m */,
+				F69272C818EB592100DDBE8F /* MathViewController.h */,
+				F69272C918EB592100DDBE8F /* MathViewController.m */,
+				F69272CA18EB592100DDBE8F /* MathViewController.xib */,
+				F69272C218EB58E800DDBE8F /* Contas.h */,
+				F69272C318EB58E800DDBE8F /* Contas.m */,
 				F6A85CAB18EA013C00819310 /* MenuViewController.h */,
 				F6A85CAC18EA013C00819310 /* MenuViewController.m */,
 				F6A85CAD18EA013C00819310 /* MenuViewController.xib */,
@@ -160,6 +171,8 @@
 				3106692018E2132200B48195 /* ViewController.xib */,
 				F6B0ABBA18E4A971004F3C42 /* GestoArcoIris.h */,
 				F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */,
+				31189DE918E358E00072D5CB /* Figura.h */,
+				31189DEA18E358E00072D5CB /* Figura.m */,
 				3106690B18E20C1600B48195 /* imagens */,
 				310668E918E20BA800B48195 /* Images.xcassets */,
 				310668DE18E20BA800B48195 /* Supporting Files */,
@@ -296,6 +309,7 @@
 				3189376E18E4A88B0033B277 /* arcoiris.png in Resources */,
 				1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */,
 				3106692218E2132200B48195 /* ViewController.xib in Resources */,
+				F69272CC18EB592100DDBE8F /* MathViewController.xib in Resources */,
 				1BC90EA318E6125D002E91E3 /* fase2.png in Resources */,
 				F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */,
 				3106691D18E2110900B48195 /* fase1.png in Resources */,
@@ -326,6 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69272CB18EB592100DDBE8F /* MathViewController.m in Sources */,
+				F69272C418EB58E800DDBE8F /* Contas.m in Sources */,
 				310668E818E20BA800B48195 /* AppDelegate.m in Sources */,
 				F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */,
 				31189DEB18E358E00072D5CB /* Figura.m in Sources */,
