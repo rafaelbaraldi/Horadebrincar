@@ -136,4 +136,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)goBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:Nil];
+}
 @end

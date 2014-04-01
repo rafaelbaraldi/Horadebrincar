@@ -30,6 +30,7 @@
 		312A54B918EB3EAF0016DD32 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 312A54B818EB3EAF0016DD32 /* background.png */; };
 		312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 312A54BB18EB5C0C0016DD32 /* GameViewController.m */; };
 		312A54BE18EB5C0C0016DD32 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 312A54BC18EB5C0C0016DD32 /* GameViewController.xib */; };
+		312A54C018EB61CD0016DD32 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 312A54BF18EB61CD0016DD32 /* back.png */; };
 		3189376E18E4A88B0033B277 /* arcoiris.png in Resources */ = {isa = PBXBuildFile; fileRef = 3189376D18E4A88B0033B277 /* arcoiris.png */; };
 		3199B7E418E9FBF6003F0E2E /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E318E9FBF6003F0E2E /* home.png */; };
 		3199B7E918EA06C9003F0E2E /* starBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E718EA06C9003F0E2E /* starBlack.png */; };
@@ -82,6 +83,7 @@
 		312A54BA18EB5C0C0016DD32 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		312A54BB18EB5C0C0016DD32 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		312A54BC18EB5C0C0016DD32 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		312A54BF18EB61CD0016DD32 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		3189376D18E4A88B0033B277 /* arcoiris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcoiris.png; sourceTree = "<group>"; };
 		3199B7E318E9FBF6003F0E2E /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		3199B7E718EA06C9003F0E2E /* starBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starBlack.png; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		3106690B18E20C1600B48195 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				312A54BF18EB61CD0016DD32 /* back.png */,
 				312A54B818EB3EAF0016DD32 /* background.png */,
 				3199B7E718EA06C9003F0E2E /* starBlack.png */,
 				3199B7E818EA06C9003F0E2E /* starYellow.png */,
@@ -302,6 +305,7 @@
 			files = (
 				1BC90EA118E611C7002E91E3 /* finger.png in Resources */,
 				312A54B918EB3EAF0016DD32 /* background.png in Resources */,
+				312A54C018EB61CD0016DD32 /* back.png in Resources */,
 				3189376E18E4A88B0033B277 /* arcoiris.png in Resources */,
 				1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */,
 				3106692218E2132200B48195 /* ViewController.xib in Resources */,
