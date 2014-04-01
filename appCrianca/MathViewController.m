@@ -98,8 +98,6 @@
         UITouch *touch = [touches anyObject];
         CGPoint currentPoint = [touch locationInView:self.view];
         
-        UIGraphicsBeginImageContext(self.view.frame.size);
-        
         [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
         
         CGContextMoveToPoint(UIGraphicsGetCurrentContext(), [self lastPoint].x, [self lastPoint].y);
@@ -114,7 +112,6 @@
         [self setLastPoint:currentPoint];
     }
 }
-
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     
     //Remove linha do usuario
@@ -205,29 +202,28 @@
     //Roda dedo
     CABasicAnimation *animRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     animRotation.toValue  = @(M_PI / 4);
-    animRotation.duration = 4;
-    animRotation.removedOnCompletion = NO;
-    animRotation.fillMode = kCAFillModeForwards;
-    [_dedo.layer addAnimation:animRotation forKey:@"position.z"];
+    animRotation.duration = 3;
+    animRotation.repeatCount = 3;
+    [[self dedo].layer addAnimation:animRotation forKey:@"position.z"];
     
-    //Anda pra cima
-    CABasicAnimation *animAndar1 = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
-    animAndar1.toValue  = [NSNumber numberWithInt:480];
-    animAndar1.duration = 5;
-    animAndar1.removedOnCompletion = NO;
-    animAndar1.fillMode = kCAFillModeForwards;
-    [_dedo.layer addAnimation:animAndar1 forKey:nil];
+    CGMutablePathRef caminho = CGPathCreateMutable();
+    CGPathMoveToPoint(caminho, NULL, 160, 700);
+    CGPathAddCurveToPoint(caminho, NULL, 260, 400, 530, 400, 590, 670);
     
-    //Anda ate a metade
-    CABasicAnimation *animAndar2 = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
-    animAndar2.toValue  = [NSNumber numberWithInt:-250];
-    animAndar2.duration = 2.5;
-    animAndar2.removedOnCompletion = NO;
-    animAndar2.fillMode = kCAFillModeForwards;
-    [animAndar2 setValue:@"subir" forKey:@"animaSubir"];
-    animAndar2.delegate = self;
-    [_dedo.layer addAnimation:animAndar2 forKey:nil];
+    CAKeyframeAnimation *animaDedo = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    [animaDedo setPath:caminho];
+    [animaDedo setDuration:3];
+    [animaDedo setRepeatCount:3];
+    [animaDedo setRemovedOnCompletion:NO];
+    [animaDedo setFillMode:kCAFillModeForwards];
+    [[[self dedo] layer]addAnimation:animaDedo forKey:nil];
     
+    //Gamb para sumir com o Dedo
+    [self performSelector:@selector(hiddenDedo) withObject:nil afterDelay:9];
+}
+
+-(void)hiddenDedo{
+    [[self dedo]setHidden:YES];
 }
 
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
@@ -252,12 +248,8 @@
     
     [[self view] removeGestureRecognizer:_gesto];
     
-    _faseAtual++;
-    if(_faseAtual > 2){
-        _faseAtual = 1;
-    }
-    
-    [self viewDidLoad];
+
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)desenhaLinha:(CGPoint) inicial :(CGPoint) final{
