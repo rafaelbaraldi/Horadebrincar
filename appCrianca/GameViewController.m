@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "MenuViewController.h"
+#import "MathViewController.h"
 
 
 @interface GameViewController ()
@@ -89,7 +90,7 @@
 -(void)botaoIrFaseSelecionada: (id) sender {
     UIButton *botao = (UIButton *) sender;
     
-    MenuViewController* newcontroller;
+    UIViewController* newcontroller;
     
     switch (botao.tag) {
         case 1:
@@ -97,7 +98,7 @@
             break;
             
         case 2:
-            newcontroller = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil] ;
+            newcontroller = [[MathViewController alloc] initWithNibName:@"MathViewController" bundle:nil] ;
             break;
             
         case 3:

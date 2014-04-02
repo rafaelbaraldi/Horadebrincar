@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B871DFA18EC802300162007 /* MathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B871DF818EC802300162007 /* MathViewController.m */; };
+		1B871DFB18EC802300162007 /* MathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B871DF918EC802300162007 /* MathViewController.xib */; };
+		1B871DFE18EC80C500162007 /* Contas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B871DFD18EC80C500162007 /* Contas.m */; };
 		1B8AC79B18E9E0E30083EBDD /* fase3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8AC79A18E9E0E30083EBDD /* fase3.png */; };
 		1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8AC79C18E9F31C0083EBDD /* fase4.png */; };
 		1BC90EA118E611C7002E91E3 /* finger.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC90EA018E611C7002E91E3 /* finger.png */; };
@@ -53,6 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B871DF718EC802300162007 /* MathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathViewController.h; sourceTree = "<group>"; };
+		1B871DF818EC802300162007 /* MathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathViewController.m; sourceTree = "<group>"; };
+		1B871DF918EC802300162007 /* MathViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MathViewController.xib; sourceTree = "<group>"; };
+		1B871DFC18EC80C500162007 /* Contas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contas.h; sourceTree = "<group>"; };
+		1B871DFD18EC80C500162007 /* Contas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contas.m; sourceTree = "<group>"; };
 		1B8AC79A18E9E0E30083EBDD /* fase3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fase3.png; sourceTree = "<group>"; };
 		1B8AC79C18E9F31C0083EBDD /* fase4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fase4.png; sourceTree = "<group>"; };
 		1BC90EA018E611C7002E91E3 /* finger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finger.png; sourceTree = "<group>"; };
@@ -158,8 +166,13 @@
 				310668E618E20BA800B48195 /* AppDelegate.h */,
 				310668E718E20BA800B48195 /* AppDelegate.m */,
 				31189DE918E358E00072D5CB /* Figura.h */,
+				1B871DF718EC802300162007 /* MathViewController.h */,
+				1B871DF818EC802300162007 /* MathViewController.m */,
+				1B871DF918EC802300162007 /* MathViewController.xib */,
 				31189DEA18E358E00072D5CB /* Figura.m */,
 				312A54BA18EB5C0C0016DD32 /* GameViewController.h */,
+				1B871DFC18EC80C500162007 /* Contas.h */,
+				1B871DFD18EC80C500162007 /* Contas.m */,
 				312A54BB18EB5C0C0016DD32 /* GameViewController.m */,
 				312A54BC18EB5C0C0016DD32 /* GameViewController.xib */,
 				F6A85CAB18EA013C00819310 /* MenuViewController.h */,
@@ -318,6 +331,7 @@
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
 				310668EA18E20BA800B48195 /* Images.xcassets in Resources */,
 				312A54BE18EB5C0C0016DD32 /* GameViewController.xib in Resources */,
+				1B871DFB18EC802300162007 /* MathViewController.xib in Resources */,
 				3199B7E418E9FBF6003F0E2E /* home.png in Resources */,
 				31A1648518E60AF800FA391E /* CBL in Resources */,
 				31A1648318E5F8B400FA391E /* ok.png in Resources */,
@@ -339,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B871DFA18EC802300162007 /* MathViewController.m in Sources */,
 				310668E818E20BA800B48195 /* AppDelegate.m in Sources */,
 				F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */,
 				312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */,
@@ -346,6 +361,7 @@
 				3106692118E2132200B48195 /* ViewController.m in Sources */,
 				F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */,
 				310668E418E20BA800B48195 /* main.m in Sources */,
+				1B871DFE18EC80C500162007 /* Contas.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

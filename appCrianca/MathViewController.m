@@ -87,9 +87,7 @@
         }
     }
     
-    
-    
-    
+    UIGraphicsBeginImageContext(self.view.frame.size);
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
