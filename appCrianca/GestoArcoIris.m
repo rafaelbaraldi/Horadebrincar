@@ -98,7 +98,7 @@
         //        //muda  a cor do fundo para reconhecimento visual para o usuario ver que o gesto foi reconhecido
     }
     else{
-        NSLog(@"falho pra finalizar");
+//        NSLog(@"falho pra finalizar");
         self.state = UIGestureRecognizerStateFailed;
     }
 }
