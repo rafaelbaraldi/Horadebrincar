@@ -10,6 +10,7 @@
 #import "MenuViewController.h"
 #import "MathViewController.h"
 #import "PontosViewController.h"
+#import "LabirintoViewController.h"
 
 @interface GameViewController ()
 
@@ -106,7 +107,7 @@
             break;
             
         case 4:
-            newcontroller = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil] ;
+            newcontroller = [[LabirintoViewController alloc] initWithNibName:@"LabirintoViewController" bundle:nil] ;
             break;
     }
         

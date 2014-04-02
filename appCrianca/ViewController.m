@@ -260,9 +260,6 @@
     [[self tempDrawImage] setImage:UIGraphicsGetImageFromCurrentImageContext()];
 }
 
-- (IBAction)go:(id)sender {
-}
-
 - (IBAction)goHome:(id)sender {
     [self dismissViewControllerAnimated:YES completion:Nil];
 }

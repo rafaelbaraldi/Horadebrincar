@@ -13,6 +13,10 @@
 		1B871E0218EC8A8400162007 /* PontosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B871E0018EC8A8400162007 /* PontosViewController.m */; };
 		1B871E0318EC8A8400162007 /* PontosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B871E0118EC8A8400162007 /* PontosViewController.xib */; };
 		1B871E0718EC8B3C00162007 /* pontosCaracol.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B871E0618EC8B3C00162007 /* pontosCaracol.png */; };
+		1B871E0E18EC9E8200162007 /* LabirintoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B871E0C18EC9E8200162007 /* LabirintoViewController.m */; };
+		1B871E0F18EC9E8200162007 /* LabirintoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B871E0D18EC9E8200162007 /* LabirintoViewController.xib */; };
+		1B871E1118EC9F8800162007 /* labirintoImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B871E1018EC9F8800162007 /* labirintoImg.png */; };
+		1B871E1418EC9FF300162007 /* GestoLabirinto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B871E1318EC9FF300162007 /* GestoLabirinto.m */; };
 		1B8AC79B18E9E0E30083EBDD /* fase3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8AC79A18E9E0E30083EBDD /* fase3.png */; };
 		1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8AC79C18E9F31C0083EBDD /* fase4.png */; };
 		1BC90EA118E611C7002E91E3 /* finger.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC90EA018E611C7002E91E3 /* finger.png */; };
@@ -68,6 +72,12 @@
 		1B871E0018EC8A8400162007 /* PontosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontosViewController.m; sourceTree = "<group>"; };
 		1B871E0118EC8A8400162007 /* PontosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PontosViewController.xib; sourceTree = "<group>"; };
 		1B871E0618EC8B3C00162007 /* pontosCaracol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pontosCaracol.png; sourceTree = "<group>"; };
+		1B871E0B18EC9E8200162007 /* LabirintoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabirintoViewController.h; sourceTree = "<group>"; };
+		1B871E0C18EC9E8200162007 /* LabirintoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabirintoViewController.m; sourceTree = "<group>"; };
+		1B871E0D18EC9E8200162007 /* LabirintoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabirintoViewController.xib; sourceTree = "<group>"; };
+		1B871E1018EC9F8800162007 /* labirintoImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = labirintoImg.png; sourceTree = "<group>"; };
+		1B871E1218EC9FF300162007 /* GestoLabirinto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoLabirinto.h; sourceTree = "<group>"; };
+		1B871E1318EC9FF300162007 /* GestoLabirinto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoLabirinto.m; sourceTree = "<group>"; };
 		1B8AC79A18E9E0E30083EBDD /* fase3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fase3.png; sourceTree = "<group>"; };
 		1B8AC79C18E9F31C0083EBDD /* fase4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fase4.png; sourceTree = "<group>"; };
 		1BC90EA018E611C7002E91E3 /* finger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finger.png; sourceTree = "<group>"; };
@@ -172,6 +182,9 @@
 				31A1648418E60AF800FA391E /* CBL */,
 				310668E618E20BA800B48195 /* AppDelegate.h */,
 				310668E718E20BA800B48195 /* AppDelegate.m */,
+				1B871E0B18EC9E8200162007 /* LabirintoViewController.h */,
+				1B871E0C18EC9E8200162007 /* LabirintoViewController.m */,
+				1B871E0D18EC9E8200162007 /* LabirintoViewController.xib */,
 				312A54BA18EB5C0C0016DD32 /* GameViewController.h */,
 				312A54BB18EB5C0C0016DD32 /* GameViewController.m */,
 				312A54BC18EB5C0C0016DD32 /* GameViewController.xib */,
@@ -185,6 +198,8 @@
 				31189DEA18E358E00072D5CB /* Figura.m */,
 				1B871DF718EC802300162007 /* MathViewController.h */,
 				1B871DF818EC802300162007 /* MathViewController.m */,
+				1B871E1218EC9FF300162007 /* GestoLabirinto.h */,
+				1B871E1318EC9FF300162007 /* GestoLabirinto.m */,
 				1B871DF918EC802300162007 /* MathViewController.xib */,
 				1B871DFC18EC80C500162007 /* Contas.h */,
 				1B871DFD18EC80C500162007 /* Contas.m */,
@@ -232,6 +247,7 @@
 		3106690B18E20C1600B48195 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				1B871E1018EC9F8800162007 /* labirintoImg.png */,
 				1B871E0618EC8B3C00162007 /* pontosCaracol.png */,
 				312A54BF18EB61CD0016DD32 /* back.png */,
 				312A54B818EB3EAF0016DD32 /* background.png */,
@@ -334,11 +350,13 @@
 				1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */,
 				3106692218E2132200B48195 /* ViewController.xib in Resources */,
 				1BC90EA318E6125D002E91E3 /* fase2.png in Resources */,
+				1B871E0F18EC9E8200162007 /* LabirintoViewController.xib in Resources */,
 				F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */,
 				3106691D18E2110900B48195 /* fase1.png in Resources */,
 				3199B7EA18EA06C9003F0E2E /* starYellow.png in Resources */,
 				3199B7E918EA06C9003F0E2E /* starBlack.png in Resources */,
 				1B8AC79B18E9E0E30083EBDD /* fase3.png in Resources */,
+				1B871E1118EC9F8800162007 /* labirintoImg.png in Resources */,
 				1B871E0718EC8B3C00162007 /* pontosCaracol.png in Resources */,
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
 				310668EA18E20BA800B48195 /* Images.xcassets in Resources */,
@@ -368,8 +386,10 @@
 			files = (
 				1B871DFA18EC802300162007 /* MathViewController.m in Sources */,
 				310668E818E20BA800B48195 /* AppDelegate.m in Sources */,
+				1B871E0E18EC9E8200162007 /* LabirintoViewController.m in Sources */,
 				F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */,
 				1B871E0218EC8A8400162007 /* PontosViewController.m in Sources */,
+				1B871E1418EC9FF300162007 /* GestoLabirinto.m in Sources */,
 				312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */,
 				31189DEB18E358E00072D5CB /* Figura.m in Sources */,
 				3106692118E2132200B48195 /* ViewController.m in Sources */,
