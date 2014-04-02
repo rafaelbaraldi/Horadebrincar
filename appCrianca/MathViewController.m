@@ -136,10 +136,22 @@
             if( [[self labelInicial] frame].origin.x != [labelFinal frame].origin.x){
                 
                 int x1 = [[self labelInicial] frame].origin.x + [[self labelInicial] frame].size.width/2 ;
+                int x2 = [labelFinal frame].origin.x + [labelFinal frame].size.width/2;
+                
+                if (x1 > x2) {
+                    x1 = [[self labelInicial] frame].origin.x;
+                    x2 = [labelFinal frame].origin.x + [labelFinal frame].size.width;
+                }
+                else{
+                    x1 = [[self labelInicial] frame].origin.x + [[self labelInicial] frame].size.width;
+                    x2 = [labelFinal frame].origin.x;
+                    
+                }
+                
                 int y1 = [[self labelInicial] frame].origin.y + [[self labelInicial] frame].size.height/2 ;
                 CGPoint centro1 = CGPointMake(x1, y1);
                 
-                int x2 = [labelFinal frame].origin.x + [labelFinal frame].size.width/2;
+                
                 int y2 = [labelFinal frame].origin.y + [labelFinal frame].size.height/2;
                 CGPoint centro2 = CGPointMake(x2, y2);
                 
@@ -264,6 +276,10 @@
     
     CGContextStrokePath(contexto);
     [[self tempDrawImage] setImage:UIGraphicsGetImageFromCurrentImageContext()];
+}
+
+- (IBAction)goHome:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:Nil];
 }
 
 @end
