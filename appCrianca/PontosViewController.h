@@ -10,4 +10,6 @@
 
 @interface PontosViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *tempDrawImage;
+
 @end
