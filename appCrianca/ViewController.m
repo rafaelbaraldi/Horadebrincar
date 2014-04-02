@@ -187,6 +187,7 @@
     }
 }
 
+//Anima Arco e Dedo
 -(void)animaArcoComDedo{
     
     //Adiciona arco-iris
@@ -223,7 +224,7 @@
     [self performSelector:@selector(hiddenDedo) withObject:nil afterDelay:9];
 }
 
-//some com o dedo
+//Some com o dedo
 -(void)hiddenDedo{
     [[self dedo]setHidden:YES];
 }

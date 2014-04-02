@@ -14,9 +14,10 @@
 @property int x2;
 @property int y1;
 @property int y2;
-@property NSString *tag;
+@property int tag;
 
--(id)initWithX1:(int)x1 y1:(int)y1 x2:(int)x2 y2:(int)y2;
+-(id)initWithX1:(int)x1 y1:(int)y1 x2:(int)x2 y2:(int)y2 tag:(int)tag;
+
 +(NSMutableArray*)retornaPontosFase1;
 +(NSMutableArray*)retornaPontosFase2;
 +(NSMutableArray*)retornaPontosFase3;

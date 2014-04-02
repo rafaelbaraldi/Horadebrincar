@@ -20,5 +20,13 @@
 @property UIImageView *arcoiris;
 @property GestoArcoIris* gesto;
 
+@property int faseAtual;
+
+@property NSMutableArray *pontos;
+
+@property UIImage* anterior;
+
+@property Pontos *pontoFinal;
+@property Pontos *pontoInicial;
 
 @end
