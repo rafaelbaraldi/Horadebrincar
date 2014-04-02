@@ -9,7 +9,7 @@
 #import "GameViewController.h"
 #import "MenuViewController.h"
 #import "MathViewController.h"
-
+#import "PontosViewController.h"
 
 @interface GameViewController ()
 
@@ -102,7 +102,7 @@
             break;
             
         case 3:
-            newcontroller = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil] ;
+            newcontroller = [[PontosViewController alloc] initWithNibName:@"PontosViewController" bundle:nil] ;
             break;
             
         case 4:
