@@ -43,6 +43,7 @@
 		3199B7EA18EA06C9003F0E2E /* starYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E818EA06C9003F0E2E /* starYellow.png */; };
 		31A1648318E5F8B400FA391E /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648218E5F8B400FA391E /* ok.png */; };
 		31A1648518E60AF800FA391E /* CBL in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648418E60AF800FA391E /* CBL */; };
+		F6A3891618EC93DC004AEE2B /* Pontos.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A3891518EC93DC004AEE2B /* Pontos.m */; };
 		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
 		F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A85CAD18EA013C00819310 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
@@ -105,6 +106,8 @@
 		3199B7E818EA06C9003F0E2E /* starYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starYellow.png; sourceTree = "<group>"; };
 		31A1648218E5F8B400FA391E /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 		31A1648418E60AF800FA391E /* CBL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBL; sourceTree = "<group>"; };
+		F6A3891418EC93DC004AEE2B /* Pontos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pontos.h; sourceTree = "<group>"; };
+		F6A3891518EC93DC004AEE2B /* Pontos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pontos.m; sourceTree = "<group>"; };
 		F6A85CAB18EA013C00819310 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F6A85CAC18EA013C00819310 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F6A85CAD18EA013C00819310 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 				31A1648418E60AF800FA391E /* CBL */,
 				310668E618E20BA800B48195 /* AppDelegate.h */,
 				310668E718E20BA800B48195 /* AppDelegate.m */,
+				F6B0ABBA18E4A971004F3C42 /* GestoArcoIris.h */,
+				F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */,
 				312A54BA18EB5C0C0016DD32 /* GameViewController.h */,
 				312A54BB18EB5C0C0016DD32 /* GameViewController.m */,
 				312A54BC18EB5C0C0016DD32 /* GameViewController.xib */,
@@ -191,8 +196,8 @@
 				1B871DFF18EC8A8400162007 /* PontosViewController.h */,
 				1B871E0018EC8A8400162007 /* PontosViewController.m */,
 				1B871E0118EC8A8400162007 /* PontosViewController.xib */,
-				F6B0ABBA18E4A971004F3C42 /* GestoArcoIris.h */,
-				F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */,
+				F6A3891418EC93DC004AEE2B /* Pontos.h */,
+				F6A3891518EC93DC004AEE2B /* Pontos.m */,
 				3106690B18E20C1600B48195 /* imagens */,
 				310668E918E20BA800B48195 /* Images.xcassets */,
 				310668DE18E20BA800B48195 /* Supporting Files */,
@@ -372,6 +377,7 @@
 				1B871E0218EC8A8400162007 /* PontosViewController.m in Sources */,
 				312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */,
 				31189DEB18E358E00072D5CB /* Figura.m in Sources */,
+				F6A3891618EC93DC004AEE2B /* Pontos.m in Sources */,
 				3106692118E2132200B48195 /* ViewController.m in Sources */,
 				F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */,
 				310668E418E20BA800B48195 /* main.m in Sources */,
