@@ -39,53 +39,60 @@
     [[self errou] setFrame:CGRectMake([[self view] bounds].size.width/2-75, CGRectGetMidY([self view].frame) + 300, 150, 150)];
     [[self errou] setAlpha:0];
     [self.view addSubview:[self errou]];
+    [self setGanhou:NO];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
-    UITouch *touch = [touches anyObject];
-    CGPoint currentPoint = [touch locationInView:self.view];
-    
-    [self setLastPoint:currentPoint];
-    UIGraphicsBeginImageContext(self.view.frame.size);
+    if(![self ganhou]){
+        UITouch *touch = [touches anyObject];
+        CGPoint currentPoint = [touch locationInView:self.view];
+        
+        [self setLastPoint:currentPoint];
+        UIGraphicsBeginImageContext(self.view.frame.size);
+    }
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     
-    if([[self view] tag] == 0){
-        UITouch *touch = [touches anyObject];
-        CGPoint currentPoint = [touch locationInView:self.view];
+    if(![self ganhou]){
+        if([[self view] tag] == 0){
+            UITouch *touch = [touches anyObject];
+            CGPoint currentPoint = [touch locationInView:self.view];
 
 
-        [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+            [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 
-        CGContextMoveToPoint(UIGraphicsGetCurrentContext(), [self lastPoint].x, [self lastPoint].y);
-        CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
-        CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 10.0);
+            CGContextMoveToPoint(UIGraphicsGetCurrentContext(), [self lastPoint].x, [self lastPoint].y);
+            CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
+            CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
+            CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 10.0);
 
-        CGContextStrokePath(UIGraphicsGetCurrentContext());
+            CGContextStrokePath(UIGraphicsGetCurrentContext());
 
-        [[self tempDrawImage] setImage:UIGraphicsGetImageFromCurrentImageContext()];
+            [[self tempDrawImage] setImage:UIGraphicsGetImageFromCurrentImageContext()];
 
-        [self setLastPoint:currentPoint];
-    }
-    else{
-        //Errou, zerou
-        [self hiddenImageView];
-        
-        //Exibe o Erro
-        [self animaErro];
+            [self setLastPoint:currentPoint];
+        }
+        else{
+            //Errou, zerou
+            [self hiddenImageView];
+            
+            //Exibe o Erro
+            [self animaErro];
+        }
     }
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    if([[self gesto] state] != UIGestureRecognizerStateRecognized){
-        //Errou, zerou
-        [self hiddenImageView];
-        
-        //Exibe o Erro
-        [self animaErro];
+    if(![self ganhou]){
+        if([[self gesto] state] != UIGestureRecognizerStateRecognized){
+            //Errou, zerou
+            [self hiddenImageView];
+            
+            //Exibe o Erro
+            [self animaErro];
+        }
     }
 }
 
