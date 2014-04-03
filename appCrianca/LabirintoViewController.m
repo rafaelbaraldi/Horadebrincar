@@ -19,6 +19,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        [[self view] setTag:0];
     }
     return self;
 }
@@ -42,35 +44,32 @@
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    UITouch *touch = [touches anyObject];
-    CGPoint currentPoint = [touch locationInView:self.view];
     
-    
-    [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    
-    CGContextMoveToPoint(UIGraphicsGetCurrentContext(), [self lastPoint].x, [self lastPoint].y);
-    CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
-    CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-    CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 10.0);
-    
-    CGContextStrokePath(UIGraphicsGetCurrentContext());
-    
-    [[self tempDrawImage] setImage:UIGraphicsGetImageFromCurrentImageContext()];
-    
-    [self setLastPoint:currentPoint];
-    
-    
-    BOOL errou = NO;
-    
-    for (GestoLabirinto* g in [[self view] gestureRecognizers]) {
-        if (g == [self gesto]) {
-            if(g.state == UIGestureRecognizerStateFailed){
-                errou = YES;
-            }
-        }
+    if([[self view] tag] == 0){
+        UITouch *touch = [touches anyObject];
+        CGPoint currentPoint = [touch locationInView:self.view];
+
+
+        [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+
+        CGContextMoveToPoint(UIGraphicsGetCurrentContext(), [self lastPoint].x, [self lastPoint].y);
+        CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
+        CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
+        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 10.0);
+
+        CGContextStrokePath(UIGraphicsGetCurrentContext());
+
+        [[self tempDrawImage] setImage:UIGraphicsGetImageFromCurrentImageContext()];
+
+        [self setLastPoint:currentPoint];
     }
-    
-    if(errou){
+    else{
+        [[self tempDrawImage] setImage:[UIImage imageNamed:@"labirintoImg.png"]];
+    }
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    if([[self gesto] state] != UIGestureRecognizerStateRecognized){
         [[self tempDrawImage] setImage:[UIImage imageNamed:@"labirintoImg.png"]];
     }
 }

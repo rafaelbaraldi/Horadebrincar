@@ -32,6 +32,10 @@
     if(toque.x < x1 || toque.x > x2 || toque.y < y1 || toque.y > y2){
        self.state = UIGestureRecognizerStateFailed;
         NSLog(@"comecou fora");
+        [[self view] setTag:1];
+    }
+    else{
+        [[self view] setTag:0];
     }
 }
 
@@ -52,8 +56,9 @@
        (toque.x < 445 || toque.x > 485 || toque.y < 570 || toque.y > 650) &&
        (toque.x < 445 || toque.x > 570 || toque.y < 610 || toque.y > 650) &&
        (toque.x < 525 || toque.x > 600 || toque.y < 610 || toque.y > 730)){
-        self.state = UIGestureRecognizerStateFailed;
+        self.state = 5;
         NSLog(@"errou o caminho, saiu do tracado");
+        [[self view] setTag:1];
     }
 }
 
