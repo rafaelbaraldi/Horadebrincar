@@ -24,10 +24,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-}
-
--(void)viewWillAppear:(BOOL)animated{
-        
+    
     NSMutableArray* conta = [Contas retornaContasFase: [self faseAtual]];
     
     [self setEquation: [conta firstObject]];
@@ -40,10 +37,10 @@
     for (int i = 0; i < tamanhoVetores ; i++) {
         posicao = posicao + 100;
         //coloca os frames no labels e mosta eles
-        [[[self equation] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/tamanhoVetores, posicao, 200 , 60) ];
+        [[[self equation] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/9, posicao, 200 , 60) ];
         [[self view] addSubview:[[self equation] objectAtIndex: i]];
         
-        [[[self solution] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/tamanhoVetores + 400, posicao, 200 , 60)];
+        [[[self solution] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/9 + 400, posicao, 200 , 60)];
         [[self view] addSubview:[[self solution] objectAtIndex: i]];
     }
     
@@ -57,7 +54,15 @@
         [[self solution] removeLastObject];
     }
     
+    [[self tempDrawImage]setImage:[UIImage imageNamed:@"matematica.png"]];
+    [[self tempDrawImage] setAlpha:1];
+    [self setAnterior:[UIImage imageNamed:@"matematica.png"]];
+    
     [self setGanhou:NO];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
     
 }
 
@@ -173,6 +178,10 @@
     //Verifica se Ganhou
     if([[self contas] count] == 0 && ![self ganhou]){
         
+        //Salva a fase vencida
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setBool:TRUE forKey:[NSString stringWithFormat:@"jogo %d - fase %d", 2, [self faseAtual]]];
+        
         _gesto = [[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)];
         [[self view] addGestureRecognizer:_gesto];
         
@@ -266,7 +275,7 @@
         _faseAtual = 1;
     }
     else{
-        [self viewWillAppear:NO];
+        [self viewDidLoad];
     }
 }
 

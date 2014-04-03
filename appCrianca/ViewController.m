@@ -62,10 +62,6 @@
     [self setGanhou:NO];
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    
-}
-
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
 }
@@ -160,7 +156,7 @@
         
         //Salva a fase vencida
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-        [prefs setBool:TRUE forKey:[NSString stringWithFormat:@"%d", [self faseAtual]]];
+        [prefs setBool:TRUE forKey:[NSString stringWithFormat:@"jogo %d - fase %d", 1, [self faseAtual]]];
         
         _gesto = [[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)];
         [[self view] addGestureRecognizer:_gesto];

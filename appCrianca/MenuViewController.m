@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "ViewController.h"
+#import "MathViewController.h"
 
 @interface MenuViewController ()
 
@@ -96,7 +97,7 @@
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
     for (UIImageView* fase in [self estrelas]) {
-        BOOL statusEstrela = (BOOL)[prefs boolForKey:[NSString stringWithFormat:@"%d", fase.tag]];
+        BOOL statusEstrela = (BOOL)[prefs boolForKey:[NSString stringWithFormat:@"jogo %d - fase %d", self.view.tag, fase.tag]];
         
         if(statusEstrela){
             [fase setImage:[UIImage imageNamed:@"starYellow.png"]];
@@ -105,7 +106,6 @@
 }
 
 -(void)controlaEstrela:(UIButton*)fase{
-    
     //Inicia estrela
     UIImageView *star = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"starBlack.png"]];
     star.tag = fase.tag;
@@ -115,10 +115,29 @@
 }
 
 -(void)botaoIrFaseSelecionada: (id) sender {
+    
+    int fase = [[self view] tag];
+    
     UIButton *botao = (UIButton *) sender;
-    ViewController * newcontroller = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] ;
-    [newcontroller setFaseAtual: [botao tag]];
-    [self presentViewController: newcontroller animated:YES completion:Nil];
+    
+    ViewController *vc;
+    MathViewController *mv;
+    
+    
+    switch (fase) {
+        case 1:
+            vc = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] ;
+            [vc setFaseAtual: [botao tag]];
+            [self presentViewController: vc animated:YES completion:Nil];
+            break;
+            
+        case 2:
+            mv = [[MathViewController alloc] initWithNibName:@"MathViewController" bundle:nil] ;
+            [mv setFaseAtual: [botao tag]];
+            [self presentViewController: mv animated:YES completion:Nil];
+        default:
+            break;
+    }
 }
 
 
