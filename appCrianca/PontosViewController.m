@@ -113,6 +113,10 @@
         _gesto = [[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)];
         [[self view] addGestureRecognizer:_gesto];
         
+        //Salva a fase vencida
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setBool:TRUE forKey:[NSString stringWithFormat:@"jogo %d - fase %d", 3, [self faseAtual]]];
+        
         //Set Alpha do Jogo
         [[self tempDrawImage] setAlpha:0.2];
         [self setGanhou:YES];
@@ -218,7 +222,7 @@
     CGContextMoveToPoint( contexto, inicial.x, inicial.y);     // ponto inicial da linha (farinha)
     CGContextAddLineToPoint( contexto, final.x, final.y); // ponto final da linha (pao) // falta descobrir o ponto exato
     CGContextSetLineCap( contexto, kCGLineCapRound);
-    CGContextSetLineWidth( contexto, 10.0);
+    CGContextSetLineWidth( contexto, 4.0);
 //    CGContextSetRGBStrokeColor(contexto, (arc4random()%750)/1000.0, (arc4random()%750)/1000.0, (arc4random()%750)/1000.0, 1.0);
     
     CGContextStrokePath(contexto);

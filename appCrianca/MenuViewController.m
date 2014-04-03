@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "MathViewController.h"
 #import "LabirintoViewController.h"
+#import "PontosViewController.h"
 
 @interface MenuViewController ()
 
@@ -124,7 +125,7 @@
     ViewController *vc;
     MathViewController *mv;
     LabirintoViewController *lv;
-    
+    PontosViewController *pv;
     
     switch (fase) {
         case 1:
@@ -137,6 +138,12 @@
             mv = [[MathViewController alloc] initWithNibName:@"MathViewController" bundle:nil] ;
             [mv setFaseAtual: [botao tag]];
             [self presentViewController: mv animated:YES completion:Nil];
+            break;
+            
+        case 3:
+            pv = [[PontosViewController alloc] initWithNibName:@"PontosViewController" bundle:nil] ;
+            [pv setFaseAtual: [botao tag]];
+            [self presentViewController: pv animated:YES completion:Nil];
             break;
             
         case 4:
