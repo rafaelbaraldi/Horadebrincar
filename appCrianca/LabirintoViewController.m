@@ -86,4 +86,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskPortrait;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
+}
+
 @end

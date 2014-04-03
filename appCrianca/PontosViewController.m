@@ -201,6 +201,13 @@
     [self dismissViewControllerAnimated:YES completion:Nil];
 }
 
-
+- (NSUInteger)supportedInterfaceOrientations
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskPortrait;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
+}
 
 @end
