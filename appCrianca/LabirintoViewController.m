@@ -7,6 +7,7 @@
 //
 
 #import "LabirintoViewController.h"
+#import "GestoLabirintoFase1.h"
 
 @interface LabirintoViewController ()
 
@@ -34,7 +35,7 @@
     
     switch ([self faseAtual]) {
         case 1:
-            [self setGesto:[[GestoLabirinto alloc] initWithTarget:self action:@selector(metodoDogesto)]];
+            [self setGesto:[[GestoLabirintoFase1 alloc] initWithTarget:self action:@selector(metodoDogesto)]];
             break;
             
         case 2:

@@ -16,7 +16,7 @@
 
 @property CGPoint lastPoint;
 
-@property GestoLabirinto* gesto;
+@property UIGestureRecognizer* gesto;
 @property GestoArcoIris* gestoArco;
 
 @property BOOL ganhou;

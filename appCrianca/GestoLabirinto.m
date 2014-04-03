@@ -31,7 +31,6 @@
     
     if(toque.x < x1 || toque.x > x2 || toque.y < y1 || toque.y > y2){
        self.state = UIGestureRecognizerStateFailed;
-//        NSLog(@"comecou fora");
         [[self view] setTag:1];
     }
     else{
