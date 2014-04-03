@@ -64,14 +64,34 @@
         [self setLastPoint:currentPoint];
     }
     else{
-        [[self tempDrawImage] setImage:[UIImage imageNamed:@"labirintoImg.png"]];
+        //Errou, zerou
+        [self hiddenImageView];
+        
+        //Exibe o Erro
+        [self animaErro];
     }
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     if([[self gesto] state] != UIGestureRecognizerStateRecognized){
-        [[self tempDrawImage] setImage:[UIImage imageNamed:@"labirintoImg.png"]];
+        //Errou, zerou
+        [self hiddenImageView];
+        
+        //Exibe o Erro
+        [self animaErro];
     }
+}
+
+//anima o Erro
+-(void)animaErro{
+    
+    //Image erro
+    [[self errou] setImage:[UIImage imageNamed:@"errou.png"]];
+}
+
+//Zera imagem
+-(void)hiddenImageView{
+    [[self tempDrawImage] setImage:[UIImage imageNamed:@"labirintoImg.png"]];
 }
 
 

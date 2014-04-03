@@ -51,6 +51,7 @@
 		3199B7EA18EA06C9003F0E2E /* starYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E818EA06C9003F0E2E /* starYellow.png */; };
 		31A1648318E5F8B400FA391E /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648218E5F8B400FA391E /* ok.png */; };
 		31A1648518E60AF800FA391E /* CBL in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648418E60AF800FA391E /* CBL */; };
+		31C4190218EDE62A004F83DE /* errou.png in Resources */ = {isa = PBXBuildFile; fileRef = 31C4190118EDE62A004F83DE /* errou.png */; };
 		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
 		F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A85CAD18EA013C00819310 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
@@ -124,6 +125,7 @@
 		3199B7E818EA06C9003F0E2E /* starYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starYellow.png; sourceTree = "<group>"; };
 		31A1648218E5F8B400FA391E /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 		31A1648418E60AF800FA391E /* CBL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBL; sourceTree = "<group>"; };
+		31C4190118EDE62A004F83DE /* errou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = errou.png; sourceTree = "<group>"; };
 		F6A85CAB18EA013C00819310 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F6A85CAC18EA013C00819310 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F6A85CAD18EA013C00819310 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		3106690B18E20C1600B48195 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				31C4190118EDE62A004F83DE /* errou.png */,
 				1BF7762318EDE19F00FC7C18 /* florzinha.gif */,
 				1BF7762418EDE19F00FC7C18 /* abelhinha.jpg */,
 				1BF7762518EDE19F00FC7C18 /* leaozinho.gif */,
@@ -362,6 +365,7 @@
 				312A54B918EB3EAF0016DD32 /* background.png in Resources */,
 				312A54C018EB61CD0016DD32 /* back.png in Resources */,
 				3189376E18E4A88B0033B277 /* arcoiris.png in Resources */,
+				31C4190218EDE62A004F83DE /* errou.png in Resources */,
 				1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */,
 				3106692218E2132200B48195 /* ViewController.xib in Resources */,
 				1BC90EA318E6125D002E91E3 /* fase2.png in Resources */,

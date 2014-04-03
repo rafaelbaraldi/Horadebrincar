@@ -21,6 +21,7 @@
 
 @property BOOL ganhou;
 
+@property UIImageView *errou;
 @property UIImageView *ok;
 @property UIImageView *arcoiris;
 @property UIImageView *dedo;
