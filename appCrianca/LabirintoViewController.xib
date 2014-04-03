@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="labirinto1.png" translatesAutoresizingMaskIntoConstraints="NO" id="8sg-vx-Wtt">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="labirinto2.png" translatesAutoresizingMaskIntoConstraints="NO" id="8sg-vx-Wtt">
                     <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
@@ -36,6 +36,6 @@
     </objects>
     <resources>
         <image name="back.png" width="180" height="180"/>
-        <image name="labirinto1.png" width="720" height="1024"/>
+        <image name="labirinto2.png" width="720" height="1024"/>
     </resources>
 </document>
