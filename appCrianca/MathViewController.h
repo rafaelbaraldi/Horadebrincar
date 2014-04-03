@@ -22,12 +22,11 @@
 @property UIImageView *ok;
 @property UIImageView *arcoiris;
 @property GestoArcoIris* gesto;
+@property int faseAtual;
 
 @property UILabel *labelInicial;
-
 @property NSMutableArray *equation;
 @property NSMutableArray *solution;
-
 @property NSMutableArray *contas;
 
 

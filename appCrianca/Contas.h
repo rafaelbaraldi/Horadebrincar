@@ -10,6 +10,8 @@
 
 @interface Contas : NSObject
 
-+(NSMutableArray*)retornaContas;
++(NSMutableArray*)retornaContasFase: (int)fase;
+
+
 
 @end

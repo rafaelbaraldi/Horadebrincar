@@ -18,16 +18,18 @@
     return self;
 }
 
-+(NSMutableArray*)retornaContas{
++(NSMutableArray*)retornaContasFase: (int)fase{
     
     NSMutableArray *equation =  [[NSMutableArray alloc] init];
     NSMutableArray *solution =  [[NSMutableArray alloc] init];
-
+    
+    int qteContas = fase*2 +1;
+    
     int valor1 ;
     int valor2 ;
     int operacao ;
     
-    for (int i = 0; i < 9; i++) {
+    for (int i = 0; i < qteContas; i++) {
         //posicao = posicao + 100;
         
         //soh coloca o frame nos labels depois da coluna de resposta estar alearotizada (ja implementado no view controller)
@@ -46,7 +48,7 @@
         solucao.font = [UIFont systemFontOfSize:40];
         
         valor1 = arc4random()%10 + 1;
-        valor2 = arc4random()%valor1;
+        valor2 = arc4random()%valor1;// evita a conta ter resultado negativo
         operacao = arc4random()%2;
         
         if (operacao == 0) { // 0 = soma, 1 = subtracao
@@ -69,8 +71,8 @@
     
     //faz a coluna de label de respostas ficar aleatoria
     for (int i = 0; i < 50; i++) {
-        valor1 = arc4random()%9;
-        valor2 = arc4random()%9;
+        valor1 = arc4random()%qteContas;
+        valor2 = arc4random()%qteContas;
         [solution exchangeObjectAtIndex:valor1 withObjectAtIndex: valor2];
     }
     
