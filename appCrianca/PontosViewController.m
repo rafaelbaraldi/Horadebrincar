@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        [self setFaseAtual:1];
+        //[self setFaseAtual:2];
     }
     return self;
 }
@@ -41,6 +41,28 @@
             [[self tempDrawImage] setImage:[UIImage imageNamed:@"pontosCaracol.png"]];
             [[self tempDrawImage] setAlpha:1];
             [self setAnterior:[UIImage imageNamed:@"pontosCaracol.png"]];
+            break;
+        case 2:
+            [self setPontos:[Pontos retornaPontosFase2]];
+            [[self tempDrawImage] setImage:[UIImage imageNamed:@"florzinha.gif"]];
+            [[self tempDrawImage] setAlpha:1];
+            [self setAnterior:[UIImage imageNamed:@"florzinha.gif"]];
+            break;
+            
+        case 3:
+            [self setPontos:[Pontos retornaPontosFase3]];
+            [[self tempDrawImage] setImage:[UIImage imageNamed:@"abelhinha.jpg"]];
+            [[self tempDrawImage] setAlpha:1];
+            [self setAnterior:[UIImage imageNamed:@"abelhinha.jpg"]];
+            break;
+            
+        case 4:
+            [self setPontos:[Pontos retornaPontosFase4]];
+            [[self tempDrawImage] setImage:[UIImage imageNamed:@"leaozinho.gif"]];
+            [[self tempDrawImage] setAlpha:1];
+            [self setAnterior:[UIImage imageNamed:@"leaozinho.gif"]];
+            break;
+        default:
             break;
     }
 }
@@ -177,8 +199,14 @@
     
     [[self view] removeGestureRecognizer:_gesto];
     
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    _faseAtual++;
+    if(_faseAtual > 4){
+        [self dismissViewControllerAnimated:YES completion:Nil];
+        _faseAtual = 1;
+    }
+    else{
+        [self viewDidLoad];
+    }
 }
 
 -(void)desenhaLinha:(CGPoint) inicial :(CGPoint) final{
