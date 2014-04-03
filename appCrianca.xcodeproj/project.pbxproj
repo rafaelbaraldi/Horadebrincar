@@ -48,6 +48,7 @@
 		3199B7EA18EA06C9003F0E2E /* starYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E818EA06C9003F0E2E /* starYellow.png */; };
 		31A1648318E5F8B400FA391E /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648218E5F8B400FA391E /* ok.png */; };
 		31A1648518E60AF800FA391E /* CBL in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648418E60AF800FA391E /* CBL */; };
+		31C4190018EDDE7D004F83DE /* matematica.png in Resources */ = {isa = PBXBuildFile; fileRef = 31C418FF18EDDE7D004F83DE /* matematica.png */; };
 		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
 		F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A85CAD18EA013C00819310 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
@@ -118,6 +119,7 @@
 		3199B7E818EA06C9003F0E2E /* starYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starYellow.png; sourceTree = "<group>"; };
 		31A1648218E5F8B400FA391E /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 		31A1648418E60AF800FA391E /* CBL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBL; sourceTree = "<group>"; };
+		31C418FF18EDDE7D004F83DE /* matematica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matematica.png; sourceTree = "<group>"; };
 		F6A85CAB18EA013C00819310 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F6A85CAC18EA013C00819310 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F6A85CAD18EA013C00819310 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 		3106690B18E20C1600B48195 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				31C418FF18EDDE7D004F83DE /* matematica.png */,
 				1B871E1018EC9F8800162007 /* labirintoImg.png */,
 				1B871E0618EC8B3C00162007 /* pontosCaracol.png */,
 				312A54BF18EB61CD0016DD32 /* back.png */,
@@ -363,6 +366,7 @@
 				1B8AC79B18E9E0E30083EBDD /* fase3.png in Resources */,
 				1B871E1118EC9F8800162007 /* labirintoImg.png in Resources */,
 				1B871E0718EC8B3C00162007 /* pontosCaracol.png in Resources */,
+				31C4190018EDDE7D004F83DE /* matematica.png in Resources */,
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
 				310668EA18E20BA800B48195 /* Images.xcassets in Resources */,
 				312A54BE18EB5C0C0016DD32 /* GameViewController.xib in Resources */,

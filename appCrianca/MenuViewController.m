@@ -97,7 +97,7 @@
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
     for (UIImageView* fase in [self estrelas]) {
-        BOOL statusEstrela = (BOOL)[prefs boolForKey:[NSString stringWithFormat:@"%d", fase.tag]];
+        BOOL statusEstrela = (BOOL)[prefs boolForKey:[NSString stringWithFormat:@"jogo %d - fase %d", self.view.tag, fase.tag]];
         
         if(statusEstrela){
             [fase setImage:[UIImage imageNamed:@"starYellow.png"]];
