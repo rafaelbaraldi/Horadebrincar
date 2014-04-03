@@ -56,6 +56,7 @@
 		31C4190218EDE62A004F83DE /* errou.png in Resources */ = {isa = PBXBuildFile; fileRef = 31C4190118EDE62A004F83DE /* errou.png */; };
 		31C4190418EDF2A8004F83DE /* labirinto1.png in Resources */ = {isa = PBXBuildFile; fileRef = 31C4190318EDF2A8004F83DE /* labirinto1.png */; };
 		31C4190618EE02F1004F83DE /* labirinto2.png in Resources */ = {isa = PBXBuildFile; fileRef = 31C4190518EE02F1004F83DE /* labirinto2.png */; };
+		31C4190818EE0585004F83DE /* labirinto3.png in Resources */ = {isa = PBXBuildFile; fileRef = 31C4190718EE0585004F83DE /* labirinto3.png */; };
 		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
 		F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A85CAD18EA013C00819310 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
@@ -135,6 +136,7 @@
 		31C4190118EDE62A004F83DE /* errou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = errou.png; sourceTree = "<group>"; };
 		31C4190318EDF2A8004F83DE /* labirinto1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = labirinto1.png; sourceTree = "<group>"; };
 		31C4190518EE02F1004F83DE /* labirinto2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = labirinto2.png; sourceTree = "<group>"; };
+		31C4190718EE0585004F83DE /* labirinto3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = labirinto3.png; sourceTree = "<group>"; };
 		F6A85CAB18EA013C00819310 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F6A85CAC18EA013C00819310 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F6A85CAD18EA013C00819310 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				1B871E1018EC9F8800162007 /* labirinto4.png */,
+				31C4190718EE0585004F83DE /* labirinto3.png */,
 				31C4190518EE02F1004F83DE /* labirinto2.png */,
 				31C4190318EDF2A8004F83DE /* labirinto1.png */,
 			);
@@ -406,6 +409,7 @@
 				31C4190218EDE62A004F83DE /* errou.png in Resources */,
 				1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */,
 				3106692218E2132200B48195 /* ViewController.xib in Resources */,
+				31C4190818EE0585004F83DE /* labirinto3.png in Resources */,
 				1BC90EA318E6125D002E91E3 /* fase2.png in Resources */,
 				1B871E0F18EC9E8200162007 /* LabirintoViewController.xib in Resources */,
 				F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */,
