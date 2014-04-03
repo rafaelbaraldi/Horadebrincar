@@ -55,6 +55,7 @@
 		31A1648518E60AF800FA391E /* CBL in Resources */ = {isa = PBXBuildFile; fileRef = 31A1648418E60AF800FA391E /* CBL */; };
 		31C4190218EDE62A004F83DE /* errou.png in Resources */ = {isa = PBXBuildFile; fileRef = 31C4190118EDE62A004F83DE /* errou.png */; };
 		31C4190418EDF2A8004F83DE /* labirinto1.png in Resources */ = {isa = PBXBuildFile; fileRef = 31C4190318EDF2A8004F83DE /* labirinto1.png */; };
+		31C4190618EE02F1004F83DE /* labirinto2.png in Resources */ = {isa = PBXBuildFile; fileRef = 31C4190518EE02F1004F83DE /* labirinto2.png */; };
 		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
 		F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A85CAD18EA013C00819310 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
@@ -133,6 +134,7 @@
 		31A1648418E60AF800FA391E /* CBL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBL; sourceTree = "<group>"; };
 		31C4190118EDE62A004F83DE /* errou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = errou.png; sourceTree = "<group>"; };
 		31C4190318EDF2A8004F83DE /* labirinto1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = labirinto1.png; sourceTree = "<group>"; };
+		31C4190518EE02F1004F83DE /* labirinto2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = labirinto2.png; sourceTree = "<group>"; };
 		F6A85CAB18EA013C00819310 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F6A85CAC18EA013C00819310 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F6A85CAD18EA013C00819310 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				1B871E1018EC9F8800162007 /* labirinto4.png */,
+				31C4190518EE02F1004F83DE /* labirinto2.png */,
 				31C4190318EDF2A8004F83DE /* labirinto1.png */,
 			);
 			name = Labirinto;
@@ -416,6 +419,7 @@
 				1BF7762718EDE19F00FC7C18 /* abelhinha.jpg in Resources */,
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
 				310668EA18E20BA800B48195 /* Images.xcassets in Resources */,
+				31C4190618EE02F1004F83DE /* labirinto2.png in Resources */,
 				312A54BE18EB5C0C0016DD32 /* GameViewController.xib in Resources */,
 				1B871DFB18EC802300162007 /* MathViewController.xib in Resources */,
 				3199B7E418E9FBF6003F0E2E /* home.png in Resources */,
