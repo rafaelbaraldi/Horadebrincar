@@ -178,7 +178,6 @@
         animacao.toValue = [NSNumber numberWithFloat:1.0f];
         [[_ok layer] addAnimation:animacao forKey:nil];
         
-
         [self performSelector:@selector(animaArcoComDedo) withObject:nil afterDelay:1.2];
     }
 }

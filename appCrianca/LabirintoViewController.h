@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GestoLabirinto.h"
+#import "GestoArcoIris.h"
 
 @interface LabirintoViewController : UIViewController
 
@@ -16,5 +17,14 @@
 @property CGPoint lastPoint;
 
 @property GestoLabirinto* gesto;
+@property GestoArcoIris* gestoArco;
+
+@property BOOL ganhou;
+
+@property UIImageView *ok;
+@property UIImageView *arcoiris;
+@property UIImageView *dedo;
+
+- (IBAction)goBack:(id)sender;
 
 @end
