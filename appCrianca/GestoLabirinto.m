@@ -56,9 +56,13 @@
        (toque.x < 445 || toque.x > 485 || toque.y < 570 || toque.y > 650) &&
        (toque.x < 445 || toque.x > 570 || toque.y < 610 || toque.y > 650) &&
        (toque.x < 525 || toque.x > 600 || toque.y < 610 || toque.y > 730)){
-        self.state = 5;
+        self.state = UIGestureRecognizerStateFailed;
         NSLog(@"errou o caminho, saiu do tracado");
         [[self view] setTag:1];
+    }
+    
+    if(toque.x > 550 && toque.x < 675 && toque.y > 620 && toque.y < 685){
+        self.state = UIGestureRecognizerStateRecognized;
     }
 }
 
