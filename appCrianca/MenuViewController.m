@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "ViewController.h"
 #import "MathViewController.h"
+#import "LabirintoViewController.h"
 
 @interface MenuViewController ()
 
@@ -122,6 +123,7 @@
     
     ViewController *vc;
     MathViewController *mv;
+    LabirintoViewController *lv;
     
     
     switch (fase) {
@@ -135,6 +137,14 @@
             mv = [[MathViewController alloc] initWithNibName:@"MathViewController" bundle:nil] ;
             [mv setFaseAtual: [botao tag]];
             [self presentViewController: mv animated:YES completion:Nil];
+            break;
+            
+        case 4:
+            lv = [[LabirintoViewController alloc] initWithNibName:@"LabirintoViewController" bundle:nil] ;
+            [lv setFaseAtual: [botao tag]];
+            [self presentViewController: lv animated:YES completion:Nil];
+            break;
+            
         default:
             break;
     }

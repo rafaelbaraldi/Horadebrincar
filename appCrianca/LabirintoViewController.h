@@ -26,6 +26,8 @@
 @property UIImageView *arcoiris;
 @property UIImageView *dedo;
 
+@property int faseAtual;
+
 - (IBAction)goBack:(id)sender;
 
 @end

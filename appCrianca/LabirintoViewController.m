@@ -19,8 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
-        [[self view] setTag:0];
+        [self setFaseAtual:1];
     }
     return self;
 }
@@ -30,7 +29,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self setGesto:[[GestoLabirinto alloc] initWithTarget:self action:@selector(metodoDogesto)]];
+    
+    [[self view] setTag:0];
+    
+    switch ([self faseAtual]) {
+        case 1:
+            [self setGesto:[[GestoLabirinto alloc] initWithTarget:self action:@selector(metodoDogesto)]];
+            break;
+            
+        case 2:
+            [self setGesto:[[GestoLabirinto alloc] initWithTarget:self action:@selector(metodoDogesto)]];
+            break;
+            
+        case 3:
+            [self setGesto:[[GestoLabirinto alloc] initWithTarget:self action:@selector(metodoDogesto)]];
+            break;
+            
+        case 4:
+            [self setGesto:[[GestoLabirinto alloc] initWithTarget:self action:@selector(metodoDogesto)]];
+            break;
+            
+        default:
+            break;
+    }
+    
     [[self view] addGestureRecognizer:[self gesto]];
     
     //Image erro
@@ -39,6 +61,9 @@
     [[self errou] setFrame:CGRectMake([[self view] bounds].size.width/2-75, CGRectGetMidY([self view].frame) + 300, 150, 150)];
     [[self errou] setAlpha:0];
     [self.view addSubview:[self errou]];
+    
+    [self hiddenImageView];
+    
     [self setGanhou:NO];
 }
 
@@ -108,7 +133,30 @@
 
 //Zera imagem
 -(void)hiddenImageView{
-    [[self tempDrawImage] setImage:[UIImage imageNamed:@"labirintoImg.png"]];
+    switch ([self faseAtual]) {
+        case 1:
+            [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"labirinto%d.png", [self faseAtual]]]];
+            [[self tempDrawImage] setAlpha:1];
+            break;
+            
+        case 2:
+            [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"labirinto%d.png", [self faseAtual]]]];
+            [[self tempDrawImage] setAlpha:1];
+            break;
+            
+        case 3:
+            [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"labirinto%d.png", [self faseAtual]]]];
+            [[self tempDrawImage] setAlpha:1];
+            break;
+            
+        case 4:
+            [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"labirinto%d.png", [self faseAtual]]]];
+            [[self tempDrawImage] setAlpha:1];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 -(void)metodoDogesto{
@@ -188,17 +236,17 @@
     [_arcoiris removeFromSuperview];
     [_dedo removeFromSuperview];
     
-    [[self view] removeGestureRecognizer:_gesto];
+    [[self view] removeGestureRecognizer:_gestoArco];
     
-//    _faseAtual++;
-//    if(_faseAtual > 4){
+    _faseAtual++;
+    if(_faseAtual > 4){
         [self dismissViewControllerAnimated:YES completion:Nil];
-//        _faseAtual = 1;
-//    }
-//    else{
-//        [self viewDidLoad];
-//    }
-    
+        _faseAtual = 1;
+    }
+    else{
+        [self viewDidLoad];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning

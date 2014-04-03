@@ -92,30 +92,10 @@
     UIButton *botao = (UIButton *) sender;
     
     UIViewController* newcontroller;
-//    newcontroller = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil] ;
+    newcontroller = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil] ;
     
-//    [[newcontroller view] setTag:[botao tag]];
+    [[newcontroller view] setTag:[botao tag]];
     
-    
-    switch (botao.tag) {
-        case 1:
-            newcontroller = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
-            [[newcontroller view] setTag:[botao tag]];
-            break;
-            
-        case 2:
-            newcontroller = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
-            [[newcontroller view] setTag:[botao tag]];
-            break;
-            
-        case 3:
-            newcontroller = [[PontosViewController alloc] initWithNibName:@"PontosViewController" bundle:nil];
-            break;
-            
-        case 4:
-            newcontroller = [[LabirintoViewController alloc] initWithNibName:@"LabirintoViewController" bundle:nil];
-            break;
-    }
     
     [self presentViewController: newcontroller animated:YES completion:Nil];
 
