@@ -9,6 +9,7 @@
 #import "LabirintoViewController.h"
 #import "GestoLabirintoFase1.h"
 #import "GestoLabirintoFase2.h"
+#import "GestoLabirintoFase3.h"
 
 @interface LabirintoViewController ()
 
@@ -44,7 +45,7 @@
             break;
             
         case 3:
-            [self setGesto:[[GestoLabirinto alloc] initWithTarget:self action:@selector(metodoDogesto)]];
+            [self setGesto:[[GestoLabirintoFase3 alloc] initWithTarget:self action:@selector(metodoDogesto)]];
             break;
             
         case 4:
@@ -162,6 +163,10 @@
 }
 
 -(void)metodoDogesto{
+    //Salva a fase vencida
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setBool:TRUE forKey:[NSString stringWithFormat:@"jogo %d - fase %d", 4, [self faseAtual]]];
+    
     [[self tempDrawImage] setImage:UIGraphicsGetImageFromCurrentImageContext()];
     
     //Gesto do Arco

@@ -27,6 +27,7 @@
 		1BF7762D18EDFDD200FC7C18 /* matematica.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF7762C18EDFDD200FC7C18 /* matematica.png */; };
 		1BF7763018EDFEC200FC7C18 /* GestoLabirintoFase1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF7762F18EDFEC200FC7C18 /* GestoLabirintoFase1.m */; };
 		1BF7763318EE03B200FC7C18 /* GestoLabirintoFase2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF7763218EE03B200FC7C18 /* GestoLabirintoFase2.m */; };
+		2F5DE55A18EE58BE00AC13D8 /* GestoLabirintoFase3.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DE55918EE58BE00AC13D8 /* GestoLabirintoFase3.m */; };
 		2F63489F18ECF0F900E5E7A8 /* Pontos.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F63489E18ECF0F900E5E7A8 /* Pontos.m */; };
 		310668D818E20BA800B48195 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310668D718E20BA800B48195 /* Foundation.framework */; };
 		310668DA18E20BA800B48195 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310668D918E20BA800B48195 /* CoreGraphics.framework */; };
@@ -101,6 +102,8 @@
 		1BF7762F18EDFEC200FC7C18 /* GestoLabirintoFase1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoLabirintoFase1.m; sourceTree = "<group>"; };
 		1BF7763118EE03B200FC7C18 /* GestoLabirintoFase2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoLabirintoFase2.h; sourceTree = "<group>"; };
 		1BF7763218EE03B200FC7C18 /* GestoLabirintoFase2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoLabirintoFase2.m; sourceTree = "<group>"; };
+		2F5DE55818EE58BE00AC13D8 /* GestoLabirintoFase3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoLabirintoFase3.h; sourceTree = "<group>"; };
+		2F5DE55918EE58BE00AC13D8 /* GestoLabirintoFase3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoLabirintoFase3.m; sourceTree = "<group>"; };
 		2F63489D18ECF0F900E5E7A8 /* Pontos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pontos.h; sourceTree = "<group>"; };
 		2F63489E18ECF0F900E5E7A8 /* Pontos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pontos.m; sourceTree = "<group>"; };
 		310668D418E20BA800B48195 /* appCrianca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appCrianca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +276,8 @@
 				310668E918E20BA800B48195 /* Images.xcassets */,
 				310668DE18E20BA800B48195 /* Supporting Files */,
 				1BF7762E18EDFEC200FC7C18 /* GestoLabirintoFase1.h */,
+				2F5DE55818EE58BE00AC13D8 /* GestoLabirintoFase3.h */,
+				2F5DE55918EE58BE00AC13D8 /* GestoLabirintoFase3.m */,
 				1BF7762F18EDFEC200FC7C18 /* GestoLabirintoFase1.m */,
 				1BF7763118EE03B200FC7C18 /* GestoLabirintoFase2.h */,
 				1BF7763218EE03B200FC7C18 /* GestoLabirintoFase2.m */,
@@ -463,6 +468,7 @@
 				1BF7763018EDFEC200FC7C18 /* GestoLabirintoFase1.m in Sources */,
 				1B871E0218EC8A8400162007 /* PontosViewController.m in Sources */,
 				1B871E1418EC9FF300162007 /* GestoLabirinto.m in Sources */,
+				2F5DE55A18EE58BE00AC13D8 /* GestoLabirintoFase3.m in Sources */,
 				312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */,
 				31189DEB18E358E00072D5CB /* Figura.m in Sources */,
 				3106692118E2132200B48195 /* ViewController.m in Sources */,
