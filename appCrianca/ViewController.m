@@ -47,11 +47,21 @@
             [self setAnterior:[UIImage imageNamed:@"fase3.png"]];
             break;
             
+            //        case 4:
+            //            [self setFiguras:[Figura retornaFiguraFase4]];
+            //            [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
+            //            [[self tempDrawImage] setAlpha:1];
+            //            [self setAnterior:[UIImage imageNamed:@"fase4.png"]];
+            //            break;
+            
         case 4:
-            [self setFiguras:[Figura retornaFiguraFase4]];
-            [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
+            [self setFiguras:[Figura retornaFiguraFaseRandom]];
+            [[self tempDrawImage]setImage:[UIImage imageNamed:@"matematica.png"]];
             [[self tempDrawImage] setAlpha:1];
-            [self setAnterior:[UIImage imageNamed:@"fase4.png"]];
+            [self setAnterior:[UIImage imageNamed:@"matematica.png"]];
+            for(Figura *f in [self figuras]){
+                [[self view]addSubview: [f imgView]];
+            }
             break;
             
         default:
@@ -127,7 +137,7 @@
         
         if([[[self figuraInicial] tag] isEqualToString:[figuraFinal tag]]){
             if([[self figuraInicial] x1] != [figuraFinal x1]){
-            
+                
                 int x1 = ([[self figuraInicial] x1] + ( ([[self figuraInicial] x2] - [[self figuraInicial] x1]) / 2) );
                 int y1 = ([[self figuraInicial] y1] + [[self figuraInicial] y2]) / 2;
                 
@@ -160,7 +170,7 @@
         
         _gesto = [[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)];
         [[self view] addGestureRecognizer:_gesto];
-
+        
         //Set Alpha do Jogo
         [[self tempDrawImage] setAlpha:0.2];
         [self setGanhou:YES];
@@ -214,7 +224,7 @@
     [animaDedo setRemovedOnCompletion:NO];
     [animaDedo setFillMode:kCAFillModeForwards];
     [[[self dedo] layer]addAnimation:animaDedo forKey:nil];
-
+    
     //Gamb para sumir com o Dedo
     [self performSelector:@selector(hiddenDedo) withObject:nil afterDelay:9];
 }

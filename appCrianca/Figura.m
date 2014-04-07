@@ -96,4 +96,110 @@
     return figurasFase;
 }
 
++(NSMutableArray*)retornaFiguraFaseRandom{
+    int qteImagensColuna = 4;
+    
+    NSMutableArray * colunaDireita = [[NSMutableArray alloc] init];
+    NSMutableArray * colunaEsquerda = [[NSMutableArray alloc] init];
+    
+    int numero;
+    int sorteados[4];
+    for (int i = 0; i < 4;  i++) {
+        sorteados[i] = -1;
+    }
+    BOOL existe = FALSE;
+    
+    for (int i = 0; i < qteImagensColuna; i++) {
+        do {//sorteia um numero dos possivels de imagems e ve se nao ja foi sorteado antes
+            numero = arc4random()%20;
+            for (int j = 0; j < 4; j++) {
+                if (sorteados[j] == numero) {
+                    existe = TRUE;
+                    break;
+                }
+                else{
+                    existe = FALSE;
+                }
+            }
+        }while (existe);
+        sorteados[i]= numero;
+        
+        Figura *figEsquerda= [[Figura alloc] initWithX1:50 y1:0 x2:250 y2:0 tag: [NSString stringWithFormat:@"%d", numero ]];
+        Figura *figDireita = [[Figura alloc] initWithX1:520 y1:0 x2:720 y2:0 tag: [NSString stringWithFormat:@"%d", numero ]];
+        
+        [figEsquerda setImgView: [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"esquerda%d.png", numero ]]]];
+        [figDireita setImgView: [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"direita%d.png", numero ]]]];
+        
+        [colunaEsquerda addObject: figEsquerda];
+        [colunaDireita addObject: figDireita];
+        
+    }
+    
+    //faz a coluna de imagems de respostas ficar aleatoria
+    for (int i = 0; i < 50; i++) {
+        int valor1 = arc4random()%qteImagensColuna;
+        int valor2 = arc4random()%qteImagensColuna;
+        [colunaEsquerda exchangeObjectAtIndex:valor1 withObjectAtIndex: valor2];
+    }
+    
+    for (int i = 0; i < 4; i++) {
+        switch (i) {
+            case 0:
+                [[[colunaEsquerda objectAtIndex:i] imgView] setFrame: CGRectMake(50, 100 , 200, 200)];
+                [[colunaEsquerda objectAtIndex:i] setY1: 100];
+                [[colunaEsquerda objectAtIndex:i] setY2: 300];
+                
+                [[[colunaDireita objectAtIndex:i] imgView] setFrame: CGRectMake(520, 100 , 200, 200)];
+                [[colunaDireita objectAtIndex:i] setY1: 100];
+                [[colunaDireita objectAtIndex:i] setY2: 300];
+                
+                break;
+            case 1:
+                [[[colunaEsquerda objectAtIndex:i] imgView]setFrame: CGRectMake(50, 320, 200, 200)];
+                [[colunaEsquerda objectAtIndex:i] setY1: 320];
+                [[colunaEsquerda objectAtIndex:i] setY2: 520];
+                
+                [[[colunaDireita objectAtIndex:i] imgView] setFrame: CGRectMake(520, 320, 200, 200)];
+                [[colunaDireita objectAtIndex:i] setY1: 320];
+                [[colunaDireita objectAtIndex:i] setY2: 520];
+                break;
+            case 2:
+                [[[colunaEsquerda objectAtIndex:i] imgView]setFrame: CGRectMake(50, 540, 200, 200)];
+                [[colunaEsquerda objectAtIndex:i] setY1: 540];
+                [[colunaEsquerda objectAtIndex:i] setY2: 740];
+                
+                [[[colunaDireita objectAtIndex:i] imgView] setFrame: CGRectMake(520, 540, 200, 200)];
+                [[colunaDireita objectAtIndex:i] setY1: 540];
+                [[colunaDireita objectAtIndex:i] setY2: 740];
+                break;
+            case 3:
+                [[[colunaEsquerda objectAtIndex:i] imgView] setFrame: CGRectMake(50, 760, 200, 200)];
+                [[colunaEsquerda objectAtIndex:i] setY1: 760];
+                [[colunaEsquerda objectAtIndex:i] setY2: 960];
+                
+                [[[colunaDireita objectAtIndex:i] imgView] setFrame: CGRectMake(520, 760, 200, 200)];
+                [[colunaDireita objectAtIndex:i] setY1: 760];
+                [[colunaDireita objectAtIndex:i] setY2: 960];
+                break;
+        }
+        
+    }
+    
+    
+    NSMutableArray * colunas = [[NSMutableArray alloc] init];
+    for (int i = 0;  i < qteImagensColuna ; i++) {
+        [colunas addObject: [colunaEsquerda lastObject]];
+        [colunaEsquerda removeLastObject];
+        
+        [colunas addObject: [colunaDireita lastObject]];
+        [colunaDireita removeLastObject];
+    }
+    
+    
+    return colunas;
+    
+}
+
+
+
 @end
