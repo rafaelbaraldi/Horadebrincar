@@ -36,6 +36,7 @@
         //UILabel *equacao = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/9, posicao, 200 , 60)];
         UILabel *equacao = [[UILabel alloc] init];
         equacao.textColor = [UIColor blackColor];
+        equacao.layer.cornerRadius = 20;
         equacao.backgroundColor = [UIColor greenColor];
         [equacao setTextAlignment: NSTextAlignmentCenter];
         equacao.font = [UIFont systemFontOfSize:40];
@@ -44,6 +45,7 @@
         UILabel *solucao = [[UILabel alloc] init];
         solucao.textColor = [UIColor blackColor];
         solucao.backgroundColor = [UIColor redColor];
+        solucao.layer.cornerRadius = 20;
         [solucao setTextAlignment: NSTextAlignmentCenter];
         solucao.font = [UIFont systemFontOfSize:40];
         

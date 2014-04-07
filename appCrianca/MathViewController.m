@@ -261,7 +261,6 @@
     }
 }
 
-
 -(void)metodoDogesto{
     [_ok removeFromSuperview];
     [_arcoiris removeFromSuperview];

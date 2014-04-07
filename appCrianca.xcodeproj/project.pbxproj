@@ -46,6 +46,8 @@
 		3106691D18E2110900B48195 /* fase1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3106691C18E2110900B48195 /* fase1.png */; };
 		3106692118E2132200B48195 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3106691F18E2132200B48195 /* ViewController.m */; };
 		3106692218E2132200B48195 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3106692018E2132200B48195 /* ViewController.xib */; };
+		31078FD718F344CB00AB18C8 /* ligueOsPontos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31078FD618F344CB00AB18C8 /* ligueOsPontos.jpg */; };
+		31078FD918F3477300AB18C8 /* saiaDoLabirinto.png in Resources */ = {isa = PBXBuildFile; fileRef = 31078FD818F3477300AB18C8 /* saiaDoLabirinto.png */; };
 		31189DEB18E358E00072D5CB /* Figura.m in Sources */ = {isa = PBXBuildFile; fileRef = 31189DEA18E358E00072D5CB /* Figura.m */; };
 		312A54B918EB3EAF0016DD32 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 312A54B818EB3EAF0016DD32 /* background.png */; };
 		312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 312A54BB18EB5C0C0016DD32 /* GameViewController.m */; };
@@ -101,6 +103,9 @@
 		31EDB12C18F32C4E00FFC301 /* esquerda19.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11618F32C4E00FFC301 /* esquerda19.png */; };
 		31EDB12D18F32C4E00FFC301 /* esquerda9.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11718F32C4E00FFC301 /* esquerda9.png */; };
 		31EDB12E18F32C4E00FFC301 /* direita9.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11818F32C4E00FFC301 /* direita9.png */; };
+		31EDB13118F33A2800FFC301 /* liguaAsFiguras.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB12F18F33A2800FFC301 /* liguaAsFiguras.png */; };
+		31EDB13218F33A2800FFC301 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB13018F33A2800FFC301 /* background2.png */; };
+		31EDB13518F33D0400FFC301 /* Liguematematica.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB13418F33D0400FFC301 /* Liguematematica.png */; };
 		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
 		F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A85CAD18EA013C00819310 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
@@ -170,6 +175,8 @@
 		3106691E18E2132200B48195 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3106691F18E2132200B48195 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3106692018E2132200B48195 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		31078FD618F344CB00AB18C8 /* ligueOsPontos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ligueOsPontos.jpg; sourceTree = "<group>"; };
+		31078FD818F3477300AB18C8 /* saiaDoLabirinto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saiaDoLabirinto.png; sourceTree = "<group>"; };
 		31189DE918E358E00072D5CB /* Figura.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Figura.h; sourceTree = "<group>"; };
 		31189DEA18E358E00072D5CB /* Figura.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Figura.m; sourceTree = "<group>"; };
 		312A54B818EB3EAF0016DD32 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -227,6 +234,9 @@
 		31EDB11618F32C4E00FFC301 /* esquerda19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda19.png; sourceTree = "<group>"; };
 		31EDB11718F32C4E00FFC301 /* esquerda9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda9.png; sourceTree = "<group>"; };
 		31EDB11818F32C4E00FFC301 /* direita9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita9.png; sourceTree = "<group>"; };
+		31EDB12F18F33A2800FFC301 /* liguaAsFiguras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = liguaAsFiguras.png; sourceTree = "<group>"; };
+		31EDB13018F33A2800FFC301 /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
+		31EDB13418F33D0400FFC301 /* Liguematematica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liguematematica.png; sourceTree = "<group>"; };
 		F6A85CAB18EA013C00819310 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F6A85CAC18EA013C00819310 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F6A85CAD18EA013C00819310 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -402,20 +412,23 @@
 		3106690B18E20C1600B48195 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
-				2FFBC00918EF01310079D699 /* 152.png */,
-				2FFBC00B18EF01440079D699 /* 76.png */,
+				31078FD618F344CB00AB18C8 /* ligueOsPontos.jpg */,
+				31EDB12F18F33A2800FFC301 /* liguaAsFiguras.png */,
+				31EDB13418F33D0400FFC301 /* Liguematematica.png */,
+				31078FD818F3477300AB18C8 /* saiaDoLabirinto.png */,
 				1BF7762C18EDFDD200FC7C18 /* matematica.png */,
 				1BF7762B18EDF2DB00FC7C18 /* Labirinto */,
 				1BF7762A18EDF2D300FC7C18 /* Pontos */,
 				1BF7762918EDF2CA00FC7C18 /* Figuras */,
-				31C4190118EDE62A004F83DE /* errou.png */,
-				312A54BF18EB61CD0016DD32 /* back.png */,
+				31EDB13318F33A3100FFC301 /* animacao */,
 				312A54B818EB3EAF0016DD32 /* background.png */,
+				2FFBC00918EF01310079D699 /* 152.png */,
+				2FFBC00B18EF01440079D699 /* 76.png */,
+				312A54BF18EB61CD0016DD32 /* back.png */,
 				3199B7E718EA06C9003F0E2E /* starBlack.png */,
 				3199B7E818EA06C9003F0E2E /* starYellow.png */,
 				3199B7E318E9FBF6003F0E2E /* home.png */,
-				3189376D18E4A88B0033B277 /* arcoiris.png */,
-				31A1648218E5F8B400FA391E /* ok.png */,
+				31EDB13018F33A2800FFC301 /* background2.png */,
 			);
 			name = imagens;
 			sourceTree = "<group>";
@@ -465,6 +478,16 @@
 				31EDB11618F32C4E00FFC301 /* esquerda19.png */,
 			);
 			name = Aleatorios;
+			sourceTree = "<group>";
+		};
+		31EDB13318F33A3100FFC301 /* animacao */ = {
+			isa = PBXGroup;
+			children = (
+				31A1648218E5F8B400FA391E /* ok.png */,
+				3189376D18E4A88B0033B277 /* arcoiris.png */,
+				31C4190118EDE62A004F83DE /* errou.png */,
+			);
+			name = animacao;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -551,11 +574,13 @@
 				31EDB12D18F32C4E00FFC301 /* esquerda9.png in Resources */,
 				312A54B918EB3EAF0016DD32 /* background.png in Resources */,
 				31EDB10018F3264700FFC301 /* esquerda6.png in Resources */,
+				31EDB13518F33D0400FFC301 /* Liguematematica.png in Resources */,
 				312A54C018EB61CD0016DD32 /* back.png in Resources */,
 				3189376E18E4A88B0033B277 /* arcoiris.png in Resources */,
 				31EDB11B18F32C4E00FFC301 /* direita12.png in Resources */,
 				31C4190218EDE62A004F83DE /* errou.png in Resources */,
 				1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */,
+				31078FD718F344CB00AB18C8 /* ligueOsPontos.jpg in Resources */,
 				3106692218E2132200B48195 /* ViewController.xib in Resources */,
 				31EDB0FC18F3264700FFC301 /* esquerda2.png in Resources */,
 				31EDB11918F32C4E00FFC301 /* direita10.png in Resources */,
@@ -567,6 +592,7 @@
 				31EDB12918F32C4E00FFC301 /* esquerda16.png in Resources */,
 				31EDB12818F32C4E00FFC301 /* esquerda15.png in Resources */,
 				1B871E0F18EC9E8200162007 /* LabirintoViewController.xib in Resources */,
+				31EDB13118F33A2800FFC301 /* liguaAsFiguras.png in Resources */,
 				31EDB0FF18F3264700FFC301 /* esquerda5.png in Resources */,
 				31EDB11E18F32C4E00FFC301 /* direita15.png in Resources */,
 				F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */,
@@ -601,6 +627,7 @@
 				31EDB0F818F3264700FFC301 /* direita7.png in Resources */,
 				312A54BE18EB5C0C0016DD32 /* GameViewController.xib in Resources */,
 				1B871DFB18EC802300162007 /* MathViewController.xib in Resources */,
+				31078FD918F3477300AB18C8 /* saiaDoLabirinto.png in Resources */,
 				31EDB0FB18F3264700FFC301 /* esquerda1.png in Resources */,
 				31EDB11F18F32C4E00FFC301 /* direita16.png in Resources */,
 				2FFBC00C18EF01440079D699 /* 76.png in Resources */,
@@ -611,6 +638,7 @@
 				31A1648318E5F8B400FA391E /* ok.png in Resources */,
 				31EDB11C18F32C4E00FFC301 /* direita13.png in Resources */,
 				31EDB12118F32C4E00FFC301 /* direita18.png in Resources */,
+				31EDB13218F33A2800FFC301 /* background2.png in Resources */,
 				31EDB12B18F32C4E00FFC301 /* esquerda18.png in Resources */,
 				1BF7762618EDE19F00FC7C18 /* florzinha.gif in Resources */,
 				1B871E0318EC8A8400162007 /* PontosViewController.xib in Resources */,

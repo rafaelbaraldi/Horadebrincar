@@ -46,7 +46,7 @@
                                                                      [self view].bounds.size.height*2/8, 100, 100)] ];
     [[[self buttonFase1]titleLabel]setFont:[UIFont fontWithName:@"Chalkduster" size:36.0f]];
     [[self buttonFase1]setTitle:@"1" forState:UIControlStateNormal];
-    [[self buttonFase1]setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [[self buttonFase1]setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [[self buttonFase1]setBackgroundColor: [UIColor greenColor]];
     [[self buttonFase1]setTag:1];
     [[[self buttonFase1] layer]setCornerRadius:20];
