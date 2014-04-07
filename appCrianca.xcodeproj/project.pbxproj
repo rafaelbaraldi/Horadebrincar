@@ -79,6 +79,28 @@
 		31EDB10018F3264700FFC301 /* esquerda6.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB0EE18F3264700FFC301 /* esquerda6.png */; };
 		31EDB10118F3264700FFC301 /* esquerda7.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB0EF18F3264700FFC301 /* esquerda7.png */; };
 		31EDB10218F3264700FFC301 /* esquerda8.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB0F018F3264700FFC301 /* esquerda8.png */; };
+		31EDB11918F32C4E00FFC301 /* direita10.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10318F32C4E00FFC301 /* direita10.png */; };
+		31EDB11A18F32C4E00FFC301 /* direita11.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10418F32C4E00FFC301 /* direita11.png */; };
+		31EDB11B18F32C4E00FFC301 /* direita12.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10518F32C4E00FFC301 /* direita12.png */; };
+		31EDB11C18F32C4E00FFC301 /* direita13.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10618F32C4E00FFC301 /* direita13.png */; };
+		31EDB11D18F32C4E00FFC301 /* direita14.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10718F32C4E00FFC301 /* direita14.png */; };
+		31EDB11E18F32C4E00FFC301 /* direita15.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10818F32C4E00FFC301 /* direita15.png */; };
+		31EDB11F18F32C4E00FFC301 /* direita16.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10918F32C4E00FFC301 /* direita16.png */; };
+		31EDB12018F32C4E00FFC301 /* direita17.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10A18F32C4E00FFC301 /* direita17.png */; };
+		31EDB12118F32C4E00FFC301 /* direita18.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10B18F32C4E00FFC301 /* direita18.png */; };
+		31EDB12218F32C4E00FFC301 /* direita19.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10C18F32C4E00FFC301 /* direita19.png */; };
+		31EDB12318F32C4E00FFC301 /* esquerda.14.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10D18F32C4E00FFC301 /* esquerda.14.png */; };
+		31EDB12418F32C4E00FFC301 /* esquerda10.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10E18F32C4E00FFC301 /* esquerda10.png */; };
+		31EDB12518F32C4E00FFC301 /* esquerda11.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10F18F32C4E00FFC301 /* esquerda11.png */; };
+		31EDB12618F32C4E00FFC301 /* esquerda12.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11018F32C4E00FFC301 /* esquerda12.png */; };
+		31EDB12718F32C4E00FFC301 /* esquerda13.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11118F32C4E00FFC301 /* esquerda13.png */; };
+		31EDB12818F32C4E00FFC301 /* esquerda15.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11218F32C4E00FFC301 /* esquerda15.png */; };
+		31EDB12918F32C4E00FFC301 /* esquerda16.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11318F32C4E00FFC301 /* esquerda16.png */; };
+		31EDB12A18F32C4E00FFC301 /* esquerda17.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11418F32C4E00FFC301 /* esquerda17.png */; };
+		31EDB12B18F32C4E00FFC301 /* esquerda18.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11518F32C4E00FFC301 /* esquerda18.png */; };
+		31EDB12C18F32C4E00FFC301 /* esquerda19.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11618F32C4E00FFC301 /* esquerda19.png */; };
+		31EDB12D18F32C4E00FFC301 /* esquerda9.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11718F32C4E00FFC301 /* esquerda9.png */; };
+		31EDB12E18F32C4E00FFC301 /* direita9.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11818F32C4E00FFC301 /* direita9.png */; };
 		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
 		F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A85CAD18EA013C00819310 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
@@ -183,6 +205,28 @@
 		31EDB0EE18F3264700FFC301 /* esquerda6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda6.png; sourceTree = "<group>"; };
 		31EDB0EF18F3264700FFC301 /* esquerda7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda7.png; sourceTree = "<group>"; };
 		31EDB0F018F3264700FFC301 /* esquerda8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda8.png; sourceTree = "<group>"; };
+		31EDB10318F32C4E00FFC301 /* direita10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita10.png; sourceTree = "<group>"; };
+		31EDB10418F32C4E00FFC301 /* direita11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita11.png; sourceTree = "<group>"; };
+		31EDB10518F32C4E00FFC301 /* direita12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita12.png; sourceTree = "<group>"; };
+		31EDB10618F32C4E00FFC301 /* direita13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita13.png; sourceTree = "<group>"; };
+		31EDB10718F32C4E00FFC301 /* direita14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita14.png; sourceTree = "<group>"; };
+		31EDB10818F32C4E00FFC301 /* direita15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita15.png; sourceTree = "<group>"; };
+		31EDB10918F32C4E00FFC301 /* direita16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita16.png; sourceTree = "<group>"; };
+		31EDB10A18F32C4E00FFC301 /* direita17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita17.png; sourceTree = "<group>"; };
+		31EDB10B18F32C4E00FFC301 /* direita18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita18.png; sourceTree = "<group>"; };
+		31EDB10C18F32C4E00FFC301 /* direita19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita19.png; sourceTree = "<group>"; };
+		31EDB10D18F32C4E00FFC301 /* esquerda.14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda.14.png; sourceTree = "<group>"; };
+		31EDB10E18F32C4E00FFC301 /* esquerda10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda10.png; sourceTree = "<group>"; };
+		31EDB10F18F32C4E00FFC301 /* esquerda11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda11.png; sourceTree = "<group>"; };
+		31EDB11018F32C4E00FFC301 /* esquerda12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda12.png; sourceTree = "<group>"; };
+		31EDB11118F32C4E00FFC301 /* esquerda13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda13.png; sourceTree = "<group>"; };
+		31EDB11218F32C4E00FFC301 /* esquerda15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda15.png; sourceTree = "<group>"; };
+		31EDB11318F32C4E00FFC301 /* esquerda16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda16.png; sourceTree = "<group>"; };
+		31EDB11418F32C4E00FFC301 /* esquerda17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda17.png; sourceTree = "<group>"; };
+		31EDB11518F32C4E00FFC301 /* esquerda18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda18.png; sourceTree = "<group>"; };
+		31EDB11618F32C4E00FFC301 /* esquerda19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda19.png; sourceTree = "<group>"; };
+		31EDB11718F32C4E00FFC301 /* esquerda9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda9.png; sourceTree = "<group>"; };
+		31EDB11818F32C4E00FFC301 /* direita9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita9.png; sourceTree = "<group>"; };
 		F6A85CAB18EA013C00819310 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F6A85CAC18EA013C00819310 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F6A85CAD18EA013C00819310 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -388,6 +432,17 @@
 				31EDB0E518F3264700FFC301 /* direita6.png */,
 				31EDB0E618F3264700FFC301 /* direita7.png */,
 				31EDB0E718F3264700FFC301 /* direita8.png */,
+				31EDB11818F32C4E00FFC301 /* direita9.png */,
+				31EDB10318F32C4E00FFC301 /* direita10.png */,
+				31EDB10418F32C4E00FFC301 /* direita11.png */,
+				31EDB10518F32C4E00FFC301 /* direita12.png */,
+				31EDB10618F32C4E00FFC301 /* direita13.png */,
+				31EDB10718F32C4E00FFC301 /* direita14.png */,
+				31EDB10818F32C4E00FFC301 /* direita15.png */,
+				31EDB10918F32C4E00FFC301 /* direita16.png */,
+				31EDB10A18F32C4E00FFC301 /* direita17.png */,
+				31EDB10B18F32C4E00FFC301 /* direita18.png */,
+				31EDB10C18F32C4E00FFC301 /* direita19.png */,
 				31EDB0E818F3264700FFC301 /* esquerda0.png */,
 				31EDB0E918F3264700FFC301 /* esquerda1.png */,
 				31EDB0EA18F3264700FFC301 /* esquerda2.png */,
@@ -397,6 +452,17 @@
 				31EDB0EE18F3264700FFC301 /* esquerda6.png */,
 				31EDB0EF18F3264700FFC301 /* esquerda7.png */,
 				31EDB0F018F3264700FFC301 /* esquerda8.png */,
+				31EDB11718F32C4E00FFC301 /* esquerda9.png */,
+				31EDB10E18F32C4E00FFC301 /* esquerda10.png */,
+				31EDB10F18F32C4E00FFC301 /* esquerda11.png */,
+				31EDB11018F32C4E00FFC301 /* esquerda12.png */,
+				31EDB11118F32C4E00FFC301 /* esquerda13.png */,
+				31EDB10D18F32C4E00FFC301 /* esquerda.14.png */,
+				31EDB11218F32C4E00FFC301 /* esquerda15.png */,
+				31EDB11318F32C4E00FFC301 /* esquerda16.png */,
+				31EDB11418F32C4E00FFC301 /* esquerda17.png */,
+				31EDB11518F32C4E00FFC301 /* esquerda18.png */,
+				31EDB11618F32C4E00FFC301 /* esquerda19.png */,
 			);
 			name = Aleatorios;
 			sourceTree = "<group>";
@@ -482,24 +548,33 @@
 				1BF7762818EDE19F00FC7C18 /* leaozinho.gif in Resources */,
 				31EDB0FA18F3264700FFC301 /* esquerda0.png in Resources */,
 				1BC90EA118E611C7002E91E3 /* finger.png in Resources */,
+				31EDB12D18F32C4E00FFC301 /* esquerda9.png in Resources */,
 				312A54B918EB3EAF0016DD32 /* background.png in Resources */,
 				31EDB10018F3264700FFC301 /* esquerda6.png in Resources */,
 				312A54C018EB61CD0016DD32 /* back.png in Resources */,
 				3189376E18E4A88B0033B277 /* arcoiris.png in Resources */,
+				31EDB11B18F32C4E00FFC301 /* direita12.png in Resources */,
 				31C4190218EDE62A004F83DE /* errou.png in Resources */,
 				1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */,
 				3106692218E2132200B48195 /* ViewController.xib in Resources */,
 				31EDB0FC18F3264700FFC301 /* esquerda2.png in Resources */,
+				31EDB11918F32C4E00FFC301 /* direita10.png in Resources */,
 				31C4190818EE0585004F83DE /* labirinto3.png in Resources */,
+				31EDB12618F32C4E00FFC301 /* esquerda12.png in Resources */,
 				31EDB0F118F3264700FFC301 /* direita0.png in Resources */,
 				1BC90EA318E6125D002E91E3 /* fase2.png in Resources */,
 				31EDB0F518F3264700FFC301 /* direita4.png in Resources */,
+				31EDB12918F32C4E00FFC301 /* esquerda16.png in Resources */,
+				31EDB12818F32C4E00FFC301 /* esquerda15.png in Resources */,
 				1B871E0F18EC9E8200162007 /* LabirintoViewController.xib in Resources */,
 				31EDB0FF18F3264700FFC301 /* esquerda5.png in Resources */,
+				31EDB11E18F32C4E00FFC301 /* direita15.png in Resources */,
 				F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */,
+				31EDB12C18F32C4E00FFC301 /* esquerda19.png in Resources */,
 				31EDB0F218F3264700FFC301 /* direita1.png in Resources */,
 				3106691D18E2110900B48195 /* fase1.png in Resources */,
 				3199B7EA18EA06C9003F0E2E /* starYellow.png in Resources */,
+				31EDB12018F32C4E00FFC301 /* direita17.png in Resources */,
 				31EDB0F618F3264700FFC301 /* direita5.png in Resources */,
 				3199B7E918EA06C9003F0E2E /* starBlack.png in Resources */,
 				1B8AC79B18E9E0E30083EBDD /* fase3.png in Resources */,
@@ -507,13 +582,19 @@
 				1B871E0718EC8B3C00162007 /* pontosCaracol.png in Resources */,
 				31EDB0F418F3264700FFC301 /* direita3.png in Resources */,
 				31EDB10218F3264700FFC301 /* esquerda8.png in Resources */,
+				31EDB12A18F32C4E00FFC301 /* esquerda17.png in Resources */,
+				31EDB12718F32C4E00FFC301 /* esquerda13.png in Resources */,
 				31EDB0FE18F3264700FFC301 /* esquerda4.png in Resources */,
+				31EDB12418F32C4E00FFC301 /* esquerda10.png in Resources */,
+				31EDB11D18F32C4E00FFC301 /* direita14.png in Resources */,
 				31EDB0F718F3264700FFC301 /* direita6.png in Resources */,
 				2FFBC00A18EF01310079D699 /* 152.png in Resources */,
 				1BF7762D18EDFDD200FC7C18 /* matematica.png in Resources */,
 				1BF7762718EDE19F00FC7C18 /* abelhinha.jpg in Resources */,
+				31EDB12218F32C4E00FFC301 /* direita19.png in Resources */,
 				31EDB0F318F3264700FFC301 /* direita2.png in Resources */,
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
+				31EDB11A18F32C4E00FFC301 /* direita11.png in Resources */,
 				310668EA18E20BA800B48195 /* Images.xcassets in Resources */,
 				31C4190618EE02F1004F83DE /* labirinto2.png in Resources */,
 				31EDB0FD18F3264700FFC301 /* esquerda3.png in Resources */,
@@ -521,13 +602,20 @@
 				312A54BE18EB5C0C0016DD32 /* GameViewController.xib in Resources */,
 				1B871DFB18EC802300162007 /* MathViewController.xib in Resources */,
 				31EDB0FB18F3264700FFC301 /* esquerda1.png in Resources */,
+				31EDB11F18F32C4E00FFC301 /* direita16.png in Resources */,
 				2FFBC00C18EF01440079D699 /* 76.png in Resources */,
 				3199B7E418E9FBF6003F0E2E /* home.png in Resources */,
 				31C4190418EDF2A8004F83DE /* labirinto1.png in Resources */,
+				31EDB12318F32C4E00FFC301 /* esquerda.14.png in Resources */,
 				31A1648518E60AF800FA391E /* CBL in Resources */,
 				31A1648318E5F8B400FA391E /* ok.png in Resources */,
+				31EDB11C18F32C4E00FFC301 /* direita13.png in Resources */,
+				31EDB12118F32C4E00FFC301 /* direita18.png in Resources */,
+				31EDB12B18F32C4E00FFC301 /* esquerda18.png in Resources */,
 				1BF7762618EDE19F00FC7C18 /* florzinha.gif in Resources */,
 				1B871E0318EC8A8400162007 /* PontosViewController.xib in Resources */,
+				31EDB12518F32C4E00FFC301 /* esquerda11.png in Resources */,
+				31EDB12E18F32C4E00FFC301 /* direita9.png in Resources */,
 				31EDB0F918F3264700FFC301 /* direita8.png in Resources */,
 				31EDB10118F3264700FFC301 /* esquerda7.png in Resources */,
 			);
