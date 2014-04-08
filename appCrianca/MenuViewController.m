@@ -40,7 +40,6 @@
     [title setTextAlignment:NSTextAlignmentCenter];
     [[self view]addSubview:title];
     
-    
     //Button 1
     [self setButtonFase1: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
                                                                      [self view].bounds.size.height*2/8, 100, 100)] ];
@@ -92,8 +91,6 @@
     [[self buttonFase4]addTarget:self action:@selector(botaoIrFaseSelecionada:) forControlEvents:UIControlEventTouchDown];
     [[self view] addSubview: [self buttonFase4]];
     [self controlaEstrela:[self  buttonFase4]];
-    
-    
 }
 
 //Recarrega as estrelas

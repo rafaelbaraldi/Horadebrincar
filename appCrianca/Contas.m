@@ -36,16 +36,30 @@
         //UILabel *equacao = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/9, posicao, 200 , 60)];
         UILabel *equacao = [[UILabel alloc] init];
         equacao.textColor = [UIColor blackColor];
-        equacao.layer.cornerRadius = 20;
-        equacao.backgroundColor = [UIColor greenColor];
+
+        //CornerRadius
+        CALayer *cornerEquacao = [equacao layer];
+        cornerEquacao.masksToBounds = YES;
+        cornerEquacao.cornerRadius = 10;
+        cornerEquacao.borderWidth = 2;
+        cornerEquacao.borderColor = [UIColor blackColor].CGColor;
+        
+        equacao.backgroundColor = [UIColor whiteColor];
         [equacao setTextAlignment: NSTextAlignmentCenter];
         equacao.font = [UIFont systemFontOfSize:40];
         
         //UILabel *solucao = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/9 + 400, posicao, 200 , 60)];
         UILabel *solucao = [[UILabel alloc] init];
         solucao.textColor = [UIColor blackColor];
-        solucao.backgroundColor = [UIColor redColor];
-        solucao.layer.cornerRadius = 20;
+        solucao.backgroundColor = [UIColor whiteColor];
+        
+        //CornerRadius
+        CALayer *cornerSolucao = [solucao layer];
+        cornerSolucao.masksToBounds = YES;
+        cornerSolucao.cornerRadius = 10;
+        cornerSolucao.borderWidth = 2;
+        cornerSolucao.borderColor = [UIColor blackColor].CGColor;
+        
         [solucao setTextAlignment: NSTextAlignmentCenter];
         solucao.font = [UIFont systemFontOfSize:40];
         

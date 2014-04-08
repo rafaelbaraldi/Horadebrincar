@@ -30,27 +30,34 @@
     [self setEquation: [conta firstObject]];
     [self setSolution: [conta lastObject]];
     
-    int posicao = 0;
+    int posicao = 174;
     
     //[[self equation] count] == [[self solution] count] == 9
     int tamanhoVetores = [[self equation]count];
     for (int i = 0; i < tamanhoVetores ; i++) {
-        posicao = posicao + 100;
+
         //coloca os frames no labels e mosta eles
-        [[[self equation] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/9, posicao, 200 , 60) ];
+        [[[self equation] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/9, posicao, 200 , 60)];
         [[self view] addSubview:[[self equation] objectAtIndex: i]];
         
         [[[self solution] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/9 + 400, posicao, 200 , 60)];
         [[self view] addSubview:[[self solution] objectAtIndex: i]];
+        
+        posicao += 850/tamanhoVetores;
     }
+    
+    [self setVetorRemover:nil];
+    [self setVetorRemover:[[NSMutableArray alloc] init]];
     
     //junta os vetores de equacoes e respostas em 1 so para fazer a verificacao unificadas igual no jogo das imagens
     [self setContas:[[NSMutableArray alloc] init]];
     for (int i = 0;  i < tamanhoVetores ; i++) {
         [[self contas] addObject: [[self equation] lastObject] ];
+        [[self vetorRemover] addObject: [[self equation] lastObject] ];
         [[self equation] removeLastObject];
         
         [[self contas] addObject: [[self solution] lastObject] ];
+        [[self vetorRemover] addObject: [[self solution] lastObject] ];
         [[self solution] removeLastObject];
     }
     
@@ -67,9 +74,10 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    for (int i = 0;  i < [[self contas] count]; i++) {
-        [[[self contas] objectAtIndex: i] removeFromSuperview];
+    for (UILabel* label in [self vetorRemover]) {
+        [label removeFromSuperview];
     }
+    [[self vetorRemover] removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning{
@@ -267,6 +275,8 @@
     [_dedo removeFromSuperview];
     
     [[self view] removeGestureRecognizer:_gesto];
+    
+    [self viewWillDisappear:NO];
     
     _faseAtual++;
     if(_faseAtual > 4){

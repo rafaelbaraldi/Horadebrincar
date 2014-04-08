@@ -265,6 +265,7 @@
     CGContextAddLineToPoint( contexto, final.x, final.y); // ponto final da linha (pao) // falta descobrir o ponto exato
     CGContextSetLineCap( contexto, kCGLineCapRound);
     CGContextSetLineWidth( contexto, 10.0);
+    CGContextSetRGBStrokeColor(contexto, (arc4random()%750)/1000.0, (arc4random()%750)/1000.0, (arc4random()%750)/1000.0, 1.0);
     
     CGContextStrokePath(contexto);
     [[self tempDrawImage] setImage:UIGraphicsGetImageFromCurrentImageContext()];
