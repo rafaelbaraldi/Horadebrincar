@@ -14,6 +14,7 @@
 @property UIButton *buttonFase2;
 @property UIButton *buttonFase3;
 @property UIButton *buttonFase4;
+@property UIButton *buttonFase5;
 
 @property NSMutableArray* estrelas;
 - (IBAction)goBack:(id)sender;
