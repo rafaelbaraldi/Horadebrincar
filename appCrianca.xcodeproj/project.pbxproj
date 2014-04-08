@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B08218718F46F8500C44F82 /* esquerda14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B08218618F46F8500C44F82 /* esquerda14.jpg */; };
 		1B871DFA18EC802300162007 /* MathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B871DF818EC802300162007 /* MathViewController.m */; };
 		1B871DFB18EC802300162007 /* MathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B871DF918EC802300162007 /* MathViewController.xib */; };
 		1B871DFE18EC80C500162007 /* Contas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B871DFD18EC80C500162007 /* Contas.m */; };
@@ -92,7 +93,6 @@
 		31EDB12018F32C4E00FFC301 /* direita17.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10A18F32C4E00FFC301 /* direita17.png */; };
 		31EDB12118F32C4E00FFC301 /* direita18.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10B18F32C4E00FFC301 /* direita18.png */; };
 		31EDB12218F32C4E00FFC301 /* direita19.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10C18F32C4E00FFC301 /* direita19.png */; };
-		31EDB12318F32C4E00FFC301 /* esquerda.14.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10D18F32C4E00FFC301 /* esquerda.14.png */; };
 		31EDB12418F32C4E00FFC301 /* esquerda10.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10E18F32C4E00FFC301 /* esquerda10.png */; };
 		31EDB12518F32C4E00FFC301 /* esquerda11.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB10F18F32C4E00FFC301 /* esquerda11.png */; };
 		31EDB12618F32C4E00FFC301 /* esquerda12.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11018F32C4E00FFC301 /* esquerda12.png */; };
@@ -123,6 +123,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B08218618F46F8500C44F82 /* esquerda14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = esquerda14.jpg; sourceTree = "<group>"; };
 		1B871DF718EC802300162007 /* MathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathViewController.h; sourceTree = "<group>"; };
 		1B871DF818EC802300162007 /* MathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathViewController.m; sourceTree = "<group>"; };
 		1B871DF918EC802300162007 /* MathViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MathViewController.xib; sourceTree = "<group>"; };
@@ -224,7 +225,6 @@
 		31EDB10A18F32C4E00FFC301 /* direita17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita17.png; sourceTree = "<group>"; };
 		31EDB10B18F32C4E00FFC301 /* direita18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita18.png; sourceTree = "<group>"; };
 		31EDB10C18F32C4E00FFC301 /* direita19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita19.png; sourceTree = "<group>"; };
-		31EDB10D18F32C4E00FFC301 /* esquerda.14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda.14.png; sourceTree = "<group>"; };
 		31EDB10E18F32C4E00FFC301 /* esquerda10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda10.png; sourceTree = "<group>"; };
 		31EDB10F18F32C4E00FFC301 /* esquerda11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda11.png; sourceTree = "<group>"; };
 		31EDB11018F32C4E00FFC301 /* esquerda12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda12.png; sourceTree = "<group>"; };
@@ -473,7 +473,7 @@
 				31EDB10F18F32C4E00FFC301 /* esquerda11.png */,
 				31EDB11018F32C4E00FFC301 /* esquerda12.png */,
 				31EDB11118F32C4E00FFC301 /* esquerda13.png */,
-				31EDB10D18F32C4E00FFC301 /* esquerda.14.png */,
+				1B08218618F46F8500C44F82 /* esquerda14.jpg */,
 				31EDB11218F32C4E00FFC301 /* esquerda15.png */,
 				31EDB11318F32C4E00FFC301 /* esquerda16.png */,
 				31EDB11418F32C4E00FFC301 /* esquerda17.png */,
@@ -608,6 +608,7 @@
 				3199B7E918EA06C9003F0E2E /* starBlack.png in Resources */,
 				1B8AC79B18E9E0E30083EBDD /* fase3.png in Resources */,
 				1B871E1118EC9F8800162007 /* labirinto4.png in Resources */,
+				1B08218718F46F8500C44F82 /* esquerda14.jpg in Resources */,
 				1B871E0718EC8B3C00162007 /* pontosCaracol.png in Resources */,
 				31EDB0F418F3264700FFC301 /* direita3.png in Resources */,
 				31EDB10218F3264700FFC301 /* esquerda8.png in Resources */,
@@ -636,7 +637,6 @@
 				2FFBC00C18EF01440079D699 /* 76.png in Resources */,
 				3199B7E418E9FBF6003F0E2E /* home.png in Resources */,
 				31C4190418EDF2A8004F83DE /* labirinto1.png in Resources */,
-				31EDB12318F32C4E00FFC301 /* esquerda.14.png in Resources */,
 				31A1648518E60AF800FA391E /* CBL in Resources */,
 				31A1648318E5F8B400FA391E /* ok.png in Resources */,
 				31EDB11C18F32C4E00FFC301 /* direita13.png in Resources */,
