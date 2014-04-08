@@ -100,7 +100,7 @@
         [self setButtonFase5: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
                                                                          ([self view].bounds.size.height*6/8), 100, 100)]];
         [[[self buttonFase5]titleLabel]setFont:[UIFont fontWithName:@"Chalkduster" size:36.0f]];
-        [[self buttonFase5]setTitle:@"5" forState:UIControlStateNormal];
+        [[self buttonFase5]setTitle:@"∞" forState:UIControlStateNormal];
         [[self buttonFase5]setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [[self buttonFase5]setBackgroundColor: [UIColor grayColor]];
         [[self buttonFase5]setTag:5];
