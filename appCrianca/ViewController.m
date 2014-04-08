@@ -47,19 +47,20 @@
             [self setAnterior:[UIImage imageNamed:@"fase3.png"]];
             break;
             
-            //        case 4:
-            //            [self setFiguras:[Figura retornaFiguraFase4]];
-            //            [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
-            //            [[self tempDrawImage] setAlpha:1];
-            //            [self setAnterior:[UIImage imageNamed:@"fase4.png"]];
-            //            break;
-            
         case 4:
+            [self setFiguras:[Figura retornaFiguraFase4]];
+            [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
+            [[self tempDrawImage] setAlpha:1];
+            [self setAnterior:[UIImage imageNamed:@"fase4.png"]];
+            break;
+            
+        case 5:
             
             [[self tempDrawImage] removeFromSuperview];
             
             [self setFiguras:[Figura retornaFiguraFaseRandom]];
             [[self tempDrawImage]setImage:[UIImage imageNamed:@"transparente.png"]];
+            [[self tempDrawImage] setAlpha:1];
             [self setAnterior:[UIImage imageNamed:@"transparente.png"]];
             for(Figura *f in [self figuras]){
                 [[self view]addSubview: [f imgView]];
@@ -248,7 +249,7 @@
      _faseAtual++;
 
     if(_faseAtual > 4){
-        _faseAtual = 4;
+        _faseAtual = 5;
     }
     
      [self viewDidLoad];

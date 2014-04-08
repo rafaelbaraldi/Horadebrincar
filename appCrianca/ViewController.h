@@ -13,6 +13,7 @@
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *tempDrawImage;
+@property (strong, nonatomic) IBOutlet UIButton *botaoVoltar;
 
 
 @property CGPoint lastPoint;

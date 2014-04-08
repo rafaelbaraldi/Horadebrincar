@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="botaoVoltar" destination="uXB-h6-QWm" id="LK2-s4-5Q9"/>
                 <outlet property="tempDrawImage" destination="eno-OB-FIT" id="tY4-Bh-ViQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
