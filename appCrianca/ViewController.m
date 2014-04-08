@@ -55,13 +55,17 @@
             //            break;
             
         case 4:
+            
+            [[self tempDrawImage] removeFromSuperview];
+            
             [self setFiguras:[Figura retornaFiguraFaseRandom]];
-            [[self tempDrawImage]setImage:[UIImage imageNamed:@"matematica.png"]];
-            [[self tempDrawImage] setAlpha:1];
-            [self setAnterior:[UIImage imageNamed:@"matematica.png"]];
+            [[self tempDrawImage]setImage:[UIImage imageNamed:@"transparente.png"]];
+            [self setAnterior:[UIImage imageNamed:@"transparente.png"]];
             for(Figura *f in [self figuras]){
                 [[self view]addSubview: [f imgView]];
             }
+            
+            [[self view] addSubview:[self tempDrawImage]];
             break;
             
         default:
@@ -240,15 +244,14 @@
     [_dedo removeFromSuperview];
     
     [[self view] removeGestureRecognizer:_gesto];
-    
-    _faseAtual++;
+
+     _faseAtual++;
+
     if(_faseAtual > 4){
-        [self dismissViewControllerAnimated:YES completion:Nil];
-        _faseAtual = 1;
+        _faseAtual = 4;
     }
-    else{
-        [self viewDidLoad];
-    }
+    
+     [self viewDidLoad];
 }
 
 -(void)desenhaLinha:(CGPoint) inicial :(CGPoint) final{

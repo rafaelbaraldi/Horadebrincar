@@ -53,6 +53,7 @@
 		312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 312A54BB18EB5C0C0016DD32 /* GameViewController.m */; };
 		312A54BE18EB5C0C0016DD32 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 312A54BC18EB5C0C0016DD32 /* GameViewController.xib */; };
 		312A54C018EB61CD0016DD32 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 312A54BF18EB61CD0016DD32 /* back.png */; };
+		312DD45618F467B600F30CE8 /* transparente.png in Resources */ = {isa = PBXBuildFile; fileRef = 312DD45518F467B600F30CE8 /* transparente.png */; };
 		3189376E18E4A88B0033B277 /* arcoiris.png in Resources */ = {isa = PBXBuildFile; fileRef = 3189376D18E4A88B0033B277 /* arcoiris.png */; };
 		3199B7E418E9FBF6003F0E2E /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E318E9FBF6003F0E2E /* home.png */; };
 		3199B7E918EA06C9003F0E2E /* starBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E718EA06C9003F0E2E /* starBlack.png */; };
@@ -184,6 +185,7 @@
 		312A54BB18EB5C0C0016DD32 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		312A54BC18EB5C0C0016DD32 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		312A54BF18EB61CD0016DD32 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		312DD45518F467B600F30CE8 /* transparente.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparente.png; sourceTree = "<group>"; };
 		3189376D18E4A88B0033B277 /* arcoiris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcoiris.png; sourceTree = "<group>"; };
 		3199B7E318E9FBF6003F0E2E /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		3199B7E718EA06C9003F0E2E /* starBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starBlack.png; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 				31EDB13418F33D0400FFC301 /* Liguematematica.png */,
 				31078FD818F3477300AB18C8 /* saiaDoLabirinto.png */,
 				1BF7762C18EDFDD200FC7C18 /* matematica.png */,
+				312DD45518F467B600F30CE8 /* transparente.png */,
 				1BF7762B18EDF2DB00FC7C18 /* Labirinto */,
 				1BF7762A18EDF2D300FC7C18 /* Pontos */,
 				1BF7762918EDF2CA00FC7C18 /* Figuras */,
@@ -643,6 +646,7 @@
 				1BF7762618EDE19F00FC7C18 /* florzinha.gif in Resources */,
 				1B871E0318EC8A8400162007 /* PontosViewController.xib in Resources */,
 				31EDB12518F32C4E00FFC301 /* esquerda11.png in Resources */,
+				312DD45618F467B600F30CE8 /* transparente.png in Resources */,
 				31EDB12E18F32C4E00FFC301 /* direita9.png in Resources */,
 				31EDB0F918F3264700FFC301 /* direita8.png in Resources */,
 				31EDB10118F3264700FFC301 /* esquerda7.png in Resources */,
