@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B08218718F46F8500C44F82 /* esquerda14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B08218618F46F8500C44F82 /* esquerda14.jpg */; };
 		1B871DFA18EC802300162007 /* MathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B871DF818EC802300162007 /* MathViewController.m */; };
 		1B871DFB18EC802300162007 /* MathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B871DF918EC802300162007 /* MathViewController.xib */; };
 		1B871DFE18EC80C500162007 /* Contas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B871DFD18EC80C500162007 /* Contas.m */; };
@@ -55,6 +54,7 @@
 		312A54BE18EB5C0C0016DD32 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 312A54BC18EB5C0C0016DD32 /* GameViewController.xib */; };
 		312A54C018EB61CD0016DD32 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 312A54BF18EB61CD0016DD32 /* back.png */; };
 		312DD45618F467B600F30CE8 /* transparente.png in Resources */ = {isa = PBXBuildFile; fileRef = 312DD45518F467B600F30CE8 /* transparente.png */; };
+		312DD45818F4703700F30CE8 /* esquerda14.png in Resources */ = {isa = PBXBuildFile; fileRef = 312DD45718F4703700F30CE8 /* esquerda14.png */; };
 		3189376E18E4A88B0033B277 /* arcoiris.png in Resources */ = {isa = PBXBuildFile; fileRef = 3189376D18E4A88B0033B277 /* arcoiris.png */; };
 		3199B7E418E9FBF6003F0E2E /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E318E9FBF6003F0E2E /* home.png */; };
 		3199B7E918EA06C9003F0E2E /* starBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E718EA06C9003F0E2E /* starBlack.png */; };
@@ -123,7 +123,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B08218618F46F8500C44F82 /* esquerda14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = esquerda14.jpg; sourceTree = "<group>"; };
 		1B871DF718EC802300162007 /* MathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathViewController.h; sourceTree = "<group>"; };
 		1B871DF818EC802300162007 /* MathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathViewController.m; sourceTree = "<group>"; };
 		1B871DF918EC802300162007 /* MathViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MathViewController.xib; sourceTree = "<group>"; };
@@ -187,6 +186,7 @@
 		312A54BC18EB5C0C0016DD32 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		312A54BF18EB61CD0016DD32 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		312DD45518F467B600F30CE8 /* transparente.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparente.png; sourceTree = "<group>"; };
+		312DD45718F4703700F30CE8 /* esquerda14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda14.png; sourceTree = "<group>"; };
 		3189376D18E4A88B0033B277 /* arcoiris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcoiris.png; sourceTree = "<group>"; };
 		3199B7E318E9FBF6003F0E2E /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		3199B7E718EA06C9003F0E2E /* starBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starBlack.png; sourceTree = "<group>"; };
@@ -473,7 +473,7 @@
 				31EDB10F18F32C4E00FFC301 /* esquerda11.png */,
 				31EDB11018F32C4E00FFC301 /* esquerda12.png */,
 				31EDB11118F32C4E00FFC301 /* esquerda13.png */,
-				1B08218618F46F8500C44F82 /* esquerda14.jpg */,
+				312DD45718F4703700F30CE8 /* esquerda14.png */,
 				31EDB11218F32C4E00FFC301 /* esquerda15.png */,
 				31EDB11318F32C4E00FFC301 /* esquerda16.png */,
 				31EDB11418F32C4E00FFC301 /* esquerda17.png */,
@@ -604,11 +604,11 @@
 				3106691D18E2110900B48195 /* fase1.png in Resources */,
 				3199B7EA18EA06C9003F0E2E /* starYellow.png in Resources */,
 				31EDB12018F32C4E00FFC301 /* direita17.png in Resources */,
+				312DD45818F4703700F30CE8 /* esquerda14.png in Resources */,
 				31EDB0F618F3264700FFC301 /* direita5.png in Resources */,
 				3199B7E918EA06C9003F0E2E /* starBlack.png in Resources */,
 				1B8AC79B18E9E0E30083EBDD /* fase3.png in Resources */,
 				1B871E1118EC9F8800162007 /* labirinto4.png in Resources */,
-				1B08218718F46F8500C44F82 /* esquerda14.jpg in Resources */,
 				1B871E0718EC8B3C00162007 /* pontosCaracol.png in Resources */,
 				31EDB0F418F3264700FFC301 /* direita3.png in Resources */,
 				31EDB10218F3264700FFC301 /* esquerda8.png in Resources */,
