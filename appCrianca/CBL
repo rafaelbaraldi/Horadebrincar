@@ -1,18 +1,58 @@
-Problem: Dificuldade em desenvolver o raciocínio associativo a crianças pequenas.
+Problem: 
+    - Dificuldade em desenvolver o raciocínio associativo a crianças pequenas.
 
-Big Idea: Entretenimento/ educação.
+Big Idea: 
+    - Entretenimento/ educação.
 
-Essetial Question: Como um aplicativo de jogos infantis pode ajudar o desenvolvimento do raciocínio em crianças pequenas.
+Essetial Question:
+    - Como um aplicativo de jogos infantis pode ajudar o desenvolvimento do raciocínio em crianças pequenas.
 
-Challenge:  Desenvolver um aplicativo que auxilie as crianças de um modo interativo a desenvolver o raciocínio.
+Challenge:  
+    - Desenvolver um aplicativo que auxilie as crianças de um modo interativo a desenvolver o raciocínio.
 
 Questions:
-- Qual a faixa etária  das crianças que devemos atingir?
+    - Qual a faixa etária  das crianças que devemos atingir?
 
-- As crianças alvo sabem ler ?
+    - As crianças alvo sabem ler ?
 
-- As criancas alvo sabem contar?
+    - As criancas alvo sabem contar?
 
-- As crianças conseguem jogar em dispositivos moveis?
+    - As crianças conseguem jogar em dispositivos moveis?
 
-- 
+
+Activits:
+    - Consultar professores e especialistas pedagogos
+
+    - Visitar escolas e consultar professor
+
+    - Realizar testes com crianças e analisar a capacidade delas ao jogar em dispotivos moveis
+
+
+Solution:
+- Criar um aplicativo que:
+
+    - Ajude as criaças a desenvolver o raciocínio.
+
+    - Motive as crianças a fazer contas de matematica.
+
+    - Entreter/Divertir as crianças.
+    
+
+O que aprendermos:
+    - Utilizar as frameworks de Gesture, Animation e CoreGraphics.
+
+    - Trabalhar em equipe com repositorio no GIT.
+
+    - Construir uma interface para crianças.
+
+    - Usabildiade diferente em um app para crianças
+
+Próximos Passos:
+    - Implementar um cógido para facilitar o cadastro de novos niveis
+
+    - Melhorar interface
+
+    - Criar novos jogos
+
+    - Diminuir o uso de memoria
+
