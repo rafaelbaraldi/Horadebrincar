@@ -72,9 +72,19 @@
         default:
             break;
     }
-    
+    [self setVetorRemover:nil];
+    [self setVetorRemover:[[NSMutableArray alloc] initWithArray: [self figuras]]];
     
     [self setGanhou:NO];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    if ([self faseAtual] == 5) {
+        for (Figura* fig in [self vetorRemover]) {
+            [[fig imgView] removeFromSuperview];
+        }
+        [[self vetorRemover] removeAllObjects];
+    }
 }
 
 - (void)didReceiveMemoryWarning{
@@ -245,6 +255,8 @@
     [_dedo removeFromSuperview];
     
     [[self view] removeGestureRecognizer:_gesto];
+    
+    [self viewWillDisappear:NO];
 
      _faseAtual++;
 

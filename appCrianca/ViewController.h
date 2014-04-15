@@ -18,21 +18,18 @@
 
 @property CGPoint lastPoint;
 @property UIImage* anterior;
-
 @property BOOL ganhou;
-
-@property NSMutableArray* figuras;
-
-@property Figura* figuraInicial;
-
 @property UIImageView *dedo;
-
+@property UIImageView *ok;
+@property UIImageView *arcoiris;
+@property GestoArcoIris* gesto;
 @property int faseAtual;
 
-@property UIImageView *ok;
 
-@property UIImageView *arcoiris;
 
-@property GestoArcoIris* gesto;
+@property Figura* figuraInicial;
+@property NSMutableArray* figuras;
+@property NSMutableArray *vetorRemover;
+
 
 @end
