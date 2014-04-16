@@ -10,7 +10,7 @@
 #import "Figura.h"
 #include "GestoArcoIris.h"
 
-@interface ViewController : UIViewController
+@interface LigueAsFigurasViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *tempDrawImage;
 @property (strong, nonatomic) IBOutlet UIButton *botaoVoltar;

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 RAFAEL CARDOSO DA SILVA. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LigueAsFigurasViewController.h"
 
-@interface ViewController ()
+@interface LigueAsFigurasViewController ()
 
 @end
 
-@implementation ViewController
+@implementation LigueAsFigurasViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

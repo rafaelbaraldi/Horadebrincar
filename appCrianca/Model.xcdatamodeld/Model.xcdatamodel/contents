@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Fase" representedClassName="Fase" syncable="YES">
+        <attribute name="numero" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="jogo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Jogo" inverseName="fase" inverseEntity="Jogo" syncable="YES"/>
+        <relationship name="usuario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" inverseName="fase1" inverseEntity="Usuario" syncable="YES"/>
+    </entity>
+    <entity name="Jogo" representedClassName="Jogo" syncable="YES">
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fase" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Fase" inverseName="jogo" inverseEntity="Fase" syncable="YES"/>
+    </entity>
+    <entity name="Usuario" representedClassName="Usuario" syncable="YES">
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fase1" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Fase" inverseName="usuario" inverseEntity="Fase" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Usuario" positionX="-830" positionY="215" width="128" height="73"/>
+        <element name="Fase" positionX="-1035" positionY="-13" width="128" height="88"/>
+        <element name="Jogo" positionX="-1233" positionY="-190" width="128" height="73"/>
+    </elements>
+</model>

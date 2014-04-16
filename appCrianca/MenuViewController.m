@@ -7,7 +7,7 @@
 //
 
 #import "MenuViewController.h"
-#import "ViewController.h"
+#import "LigueAsFigurasViewController.h"
 #import "MathViewController.h"
 #import "LabirintoViewController.h"
 #import "PontosViewController.h"
@@ -136,14 +136,14 @@
     
     UIButton *botao = (UIButton *) sender;
     
-    ViewController *vc;
+    LigueAsFigurasViewController *vc;
     MathViewController *mv;
     LabirintoViewController *lv;
     PontosViewController *pv;
     
     switch (fase) {
         case 1:
-            vc = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] ;
+            vc = [[LigueAsFigurasViewController alloc] initWithNibName:@"ViewController" bundle:nil] ;
             [vc setFaseAtual: [botao tag]];
             [self presentViewController: vc animated:YES completion:Nil];
             break;

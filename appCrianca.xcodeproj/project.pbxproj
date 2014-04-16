@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B8243CF18FF096100630835 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8243CE18FF096100630835 /* CoreData.framework */; };
+		1B8243D218FF096E00630835 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B8243D018FF096E00630835 /* Model.xcdatamodeld */; };
+		1B8243D518FF262900630835 /* Fase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8243D418FF262900630835 /* Fase.m */; };
+		1B8243D818FF262A00630835 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8243D718FF262A00630835 /* Usuario.m */; };
+		1B8243DB18FF262A00630835 /* Jogo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8243DA18FF262A00630835 /* Jogo.m */; };
 		1B871DFA18EC802300162007 /* MathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B871DF818EC802300162007 /* MathViewController.m */; };
 		1B871DFB18EC802300162007 /* MathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B871DF918EC802300162007 /* MathViewController.xib */; };
 		1B871DFE18EC80C500162007 /* Contas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B871DFD18EC80C500162007 /* Contas.m */; };
@@ -44,8 +49,8 @@
 		310668FB18E20BA800B48195 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 310668F918E20BA800B48195 /* InfoPlist.strings */; };
 		310668FD18E20BA800B48195 /* appCriancaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 310668FC18E20BA800B48195 /* appCriancaTests.m */; };
 		3106691D18E2110900B48195 /* fase1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3106691C18E2110900B48195 /* fase1.png */; };
-		3106692118E2132200B48195 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3106691F18E2132200B48195 /* ViewController.m */; };
-		3106692218E2132200B48195 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3106692018E2132200B48195 /* ViewController.xib */; };
+		3106692118E2132200B48195 /* LigueAsFigurasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3106691F18E2132200B48195 /* LigueAsFigurasViewController.m */; };
+		3106692218E2132200B48195 /* LigueAsFigurasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3106692018E2132200B48195 /* LigueAsFigurasViewController.xib */; };
 		31078FD718F344CB00AB18C8 /* ligueOsPontos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31078FD618F344CB00AB18C8 /* ligueOsPontos.jpg */; };
 		31078FD918F3477300AB18C8 /* saiaDoLabirinto.png in Resources */ = {isa = PBXBuildFile; fileRef = 31078FD818F3477300AB18C8 /* saiaDoLabirinto.png */; };
 		31189DEB18E358E00072D5CB /* Figura.m in Sources */ = {isa = PBXBuildFile; fileRef = 31189DEA18E358E00072D5CB /* Figura.m */; };
@@ -123,6 +128,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B8243CE18FF096100630835 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1B8243D118FF096E00630835 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		1B8243D318FF262900630835 /* Fase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fase.h; sourceTree = "<group>"; };
+		1B8243D418FF262900630835 /* Fase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fase.m; sourceTree = "<group>"; };
+		1B8243D618FF262A00630835 /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
+		1B8243D718FF262A00630835 /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
+		1B8243D918FF262A00630835 /* Jogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jogo.h; sourceTree = "<group>"; };
+		1B8243DA18FF262A00630835 /* Jogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jogo.m; sourceTree = "<group>"; };
 		1B871DF718EC802300162007 /* MathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathViewController.h; sourceTree = "<group>"; };
 		1B871DF818EC802300162007 /* MathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathViewController.m; sourceTree = "<group>"; };
 		1B871DF918EC802300162007 /* MathViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MathViewController.xib; sourceTree = "<group>"; };
@@ -173,9 +186,9 @@
 		310668FA18E20BA800B48195 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		310668FC18E20BA800B48195 /* appCriancaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appCriancaTests.m; sourceTree = "<group>"; };
 		3106691C18E2110900B48195 /* fase1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fase1.png; sourceTree = "<group>"; };
-		3106691E18E2132200B48195 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3106691F18E2132200B48195 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3106692018E2132200B48195 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		3106691E18E2132200B48195 /* LigueAsFigurasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LigueAsFigurasViewController.h; sourceTree = "<group>"; };
+		3106691F18E2132200B48195 /* LigueAsFigurasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LigueAsFigurasViewController.m; sourceTree = "<group>"; };
+		3106692018E2132200B48195 /* LigueAsFigurasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LigueAsFigurasViewController.xib; sourceTree = "<group>"; };
 		31078FD618F344CB00AB18C8 /* ligueOsPontos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ligueOsPontos.jpg; sourceTree = "<group>"; };
 		31078FD818F3477300AB18C8 /* saiaDoLabirinto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saiaDoLabirinto.png; sourceTree = "<group>"; };
 		31189DE918E358E00072D5CB /* Figura.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Figura.h; sourceTree = "<group>"; };
@@ -251,6 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B8243CF18FF096100630835 /* CoreData.framework in Frameworks */,
 				310668DA18E20BA800B48195 /* CoreGraphics.framework in Frameworks */,
 				310668DC18E20BA800B48195 /* UIKit.framework in Frameworks */,
 				310668D818E20BA800B48195 /* Foundation.framework in Frameworks */,
@@ -270,6 +284,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B8243DC18FF264F00630835 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1B8243D018FF096E00630835 /* Model.xcdatamodeld */,
+				1B8243D918FF262A00630835 /* Jogo.h */,
+				1B8243DA18FF262A00630835 /* Jogo.m */,
+				1B8243D618FF262A00630835 /* Usuario.h */,
+				1B8243D718FF262A00630835 /* Usuario.m */,
+				1B8243D318FF262900630835 /* Fase.h */,
+				1B8243D418FF262900630835 /* Fase.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		1BF7762918EDF2CA00FC7C18 /* Figuras */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +355,7 @@
 		310668D618E20BA800B48195 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B8243CE18FF096100630835 /* CoreData.framework */,
 				310668D718E20BA800B48195 /* Foundation.framework */,
 				310668D918E20BA800B48195 /* CoreGraphics.framework */,
 				310668DB18E20BA800B48195 /* UIKit.framework */,
@@ -352,9 +381,9 @@
 				F6A85CAB18EA013C00819310 /* MenuViewController.h */,
 				F6A85CAC18EA013C00819310 /* MenuViewController.m */,
 				F6A85CAD18EA013C00819310 /* MenuViewController.xib */,
-				3106691E18E2132200B48195 /* ViewController.h */,
-				3106691F18E2132200B48195 /* ViewController.m */,
-				3106692018E2132200B48195 /* ViewController.xib */,
+				3106691E18E2132200B48195 /* LigueAsFigurasViewController.h */,
+				3106691F18E2132200B48195 /* LigueAsFigurasViewController.m */,
+				3106692018E2132200B48195 /* LigueAsFigurasViewController.xib */,
 				31189DE918E358E00072D5CB /* Figura.h */,
 				31189DEA18E358E00072D5CB /* Figura.m */,
 				1B871DF718EC802300162007 /* MathViewController.h */,
@@ -371,6 +400,7 @@
 				F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */,
 				3106690B18E20C1600B48195 /* imagens */,
 				310668E918E20BA800B48195 /* Images.xcassets */,
+				1B8243DC18FF264F00630835 /* model */,
 				310668DE18E20BA800B48195 /* Supporting Files */,
 				1BF7762E18EDFEC200FC7C18 /* GestoLabirintoFase1.h */,
 				2F5DE55818EE58BE00AC13D8 /* GestoLabirintoFase3.h */,
@@ -584,7 +614,7 @@
 				31C4190218EDE62A004F83DE /* errou.png in Resources */,
 				1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */,
 				31078FD718F344CB00AB18C8 /* ligueOsPontos.jpg in Resources */,
-				3106692218E2132200B48195 /* ViewController.xib in Resources */,
+				3106692218E2132200B48195 /* LigueAsFigurasViewController.xib in Resources */,
 				31EDB0FC18F3264700FFC301 /* esquerda2.png in Resources */,
 				31EDB11918F32C4E00FFC301 /* direita10.png in Resources */,
 				31C4190818EE0585004F83DE /* labirinto3.png in Resources */,
@@ -668,18 +698,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B8243DB18FF262A00630835 /* Jogo.m in Sources */,
 				1B871DFA18EC802300162007 /* MathViewController.m in Sources */,
 				310668E818E20BA800B48195 /* AppDelegate.m in Sources */,
+				1B8243D518FF262900630835 /* Fase.m in Sources */,
 				1B871E0E18EC9E8200162007 /* LabirintoViewController.m in Sources */,
 				F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */,
 				1BF7763318EE03B200FC7C18 /* GestoLabirintoFase2.m in Sources */,
 				1BF7763018EDFEC200FC7C18 /* GestoLabirintoFase1.m in Sources */,
 				1B871E0218EC8A8400162007 /* PontosViewController.m in Sources */,
+				1B8243D818FF262A00630835 /* Usuario.m in Sources */,
 				1B871E1418EC9FF300162007 /* GestoLabirinto.m in Sources */,
+				1B8243D218FF096E00630835 /* Model.xcdatamodeld in Sources */,
 				2F5DE55A18EE58BE00AC13D8 /* GestoLabirintoFase3.m in Sources */,
 				312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */,
 				31189DEB18E358E00072D5CB /* Figura.m in Sources */,
-				3106692118E2132200B48195 /* ViewController.m in Sources */,
+				3106692118E2132200B48195 /* LigueAsFigurasViewController.m in Sources */,
 				F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */,
 				310668E418E20BA800B48195 /* main.m in Sources */,
 				1B871DFE18EC80C500162007 /* Contas.m in Sources */,
@@ -900,6 +934,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1B8243D018FF096E00630835 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1B8243D118FF096E00630835 /* Model.xcdatamodel */,
+			);
+			currentVersion = 1B8243D118FF096E00630835 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 310668CC18E20BA800B48195 /* Project object */;
 }
