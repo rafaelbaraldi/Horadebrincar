@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="matematica.png" translatesAutoresizingMaskIntoConstraints="NO" id="XYR-aP-Eq0">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="matematicaFim.png" translatesAutoresizingMaskIntoConstraints="NO" id="XYR-aP-Eq0">
                     <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
@@ -31,11 +31,17 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XYR-aP-Eq0" secondAttribute="bottom" id="PQl-Ih-GDF"/>
+                <constraint firstItem="XYR-aP-Eq0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wj2-9T-64p"/>
+                <constraint firstItem="XYR-aP-Eq0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YFK-a3-UPM"/>
+                <constraint firstAttribute="trailing" secondItem="XYR-aP-Eq0" secondAttribute="trailing" id="thi-DH-Qtn"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
     <resources>
         <image name="back.png" width="180" height="180"/>
-        <image name="matematica.png" width="720" height="1024"/>
+        <image name="matematicaFim.png" width="768" height="1024"/>
     </resources>
 </document>

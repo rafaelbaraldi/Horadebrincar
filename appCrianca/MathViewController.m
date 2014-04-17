@@ -41,32 +41,42 @@
         }
     }
     
-    
     if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)){
         [self viewLoadLandscape];
     }
     else{
         [self viewLoadPortrait];
-        
     }
     
-    [[self tempDrawImage]setImage:[UIImage imageNamed:@"matematica.png"]];
+    [[self tempDrawImage]setImage:[UIImage imageNamed:@"matematicaFim.png"]];
     [[self tempDrawImage] setAlpha:1];
-    [self setAnterior:[UIImage imageNamed:@"matematica.png"]];
+    [self setAnterior:[UIImage imageNamed:@"matematicaFim.png"]];
     
     [self setGanhou:NO];
     
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    [[self tempDrawImage]setImage:[UIImage imageNamed:@"matematica.png"]];
     [[self tempDrawImage] setAlpha:1];
-    [self setAnterior:[UIImage imageNamed:@"matematica.png"]];
     
     if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)){
+//        CGFloat x = [[self tempDrawImage] frame].size.width;
+//        CGRect frame = [[self tempDrawImage] frame];
+//        
+//        frame.size.width = [[self tempDrawImage] frame].size.height;
+//        frame.size.height = x;
+//        
+//        [[self tempDrawImage] setFrame:frame];
+//        
+        [[self tempDrawImage] setImage:[UIImage imageNamed:@"matematicaHorizontal.png"]];
+        [self setAnterior:[UIImage imageNamed:@"matematicaHorizontal.png"]];
+        
         [self viewLoadLandscape];
     }
     else{
+        [[self tempDrawImage] setImage:[UIImage imageNamed:@"matematicaFim.png"]];
+        [self setAnterior:[UIImage imageNamed:@"matematicaFim.png"]];
+        
         [self viewLoadPortrait];
     }
     [self redesenhaLabelsAcertadas];
@@ -80,11 +90,11 @@
     for (int i = 0; i < tamanhoVetores ; i++) {
         //coloca os frames no labels e mosta eles
         [[[self equation] objectAtIndex: i] removeFromSuperview];
-        [[[self equation] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/9, posicao, 130 , 60)];
+        [[[self equation] objectAtIndex: i] setFrame: CGRectMake(self.tempDrawImage.image.size.width/9, posicao, 130 , 60)];
         [[self view] addSubview:[[self equation] objectAtIndex: i]];
         
         [[[self solution] objectAtIndex: i] removeFromSuperview];
-        [[[self solution] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/9 + 400, posicao, 130 , 60)];
+        [[[self solution] objectAtIndex: i] setFrame: CGRectMake(self.tempDrawImage.image.size.width/9 + 400, posicao, 130 , 60)];
         [[self view] addSubview:[[self solution] objectAtIndex: i]];
         
         posicao += 850/tamanhoVetores;
@@ -92,18 +102,19 @@
 }
 
 - (void)viewLoadLandscape{
+    
     NSLog(@"Landscape");
-    int posicao = self.view.bounds.size.width/9;
+    int posicao = self.tempDrawImage.image.size.width/9;
     int tamanhoVetores = [[self equation]count];
     
     for (int i = 0; i < tamanhoVetores ; i++) {
         //coloca os frames no labels e mosta eles
         [[[self equation] objectAtIndex: i] removeFromSuperview];
-        [[[self equation] objectAtIndex: i] setFrame: CGRectMake(posicao, self.view.bounds.size.height/9, 130 , 60)];
+        [[[self equation] objectAtIndex: i] setFrame: CGRectMake(posicao, self.tempDrawImage.image.size.height/9, 130 , 60)];
         [[self view] addSubview:[[self equation] objectAtIndex: i]];
         
         [[[self solution] objectAtIndex: i] removeFromSuperview];
-        [[[self solution] objectAtIndex: i] setFrame: CGRectMake(posicao, self.view.bounds.size.height/9 + 400, 130 , 60)];
+        [[[self solution] objectAtIndex: i] setFrame: CGRectMake(posicao, self.tempDrawImage.image.size.height/9 + 400, 130 , 60)];
         [[self view] addSubview:[[self solution] objectAtIndex: i]];
         
         posicao += 850/tamanhoVetores;
@@ -170,16 +181,16 @@
         }
     }
     
-    UIGraphicsBeginImageContext(self.view.frame.size);
+    UIGraphicsBeginImageContext(self.tempDrawImage.image.size);
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     
     if([[self contas]count] != 0){
         UITouch *touch = [touches anyObject];
-        CGPoint currentPoint = [touch locationInView:self.view];
+        CGPoint currentPoint = [touch locationInView:self.tempDrawImage];
         
-        [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.tempDrawImage.image.size.width, self.tempDrawImage.image.size.height)];
         
         CGContextMoveToPoint(UIGraphicsGetCurrentContext(), [self lastPoint].x, [self lastPoint].y);
         CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
@@ -365,9 +376,9 @@
     CGPoint final = CGPointMake(x2, y2);
     
     //Desenha a linha reta da farinha ao pao quando a crianca tracar certo
-    UIGraphicsBeginImageContext(self.view.frame.size);
+    UIGraphicsBeginImageContext(self.tempDrawImage.image.size);
     CGContextRef contexto = UIGraphicsGetCurrentContext();
-    [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.tempDrawImage.image.size.width, self.tempDrawImage.frame.size.height)];
     CGContextMoveToPoint( contexto, inicial.x, inicial.y);     // ponto inicial da linha (farinha)
     CGContextAddLineToPoint( contexto, final.x, final.y); // ponto final da linha (pao) // falta descobrir o ponto exato
     CGContextSetLineCap( contexto, kCGLineCapRound);
