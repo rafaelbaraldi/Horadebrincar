@@ -93,14 +93,14 @@
 }
 
 
-- (NSUInteger)supportedInterfaceOrientations
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskPortrait;
-    } else {
-        return UIInterfaceOrientationMaskPortrait;
-    }
-}
+//- (NSUInteger)supportedInterfaceOrientations
+//{
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+//        return UIInterfaceOrientationMaskPortrait;
+//    } else {
+//        return UIInterfaceOrientationMaskPortrait;
+//    }
+//}
 
 - (void)didReceiveMemoryWarning
 {

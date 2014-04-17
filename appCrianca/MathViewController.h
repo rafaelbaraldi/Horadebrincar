@@ -25,10 +25,12 @@
 @property int faseAtual;
 
 @property UILabel *labelInicial;
-@property NSMutableArray *equation;
-@property NSMutableArray *solution;
-@property NSMutableArray *contas;
-@property NSMutableArray *vetorRemover;
+@property NSMutableArray *equation; // guarda os labels para removelos da view quando sair da mesma
+@property NSMutableArray *solution; // guarda os labels para removelos da view quando sair da mesma
+@property NSMutableArray *contas;   // guarda os labels que tem as expressoes que ainda faltam para passar a fase
+@property NSMutableArray *acertos;  // guarda os labels que tem as expressoes acertadas para redesenhar qdo girar o device
+
+
 
 
 @end

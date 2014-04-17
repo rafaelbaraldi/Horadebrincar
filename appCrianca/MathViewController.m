@@ -30,35 +30,24 @@
     [self setEquation: [conta firstObject]];
     [self setSolution: [conta lastObject]];
     
-    int posicao = 174;
-    
-    //[[self equation] count] == [[self solution] count] == 9
-    int tamanhoVetores = [[self equation]count];
-    for (int i = 0; i < tamanhoVetores ; i++) {
+    [self setContas: [[NSMutableArray alloc] init]];
+    [self setAcertos:[[NSMutableArray alloc] init]];
 
-        //coloca os frames no labels e mosta eles
-        [[[self equation] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/9, posicao, 200 , 60)];
-        [[self view] addSubview:[[self equation] objectAtIndex: i]];
-        
-        [[[self solution] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/9 + 400, posicao, 200 , 60)];
-        [[self view] addSubview:[[self solution] objectAtIndex: i]];
-        
-        posicao += 850/tamanhoVetores;
+    
+    //junta os vetores de equacoes e respostas em 1 so para fazer a verificacao unificadas igual no jogo das figuras
+    for (int i = 0; i < [conta count]; i++) {
+        for (int j = 0; j < [[conta objectAtIndex:i] count]; j++) {
+            [[self contas] addObject: [[conta objectAtIndex:i] objectAtIndex:j] ];
+        }
     }
     
-    [self setVetorRemover:nil];
-    [self setVetorRemover:[[NSMutableArray alloc] init]];
     
-    //junta os vetores de equacoes e respostas em 1 so para fazer a verificacao unificadas igual no jogo das imagens
-    [self setContas:[[NSMutableArray alloc] init]];
-    for (int i = 0;  i < tamanhoVetores ; i++) {
-        [[self contas] addObject: [[self equation] lastObject] ];
-        [[self vetorRemover] addObject: [[self equation] lastObject] ];
-        [[self equation] removeLastObject];
+    if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)){
+        [self viewLoadLandscape];
+    }
+    else{
+        [self viewLoadPortrait];
         
-        [[self contas] addObject: [[self solution] lastObject] ];
-        [[self vetorRemover] addObject: [[self solution] lastObject] ];
-        [[self solution] removeLastObject];
     }
     
     [[self tempDrawImage]setImage:[UIImage imageNamed:@"matematica.png"]];
@@ -69,15 +58,94 @@
     
 }
 
--(void)viewWillAppear:(BOOL)animated{
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [[self tempDrawImage]setImage:[UIImage imageNamed:@"matematica.png"]];
+    [[self tempDrawImage] setAlpha:1];
+    [self setAnterior:[UIImage imageNamed:@"matematica.png"]];
     
+    if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)){
+        [self viewLoadLandscape];
+    }
+    else{
+        [self viewLoadPortrait];
+    }
+    [self redesenhaLabelsAcertadas];
 }
 
+- (void)viewLoadPortrait{
+    NSLog(@"Portrait");
+    int posicao = 174;
+    int tamanhoVetores = [[self equation]count];
+    
+    for (int i = 0; i < tamanhoVetores ; i++) {
+        //coloca os frames no labels e mosta eles
+        [[[self equation] objectAtIndex: i] removeFromSuperview];
+        [[[self equation] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/9, posicao, 130 , 60)];
+        [[self view] addSubview:[[self equation] objectAtIndex: i]];
+        
+        [[[self solution] objectAtIndex: i] removeFromSuperview];
+        [[[self solution] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/9 + 400, posicao, 130 , 60)];
+        [[self view] addSubview:[[self solution] objectAtIndex: i]];
+        
+        posicao += 850/tamanhoVetores;
+    }
+}
+
+- (void)viewLoadLandscape{
+    NSLog(@"Landscape");
+    int posicao = self.view.bounds.size.width/9;
+    int tamanhoVetores = [[self equation]count];
+    
+    for (int i = 0; i < tamanhoVetores ; i++) {
+        //coloca os frames no labels e mosta eles
+        [[[self equation] objectAtIndex: i] removeFromSuperview];
+        [[[self equation] objectAtIndex: i] setFrame: CGRectMake(posicao, self.view.bounds.size.height/9, 130 , 60)];
+        [[self view] addSubview:[[self equation] objectAtIndex: i]];
+        
+        [[[self solution] objectAtIndex: i] removeFromSuperview];
+        [[[self solution] objectAtIndex: i] setFrame: CGRectMake(posicao, self.view.bounds.size.height/9 + 400, 130 , 60)];
+        [[self view] addSubview:[[self solution] objectAtIndex: i]];
+        
+        posicao += 850/tamanhoVetores;
+    }
+}
+
+-(void)redesenhaLabelsAcertadas{
+    for (UILabel * label in [self acertos]) {
+        for (int i = 0; i < [[self acertos] count]; i++) {
+            if(label != nil && [[self acertos] objectAtIndex:i] != nil){
+                
+                if ( [label tag] == [[[self acertos] objectAtIndex:i] tag] ) {
+                    if ( !UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) ){
+                        if( [label frame].origin.x != [[[self acertos] objectAtIndex:i] frame].origin.x ){
+                            //Desenha linha acertada entre os itens corretos
+                            [self  desenhaLinha:label  :[[self acertos] objectAtIndex:i]];
+                        }
+                    }
+                    else{
+                        if( [label frame].origin.y != [[[self acertos] objectAtIndex:i] frame].origin.y ){
+                            //Desenha linha acertada entre os itens corretos
+                            [self  desenhaLinha:label  :[[self acertos] objectAtIndex:i]];
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 -(void)viewWillDisappear:(BOOL)animated{
-    for (UILabel* label in [self vetorRemover]) {
+    for (UILabel* label in [self equation]) {
         [label removeFromSuperview];
     }
-    [[self vetorRemover] removeAllObjects];
+    [[self equation] removeAllObjects];
+    
+    for (UILabel* label in [self solution]) {
+        [label removeFromSuperview];
+    }
+    [[self solution] removeAllObjects];
+    
 }
 
 - (void)didReceiveMemoryWarning{
@@ -145,40 +213,8 @@
     }
     
     //Verifica se o usuario acertou as imagens
-    if(labelFinal != nil && [self labelInicial] != nil){
-        
-        if ( [[self labelInicial] tag] == [labelFinal tag] ) {
-            if( [[self labelInicial] frame].origin.x != [labelFinal frame].origin.x){
-                
-                int x1 = [[self labelInicial] frame].origin.x + [[self labelInicial] frame].size.width/2 ;
-                int x2 = [labelFinal frame].origin.x + [labelFinal frame].size.width/2;
-                
-                if (x1 > x2) {
-                    x1 = [[self labelInicial] frame].origin.x;
-                    x2 = [labelFinal frame].origin.x + [labelFinal frame].size.width;
-                }
-                else{
-                    x1 = [[self labelInicial] frame].origin.x + [[self labelInicial] frame].size.width;
-                    x2 = [labelFinal frame].origin.x;
-                    
-                }
-                
-                int y1 = [[self labelInicial] frame].origin.y + [[self labelInicial] frame].size.height/2 ;
-                CGPoint centro1 = CGPointMake(x1, y1);
-                
-                
-                int y2 = [labelFinal frame].origin.y + [labelFinal frame].size.height/2;
-                CGPoint centro2 = CGPointMake(x2, y2);
-                
-                //Remove figuras acertadas do vetor
-                [[self contas] removeObject: labelFinal];
-                [[self contas] removeObject: [self labelInicial]];
-                
-                //Desenha linha acertada entre os itens corretos
-                [self  desenhaLinha:centro1 :centro2];
-            }
-        }
-    }
+    [self verificaParLabelcontasInicio:[self labelInicial] Final: labelFinal];
+    
     
     //Altera image anterior
     [self setAnterior:[[self tempDrawImage] image]];
@@ -215,8 +251,38 @@
     }
 }
 
+-(void)verificaParLabelcontasInicio: (UILabel*)inicio Final:(UILabel*)final{
+    if(final != nil && inicio != nil){
+        if ( [inicio tag] == [final tag] ) {
+            if ( !UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) ){
+                if( [inicio frame].origin.x != [final frame].origin.x){
+                    //Desenha linha acertada entre os itens corretos
+                    [self  desenhaLinha:inicio  :final];
+                    [[self acertos] addObject:inicio];
+                    [[self acertos] addObject: final];
+                    
+                    //Remove figuras acertadas do vetor
+                    [[self contas] removeObject: final];
+                    [[self contas] removeObject: inicio];
+                }
+            }
+            else{
+                if( [inicio frame].origin.y != [final frame].origin.y){
+                    //Desenha linha acertada entre os itens corretos
+                    [self  desenhaLinha:inicio  :final];
+                    [[self acertos] addObject:inicio];
+                    [[self acertos] addObject: final];
+                    
+                    [[self contas] removeObject: final];
+                    [[self contas] removeObject: inicio];
+                }
+            }
+        }
+    }
+}
+
+
 -(void)animaArcoComDedo{
-    
     //Adiciona arco-iris
     _arcoiris = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arcoiris.png"]];
     [_arcoiris setFrame:CGRectMake(35, 300, 700, 343)];
@@ -288,7 +354,15 @@
     }
 }
 
--(void)desenhaLinha:(CGPoint) inicial :(CGPoint) final{
+-(void)desenhaLinha:(UILabel *) labelInicio :(UILabel *) labelFinal{
+    
+    int x1 = [labelInicio frame].origin.x + [labelInicio frame].size.width/2 ;
+    int y1 = [labelInicio frame].origin.y + [labelInicio frame].size.height/2 ;
+    CGPoint inicial = CGPointMake(x1, y1);
+    
+    int x2 = [labelFinal frame].origin.x + [labelFinal frame].size.width/2;
+    int y2 = [labelFinal frame].origin.y + [labelFinal frame].size.height/2;
+    CGPoint final = CGPointMake(x2, y2);
     
     //Desenha a linha reta da farinha ao pao quando a crianca tracar certo
     UIGraphicsBeginImageContext(self.view.frame.size);
@@ -308,13 +382,12 @@
     [self dismissViewControllerAnimated:YES completion:Nil];
 }
 
-- (NSUInteger)supportedInterfaceOrientations
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskPortrait;
-    } else {
-        return UIInterfaceOrientationMaskPortrait;
-    }
-}
+//- (NSUInteger)supportedInterfaceOrientations{
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+//        return UIInterfaceOrientationMaskPortrait;
+//    } else {
+//        return UIInterfaceOrientationMaskPortrait;
+//    }
+//}
 
 @end
