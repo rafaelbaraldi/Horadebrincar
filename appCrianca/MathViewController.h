@@ -28,7 +28,9 @@
 @property NSMutableArray *equation;
 @property NSMutableArray *solution;
 @property NSMutableArray *contas;
-@property NSMutableArray *vetorRemover;
+@property NSMutableArray *acertos;
+
+
 
 
 @end

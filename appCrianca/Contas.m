@@ -23,8 +23,9 @@
     NSMutableArray *equation =  [[NSMutableArray alloc] init];
     NSMutableArray *solution =  [[NSMutableArray alloc] init];
     
-    int qteContas = fase*2 +1;
+    int qteContas = 2 + fase;
     
+
     int valor1 ;
     int valor2 ;
     int operacao ;
