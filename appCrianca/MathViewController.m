@@ -42,10 +42,6 @@
     }
     
     
-    
-    
-    
-    
     if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)){
         [self viewLoadLandscape];
     }
@@ -53,7 +49,6 @@
         [self viewLoadPortrait];
         
     }
-    
     
     [[self tempDrawImage]setImage:[UIImage imageNamed:@"matematica.png"]];
     [[self tempDrawImage] setAlpha:1];
@@ -63,25 +58,26 @@
     
 }
 
-// ViewController.m
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-
+    [[self tempDrawImage]setImage:[UIImage imageNamed:@"matematica.png"]];
+    [[self tempDrawImage] setAlpha:1];
+    [self setAnterior:[UIImage imageNamed:@"matematica.png"]];
+    
     if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)){
         [self viewLoadLandscape];
     }
     else{
         [self viewLoadPortrait];
-        
     }
-    
-
+    [self redesenhaLabelsAcertadas];
 }
 
 - (void)viewLoadPortrait{
+    NSLog(@"Portrait");
     int posicao = 174;
     int tamanhoVetores = [[self equation]count];
+    
     for (int i = 0; i < tamanhoVetores ; i++) {
-        
         //coloca os frames no labels e mosta eles
         [[[self equation] objectAtIndex: i] removeFromSuperview];
         [[[self equation] objectAtIndex: i] setFrame: CGRectMake(self.view.bounds.size.width/9, posicao, 130 , 60)];
@@ -93,22 +89,20 @@
         
         posicao += 850/tamanhoVetores;
     }
-    
 }
 
 - (void)viewLoadLandscape{
-    NSLog(@"lanscape, nada agr");
+    NSLog(@"Landscape");
     int posicao = self.view.bounds.size.width/9;
     int tamanhoVetores = [[self equation]count];
+    
     for (int i = 0; i < tamanhoVetores ; i++) {
-        
         //coloca os frames no labels e mosta eles
         [[[self equation] objectAtIndex: i] removeFromSuperview];
         [[[self equation] objectAtIndex: i] setFrame: CGRectMake(posicao, self.view.bounds.size.height/9, 130 , 60)];
         [[self view] addSubview:[[self equation] objectAtIndex: i]];
         
         [[[self solution] objectAtIndex: i] removeFromSuperview];
-        
         [[[self solution] objectAtIndex: i] setFrame: CGRectMake(posicao, self.view.bounds.size.height/9 + 400, 130 , 60)];
         [[self view] addSubview:[[self solution] objectAtIndex: i]];
         
@@ -116,6 +110,29 @@
     }
 }
 
+-(void)redesenhaLabelsAcertadas{
+    for (UILabel * label in [self acertos]) {
+        for (int i = 0; i < [[self acertos] count]; i++) {
+            if(label != nil && [[self acertos] objectAtIndex:i] != nil){
+                
+                if ( [label tag] == [[[self acertos] objectAtIndex:i] tag] ) {
+                    if ( !UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) ){
+                        if( [label frame].origin.x != [[[self acertos] objectAtIndex:i] frame].origin.x ){
+                            //Desenha linha acertada entre os itens corretos
+                            [self  desenhaLinha:label  :[[self acertos] objectAtIndex:i]];
+                        }
+                    }
+                    else{
+                        if( [label frame].origin.y != [[[self acertos] objectAtIndex:i] frame].origin.y ){
+                            //Desenha linha acertada entre os itens corretos
+                            [self  desenhaLinha:label  :[[self acertos] objectAtIndex:i]];
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -234,6 +251,36 @@
     }
 }
 
+-(void)verificaParLabelcontasInicio: (UILabel*)inicio Final:(UILabel*)final{
+    if(final != nil && inicio != nil){
+        if ( [inicio tag] == [final tag] ) {
+            if ( !UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) ){
+                if( [inicio frame].origin.x != [final frame].origin.x){
+                    //Desenha linha acertada entre os itens corretos
+                    [self  desenhaLinha:inicio  :final];
+                    [[self acertos] addObject:inicio];
+                    [[self acertos] addObject: final];
+                    
+                    //Remove figuras acertadas do vetor
+                    [[self contas] removeObject: final];
+                    [[self contas] removeObject: inicio];
+                }
+            }
+            else{
+                if( [inicio frame].origin.y != [final frame].origin.y){
+                    //Desenha linha acertada entre os itens corretos
+                    [self  desenhaLinha:inicio  :final];
+                    [[self acertos] addObject:inicio];
+                    [[self acertos] addObject: final];
+                    
+                    [[self contas] removeObject: final];
+                    [[self contas] removeObject: inicio];
+                }
+            }
+        }
+    }
+}
+
 
 -(void)animaArcoComDedo{
     //Adiciona arco-iris
@@ -304,33 +351,6 @@
     }
     else{
         [self viewDidLoad];
-    }
-}
-
--(void)verificaParLabelcontasInicio: (UILabel*)inicio Final:(UILabel*)final{
-    if(final != nil && inicio != nil){
-        if ( [inicio tag] == [final tag] ) {
-            if ( !UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) ){
-                if( [inicio frame].origin.x != [final frame].origin.x){
-                    //Desenha linha acertada entre os itens corretos
-                    [self  desenhaLinha:inicio  :final];
-                    
-                    //Remove figuras acertadas do vetor
-                    [[self contas] removeObject: final];
-                    [[self contas] removeObject: inicio];
-                }
-            }
-            else{
-                if( [inicio frame].origin.y != [final frame].origin.y){
-                    //Desenha linha acertada entre os itens corretos
-                    [self  desenhaLinha:inicio  :final];
-                    
-                    //Remove figuras acertadas do vetor
-                    [[self contas] removeObject: final];
-                    [[self contas] removeObject: inicio];
-                }
-            }
-        }
     }
 }
 
