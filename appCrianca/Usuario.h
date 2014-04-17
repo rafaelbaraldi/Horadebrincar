@@ -12,9 +12,8 @@
 @class Fase;
 
 @interface Usuario : NSManagedObject
-
-@property (nonatomic, retain) NSString * nome;
-@property (nonatomic, retain) NSSet *fase1;
+    @property (nonatomic, retain) NSString * nome;
+    @property (nonatomic, retain) NSSet *fase1;
 @end
 
 @interface Usuario (CoreDataGeneratedAccessors)
