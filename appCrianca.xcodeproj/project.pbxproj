@@ -113,6 +113,9 @@
 		31EDB13118F33A2800FFC301 /* liguaAsFiguras.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB12F18F33A2800FFC301 /* liguaAsFiguras.png */; };
 		31EDB13218F33A2800FFC301 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB13018F33A2800FFC301 /* background2.png */; };
 		31EDB13518F33D0400FFC301 /* Liguematematica.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB13418F33D0400FFC301 /* Liguematematica.png */; };
+		73E470DF1900CE5500987461 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E470DD1900CE5500987461 /* LoginViewController.m */; };
+		73E470E01900CE5500987461 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E470DE1900CE5500987461 /* LoginViewController.xib */; };
+		73E470E21900CEBA00987461 /* jogar.png in Resources */ = {isa = PBXBuildFile; fileRef = 73E470E11900CEBA00987461 /* jogar.png */; };
 		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
 		F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A85CAD18EA013C00819310 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
@@ -254,6 +257,10 @@
 		31EDB12F18F33A2800FFC301 /* liguaAsFiguras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = liguaAsFiguras.png; sourceTree = "<group>"; };
 		31EDB13018F33A2800FFC301 /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
 		31EDB13418F33D0400FFC301 /* Liguematematica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liguematematica.png; sourceTree = "<group>"; };
+		73E470DC1900CE5500987461 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		73E470DD1900CE5500987461 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		73E470DE1900CE5500987461 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		73E470E11900CEBA00987461 /* jogar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jogar.png; sourceTree = "<group>"; };
 		F6A85CAB18EA013C00819310 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F6A85CAC18EA013C00819310 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F6A85CAD18EA013C00819310 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -372,6 +379,9 @@
 				31A1648418E60AF800FA391E /* CBL */,
 				310668E618E20BA800B48195 /* AppDelegate.h */,
 				310668E718E20BA800B48195 /* AppDelegate.m */,
+				73E470DC1900CE5500987461 /* LoginViewController.h */,
+				73E470DD1900CE5500987461 /* LoginViewController.m */,
+				73E470DE1900CE5500987461 /* LoginViewController.xib */,
 				1B871E0B18EC9E8200162007 /* LabirintoViewController.h */,
 				1B871E0C18EC9E8200162007 /* LabirintoViewController.m */,
 				1B871E0D18EC9E8200162007 /* LabirintoViewController.xib */,
@@ -400,16 +410,16 @@
 				2F63489E18ECF0F900E5E7A8 /* Pontos.m */,
 				F6B0ABBA18E4A971004F3C42 /* GestoArcoIris.h */,
 				F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */,
-				3106690B18E20C1600B48195 /* imagens */,
-				310668E918E20BA800B48195 /* Images.xcassets */,
-				1B8243DC18FF264F00630835 /* model */,
-				310668DE18E20BA800B48195 /* Supporting Files */,
 				1BF7762E18EDFEC200FC7C18 /* GestoLabirintoFase1.h */,
 				2F5DE55818EE58BE00AC13D8 /* GestoLabirintoFase3.h */,
 				2F5DE55918EE58BE00AC13D8 /* GestoLabirintoFase3.m */,
 				1BF7762F18EDFEC200FC7C18 /* GestoLabirintoFase1.m */,
 				1BF7763118EE03B200FC7C18 /* GestoLabirintoFase2.h */,
 				1BF7763218EE03B200FC7C18 /* GestoLabirintoFase2.m */,
+				3106690B18E20C1600B48195 /* imagens */,
+				310668E918E20BA800B48195 /* Images.xcassets */,
+				1B8243DC18FF264F00630835 /* model */,
+				310668DE18E20BA800B48195 /* Supporting Files */,
 			);
 			path = appCrianca;
 			sourceTree = "<group>";
@@ -453,6 +463,7 @@
 				312DD45518F467B600F30CE8 /* transparente.png */,
 				1B988A5F1900703A00EC54C8 /* matematicaFim.png */,
 				1B988A611900713500EC54C8 /* matematicaHorizontal.png */,
+				73E470E11900CEBA00987461 /* jogar.png */,
 				1BF7762B18EDF2DB00FC7C18 /* Labirinto */,
 				1BF7762A18EDF2D300FC7C18 /* Pontos */,
 				1BF7762918EDF2CA00FC7C18 /* Figuras */,
@@ -651,6 +662,7 @@
 				31EDB12418F32C4E00FFC301 /* esquerda10.png in Resources */,
 				31EDB11D18F32C4E00FFC301 /* direita14.png in Resources */,
 				31EDB0F718F3264700FFC301 /* direita6.png in Resources */,
+				73E470E21900CEBA00987461 /* jogar.png in Resources */,
 				2FFBC00A18EF01310079D699 /* 152.png in Resources */,
 				1BF7762718EDE19F00FC7C18 /* abelhinha.jpg in Resources */,
 				31EDB12218F32C4E00FFC301 /* direita19.png in Resources */,
@@ -675,6 +687,7 @@
 				31EDB11C18F32C4E00FFC301 /* direita13.png in Resources */,
 				31EDB12118F32C4E00FFC301 /* direita18.png in Resources */,
 				31EDB13218F33A2800FFC301 /* background2.png in Resources */,
+				73E470E01900CE5500987461 /* LoginViewController.xib in Resources */,
 				31EDB12B18F32C4E00FFC301 /* esquerda18.png in Resources */,
 				1BF7762618EDE19F00FC7C18 /* florzinha.gif in Resources */,
 				1B871E0318EC8A8400162007 /* PontosViewController.xib in Resources */,
@@ -713,6 +726,7 @@
 				1B871E0218EC8A8400162007 /* PontosViewController.m in Sources */,
 				1B8243D818FF262A00630835 /* Usuario.m in Sources */,
 				1B871E1418EC9FF300162007 /* GestoLabirinto.m in Sources */,
+				73E470DF1900CE5500987461 /* LoginViewController.m in Sources */,
 				1B8243D218FF096E00630835 /* Model.xcdatamodeld in Sources */,
 				2F5DE55A18EE58BE00AC13D8 /* GestoLabirintoFase3.m in Sources */,
 				312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */,
