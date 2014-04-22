@@ -58,8 +58,6 @@
         Fase *faseAtual = [[self getFases] objectAtIndex:i];
         
         Usuario * u = (Usuario*)[faseAtual usuario];
-        NSLog(@"%@", u.nome);
-        NSLog(@"%@",[[self getJogadorAtual] nome]);
         
         if([[u nome]isEqualToString:[[self getJogadorAtual] nome]]){
             qtdEstrelas++;

@@ -9,16 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "GestoArcoIris.h"
 #import "Pontos.h"
+#import "ControlaViewController.h"
 
-@interface PontosViewController : UIViewController
+@interface PontosViewController : ControlaViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *tempDrawImage;
-
-@property BOOL ganhou;
-@property UIImageView *ok;
-@property UIImageView *dedo;
-@property UIImageView *arcoiris;
-@property GestoArcoIris* gesto;
 
 @property int faseAtual;
 

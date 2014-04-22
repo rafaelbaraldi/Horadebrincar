@@ -14,8 +14,6 @@
 
 @implementation LigueAsFigurasViewController
 
-@synthesize gesto = _gesto;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -191,7 +189,7 @@
         
         [[self tempDrawImage] setAlpha:0.2];
         
-        _gesto = [[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)];
+        [self setGesto:[[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)]];
         
         [[self view] addGestureRecognizer:[self gesto]];
     }

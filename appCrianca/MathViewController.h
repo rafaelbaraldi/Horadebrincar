@@ -9,19 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "GestoArcoIris.h"
 #import "Contas.h"
+#import "ControlaViewController.h"
 
-@interface MathViewController : UIViewController
+@interface MathViewController : ControlaViewController
 
 
 @property (strong, nonatomic) IBOutlet UIImageView *tempDrawImage;
 
 @property CGPoint lastPoint;
 @property UIImage* anterior;
-@property BOOL ganhou;
-@property UIImageView *dedo;
-@property UIImageView *ok;
-@property UIImageView *arcoiris;
-@property GestoArcoIris* gesto;
 @property int faseAtual;
 
 @property UILabel *labelInicial;

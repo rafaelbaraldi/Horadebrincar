@@ -110,98 +110,34 @@
     
     //Verifica se ganhou
     if([[self pontos] count] == 1 && ! [self ganhou]){
-        _gesto = [[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)];
-        [[self view] addGestureRecognizer:_gesto];
         
         //Salva a fase vencida
-        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-        [prefs setBool:TRUE forKey:[NSString stringWithFormat:@"jogo %d - fase %d", 3, [self faseAtual]]];
+        [self salvaFaseVencida:2 faseAtual:[self faseAtual]];
         
-        //Set Alpha do Jogo
+        //Execute animacao no fim da fase
+        [self animacaoFimDaFase];
+        
         [[self tempDrawImage] setAlpha:0.2];
-        [self setGanhou:YES];
         
-        //OK
-        _ok = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ok.png"]];
-        [_ok setFrame:CGRectMake([[self view] bounds].size.width/2-75, CGRectGetMidY([self view].frame), 150, 150)];
-        [self.view addSubview:_ok];
-        [[_ok layer] setOpacity:0];
+        [self setGesto:[[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)]];
         
-        CABasicAnimation *animacao = [CABasicAnimation animationWithKeyPath:@"opacity"];
-        animacao.duration = 3;
-        animacao.removedOnCompletion = NO;
-        animacao.fillMode = kCAFillModeForwards;
-        animacao.toValue = [NSNumber numberWithFloat:1.0f];
-        [[_ok layer] addAnimation:animacao forKey:nil];
-        
-        
-        [self performSelector:@selector(animaArcoComDedo) withObject:nil afterDelay:1.2];
+        [[self view] addGestureRecognizer:[self gesto]];
     }
 }
 
-
-//Animação do Arco e Dedo
--(void)animaArcoComDedo{
-    
-    //Adiciona arco-iris
-    _arcoiris = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arcoiris.png"]];
-    [_arcoiris setFrame:CGRectMake(35, 300, 700, 343)];
-    [self.view addSubview:_arcoiris];
-    
-    //Adiciona o dedo
-    _dedo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finger.png"]];
-    [_dedo setFrame:CGRectMake(95, 560, 156, 250)];
-    [_dedo setTransform:CGAffineTransformMakeRotation(-(M_PI / 4))];
-    [self.view addSubview:_dedo];
-    
-    //Roda dedo
-    CABasicAnimation *animRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    animRotation.toValue  = @(M_PI / 4);
-    animRotation.duration = 3;
-    animRotation.repeatCount = 3;
-    [[self dedo].layer addAnimation:animRotation forKey:@"position.z"];
-    
-    CGMutablePathRef caminho = CGPathCreateMutable();
-    CGPathMoveToPoint(caminho, NULL, 160, 700);
-    CGPathAddCurveToPoint(caminho, NULL, 260, 400, 530, 400, 590, 670);
-    
-    CAKeyframeAnimation *animaDedo = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    [animaDedo setPath:caminho];
-    [animaDedo setDuration:3];
-    [animaDedo setRepeatCount:3];
-    [animaDedo setRemovedOnCompletion:NO];
-    [animaDedo setFillMode:kCAFillModeForwards];
-    [[[self dedo] layer]addAnimation:animaDedo forKey:nil];
-    
-    //Gamb para sumir com o Dedo
-    [self performSelector:@selector(hiddenDedo) withObject:nil afterDelay:9];
-}
 
 //Esconde Dedo
 -(void)hiddenDedo{
     [[self dedo]setHidden:YES];
 }
 
--(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
-    
-    //Anda ate o final
-    NSString *value = [anim valueForKey:@"animaSubir"];
-    if([value isEqual:@"subir"]){
-        CABasicAnimation *animAndar3 = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
-        animAndar3.toValue  = [NSNumber numberWithInt:-10];
-        animAndar3.duration = 2.5;
-        animAndar3.removedOnCompletion = NO;
-        animAndar3.fillMode = kCAFillModeForwards;
-        [_dedo.layer addAnimation:animAndar3 forKey:nil];
-    }
-}
 
 -(void)metodoDogesto{
-    [_ok removeFromSuperview];
-    [_arcoiris removeFromSuperview];
-    [_dedo removeFromSuperview];
+    [[self ok] removeFromSuperview];
+    [[self arcoiris] removeFromSuperview];
+    [[self dedo] removeFromSuperview];
     
-    [[self view] removeGestureRecognizer:_gesto];
+    [[self view] removeGestureRecognizer:[self gesto]];
     
     _faseAtual++;
     if(_faseAtual > 4){

@@ -10,6 +10,7 @@
 #import "GestoLabirintoFase1.h"
 #import "GestoLabirintoFase2.h"
 #import "GestoLabirintoFase3.h"
+#import "ControlaViewController.h"
 
 @interface LabirintoViewController ()
 
@@ -164,8 +165,8 @@
 
 -(void)metodoDogesto{
     //Salva a fase vencida
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    [prefs setBool:TRUE forKey:[NSString stringWithFormat:@"jogo %d - fase %d", 4, [self faseAtual]]];
+    ControlaViewController* cvc = [[ControlaViewController alloc]initWithNibName:@"ControlaViewController" bundle:nil];
+    [cvc salvaFaseVencida:3 faseAtual:[self faseAtual]];
     
     [[self tempDrawImage] setImage:UIGraphicsGetImageFromCurrentImageContext()];
     

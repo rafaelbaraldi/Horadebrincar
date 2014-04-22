@@ -124,8 +124,11 @@
         int pintarEstrela = [[[[self getFases] objectAtIndex:i] numero] intValue];
         
         Usuario * u = (Usuario*)[[[self getFases] objectAtIndex:i] usuario];
+        Jogo* jogoDaFase = (Jogo*)[[[self getFases] objectAtIndex:i] jogo];
         
-        if([u nome] == [[self getJogadorAtual] nome]){
+        Jogo *jogoAtual = (Jogo*)[[self getJogos] objectAtIndex:[self view].tag -1];
+        
+        if([[u nome]isEqualToString:[[self getJogadorAtual] nome]] && [[jogoDaFase nome] isEqualToString:[jogoAtual nome]]){
             
             UIImageView *fase = [[self estrelas] objectAtIndex:pintarEstrela-1];
             [fase setImage:[UIImage imageNamed:@"starYellow.png"]];
