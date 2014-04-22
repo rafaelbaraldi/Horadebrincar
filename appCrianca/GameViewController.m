@@ -38,7 +38,7 @@
     // Do any additional setup after loading the view from its nib.
     
     //Criar Jogos no banco
-    //[self criaJogosNoBanco];
+//    [self criaJogosNoBanco];
     
     //Frase - Selecione o nivel
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 180, [self view].bounds.size.width, 60)];
@@ -58,8 +58,10 @@
         Fase *faseAtual = [[self getFases] objectAtIndex:i];
         
         Usuario * u = (Usuario*)[faseAtual usuario];
+        NSLog(@"%@", u.nome);
+        NSLog(@"%@",[[self getJogadorAtual] nome]);
         
-        if([u nome] == [[self getJogadorAtual] nome]){
+        if([[u nome]isEqualToString:[[self getJogadorAtual] nome]]){
             qtdEstrelas++;
         }
     }
@@ -108,23 +110,6 @@
     [[self buttonFase4]setTag:4];
     [[self buttonFase4]addTarget:self action:@selector(botaoIrFaseSelecionada:) forControlEvents:UIControlEventTouchDown];
     [[self view] addSubview: [self buttonFase4]];
-}
-
--(void)criaJogosNoBanco{
-
-    Jogo *newJogo = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
-    [newJogo setNome:@"ligueAsFiguras"];
-
-    Jogo *newJogo2 = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
-    [newJogo2 setNome:@"ligueMatematica"];
-    
-    Jogo *newJogo3 = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
-    [newJogo3 setNome:@"ligueOsPontos"];
-
-    Jogo *newJogo4 = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
-    [newJogo4 setNome:@"saiaDoLabirinto"];
-    
-    [[self context] save:nil];
 }
 
 -(void)botaoIrFaseSelecionada: (id) sender {

@@ -40,10 +40,32 @@
     [[self listaCriancas] addGestureRecognizer:tap];
     
     //Inicia com Jogador 1
-    NSUserDefaults *jogador = [NSUserDefaults standardUserDefaults];
-    [jogador setInteger:0 forKey:@"jogador"];
+//    NSUserDefaults *jogador = [NSUserDefaults standardUserDefaults];
+//    [jogador setInteger:0 forKey:@"jogador"];
     
     //    [self deletarUsuarios];
+    
+    [self criaJogosNoBanco];
+}
+
+-(void)criaJogosNoBanco{
+    
+    if([[self getJogos] count] == 0){
+    
+        Jogo *newJogo = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
+        [newJogo setNome:@"ligueAsFiguras"];
+
+        Jogo *newJogo2 = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
+        [newJogo2 setNome:@"ligueMatematica"];
+
+        Jogo *newJogo3 = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
+        [newJogo3 setNome:@"ligueOsPontos"];
+
+        Jogo *newJogo4 = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
+        [newJogo4 setNome:@"saiaDoLabirinto"];
+
+        [[self context] save:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,14 +89,14 @@
     return ((Usuario*)[[self getUsuarios] objectAtIndex:row]).nome;
 }
 
-- (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    
-    //NSArray *objects = [[self context] executeFetchRequest:[self requestUsuario] error:nil];
-    
-    //Salva jogar atual
-    NSUserDefaults *jogador = [NSUserDefaults standardUserDefaults];
-    [jogador setInteger:row forKey:@"jogador"];
-}
+//- (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+//    
+//    //NSArray *objects = [[self context] executeFetchRequest:[self requestUsuario] error:nil];
+//    
+//    //Salva jogar atual
+//    NSUserDefaults *jogador = [NSUserDefaults standardUserDefaults];
+//    [jogador setInteger:row forKey:@"jogador"];
+//}
 
 -(BOOL)verificaJogador{
     
@@ -91,6 +113,10 @@
 - (IBAction)jogar:(id)sender {
     
     if([self verificaJogador]){
+        //Salva jogar atual
+        NSUserDefaults *jogador = [NSUserDefaults standardUserDefaults];
+        [jogador setInteger:[[self listaCriancas] selectedRowInComponent:0] forKey:@"jogador"];
+        
         //Chama GameViewController
         GameViewController *gm = [[GameViewController alloc] init];
         [self presentViewController:gm animated:YES completion:nil];
