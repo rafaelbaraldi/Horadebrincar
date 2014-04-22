@@ -30,10 +30,6 @@
     
     [[self listaCriancas] setDelegate:self];
     
-    _appDelegate =[[UIApplication sharedApplication]delegate];
-    _context = [_appDelegate managedObjectContext];
-    
-    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
@@ -42,6 +38,10 @@
     [tap setCancelsTouchesInView:NO];
     [tap setDelegate:self];
     [[self listaCriancas] addGestureRecognizer:tap];
+    
+    //Inicia com Jogador 1
+    NSUserDefaults *jogador = [NSUserDefaults standardUserDefaults];
+    [jogador setInteger:0 forKey:@"jogador"];
     
     //    [self deletarUsuarios];
 }
@@ -59,45 +59,58 @@
 
 - (NSInteger)pickerView:(UIPickerView*)pickerView numberOfRowsInComponent:(NSInteger)component{
     
-    NSInteger numeroDeUsuarios;
-    
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Usuario"];
-    
-    NSArray *objects = [_context executeFetchRequest:request error:nil];
-    numeroDeUsuarios = objects.count;
-    
-    return numeroDeUsuarios;
+    return [[self getUsuarios] count];
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Usuario"];
-    
-    NSArray *objects = [_context executeFetchRequest:request error:nil];
-    
-    return ((Usuario*)[objects objectAtIndex:row]).nome;
+    return ((Usuario*)[[self getUsuarios] objectAtIndex:row]).nome;
 }
 
+- (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    
+    //NSArray *objects = [[self context] executeFetchRequest:[self requestUsuario] error:nil];
+    
+    //Salva jogar atual
+    NSUserDefaults *jogador = [NSUserDefaults standardUserDefaults];
+    [jogador setInteger:row forKey:@"jogador"];
+}
+
+-(BOOL)verificaJogador{
+    
+    if([[self getUsuarios] count] <= 0){
+    
+        NSLog(@"Adicione um Jogador");
+        
+        return false;
+    }
+    
+    return true;
+}
+
+- (IBAction)jogar:(id)sender {
+    
+    if([self verificaJogador]){
+        //Chama GameViewController
+        GameViewController *gm = [[GameViewController alloc] init];
+        [self presentViewController:gm animated:YES completion:nil];
+    }
+}
 
 - (IBAction)addUsuario:(id)sender {
     [self showKeyboard];
 }
 
-- (IBAction)jogar:(id)sender {
-    
-    GameViewController *gm = [[GameViewController alloc] init];
-    [self presentViewController:gm animated:YES completion:nil];
-}
-
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     
-    Usuario *newContact = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:_context];
+    [[self listaCriancas] setHidden:NO];
+    
+    Usuario *newContact = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:[self context]];
 
-//    NSLog([textField text]);
     [newContact setNome:[textField text]];
     [newContact setFase1:nil];
 
-    [_context save:nil];
+    [[self context] save:nil];
     
     [[self listaCriancas] reloadAllComponents];
 
@@ -141,8 +154,7 @@
 
 -(void)deletarUsuarios{
     
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Usuario"];
-    NSArray *entityObjects = [[self context] executeFetchRequest:request error:nil];
+    NSArray *entityObjects = [[self context] executeFetchRequest:[self requestUsuario] error:nil];
     
     for(Usuario *u in entityObjects){
         [[self context] deleteObject:u];

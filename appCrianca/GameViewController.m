@@ -27,17 +27,48 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+
+    [self carregaNumeroDeEstrelas];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    //Criar Jogos no banco
+    //[self criaJogosNoBanco];
+    
     //Frase - Selecione o nivel
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 160, [self view].bounds.size.width, 60)];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 180, [self view].bounds.size.width, 60)];
     [title setText:@"Selecione um jogo"];
     [title setFont:[UIFont fontWithName:@"MarkerFelt-Thin" size:60.0f]];
     [title setTextAlignment:NSTextAlignmentCenter];
     [[self view]addSubview:title];
+    
+    [self carregaBotoes];
+}
+
+-(void)carregaNumeroDeEstrelas{
+    
+    int qtdEstrelas = 0;
+    for(int i = 0; i < [[self getFases] count]; i++){
+        
+        Fase *faseAtual = [[self getFases] objectAtIndex:i];
+        
+        Usuario * u = (Usuario*)[faseAtual usuario];
+        
+        if([u nome] == [[self getJogadorAtual] nome]){
+            qtdEstrelas++;
+        }
+    }
+    
+    [[self numeroDeEstrelas] setText:[NSString stringWithFormat:@"%i", qtdEstrelas]];
+}
+
+
+-(void)carregaBotoes{
     
     //Button 1
     [self setButtonFase1:[[UIButton alloc] initWithFrame:CGRectMake(100, 300, 250, 250)]];
@@ -79,6 +110,23 @@
     [[self view] addSubview: [self buttonFase4]];
 }
 
+-(void)criaJogosNoBanco{
+
+    Jogo *newJogo = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
+    [newJogo setNome:@"ligueAsFiguras"];
+
+    Jogo *newJogo2 = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
+    [newJogo2 setNome:@"ligueMatematica"];
+    
+    Jogo *newJogo3 = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
+    [newJogo3 setNome:@"ligueOsPontos"];
+
+    Jogo *newJogo4 = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
+    [newJogo4 setNome:@"saiaDoLabirinto"];
+    
+    [[self context] save:nil];
+}
+
 -(void)botaoIrFaseSelecionada: (id) sender {
     UIButton *botao = (UIButton *) sender;
     
@@ -86,10 +134,8 @@
     newcontroller = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil] ;
     
     [[newcontroller view] setTag:[botao tag]];
-    
-    
-    [self presentViewController: newcontroller animated:YES completion:Nil];
 
+    [self presentViewController: newcontroller animated:YES completion:Nil];
 }
 
 
@@ -108,4 +154,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)sair:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

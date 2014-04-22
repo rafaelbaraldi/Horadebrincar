@@ -40,6 +40,11 @@
     [title setTextAlignment:NSTextAlignmentCenter];
     [[self view]addSubview:title];
     
+    [self carregaFases];
+}
+
+-(void)carregaFases{
+    
     //Button 1
     [self setButtonFase1: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
                                                                      [self view].bounds.size.height*2/8, 100, 100)] ];
@@ -53,7 +58,7 @@
     [[self view] addSubview: [self buttonFase1]];
     [self controlaEstrela:[self  buttonFase1]];
     
-     //Button 2
+    //Button 2
     [self setButtonFase2: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
                                                                      [self view].bounds.size.height*3/8, 100, 100)]];
     [[[self buttonFase2]titleLabel]setFont:[UIFont fontWithName:@"Chalkduster" size:36.0f]];
@@ -110,18 +115,27 @@
         [self controlaEstrela:[self  buttonFase5]];
     }
     
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    if([[self getFases] count] == 0){
+        return;
+    }
     
-    for (UIImageView* fase in [self estrelas]) {
-        BOOL statusEstrela = (BOOL)[prefs boolForKey:[NSString stringWithFormat:@"jogo %d - fase %d", self.view.tag, fase.tag]];
+    for(int i = 0; i < [[self getFases] count]; i++){
+    
+        int pintarEstrela = [[[[self getFases] objectAtIndex:i] numero] intValue];
         
-        if(statusEstrela){
+        Usuario * u = (Usuario*)[[[self getFases] objectAtIndex:i] usuario];
+        
+        if([u nome] == [[self getJogadorAtual] nome]){
+            
+            UIImageView *fase = [[self estrelas] objectAtIndex:pintarEstrela-1];
             [fase setImage:[UIImage imageNamed:@"starYellow.png"]];
         }
     }
+    
 }
 
 -(void)controlaEstrela:(UIButton*)fase{
+    
     //Inicia estrela
     UIImageView *star = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"starBlack.png"]];
     star.tag = fase.tag;
@@ -143,7 +157,7 @@
     
     switch (fase) {
         case 1:
-            vc = [[LigueAsFigurasViewController alloc] initWithNibName:@"ViewController" bundle:nil] ;
+            vc = [[LigueAsFigurasViewController alloc] initWithNibName:@"LigueAsFigurasViewController" bundle:nil] ;
             [vc setFaseAtual: [botao tag]];
             [self presentViewController: vc animated:YES completion:Nil];
             break;
@@ -171,15 +185,14 @@
     }
 }
 
-
-//- (NSUInteger)supportedInterfaceOrientations
-//{
-//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-//        return UIInterfaceOrientationMaskPortrait;
-//    } else {
-//        return UIInterfaceOrientationMaskPortrait;
-//    }
-//}
+- (NSUInteger)supportedInterfaceOrientations
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskPortrait;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
+}
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
