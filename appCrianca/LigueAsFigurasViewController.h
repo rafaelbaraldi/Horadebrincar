@@ -8,24 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "Figura.h"
-#include "GestoArcoIris.h"
+#import "ControlaViewController.h"
 
-@interface LigueAsFigurasViewController : UIViewController
+@interface LigueAsFigurasViewController : ControlaViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *tempDrawImage;
 @property (strong, nonatomic) IBOutlet UIButton *botaoVoltar;
 
-
 @property CGPoint lastPoint;
 @property UIImage* anterior;
-@property BOOL ganhou;
-@property UIImageView *dedo;
-@property UIImageView *ok;
-@property UIImageView *arcoiris;
-@property GestoArcoIris* gesto;
+
 @property int faseAtual;
-
-
 
 @property Figura* figuraInicial;
 @property NSMutableArray* figuras;

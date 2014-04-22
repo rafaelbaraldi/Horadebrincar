@@ -7,8 +7,10 @@
 //  Copyright (c) 2014 RAFAEL CARDOSO DA SILVA. All rights reserved.
 //
 
+#import "ControlaViewController.h"
 
-@interface MenuViewController : UIViewController
+
+@interface MenuViewController : ControlaViewController
 
 @property UIButton *buttonFase1;
 @property UIButton *buttonFase2;

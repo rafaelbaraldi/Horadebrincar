@@ -7,23 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Usuario.h"
-#import "AppDelegate.h"
 #import "GameViewController.h"
+#import "ControlaViewController.h"
 
-@interface LoginViewController : UIViewController <UIPickerViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate>
+@interface LoginViewController : ControlaViewController <UIPickerViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIPickerView *listaCriancas;
 @property (strong, nonatomic) IBOutlet UITextField *textoNomeUsuario;
 
 - (IBAction)addUsuario:(id)sender;
 - (IBAction)jogar:(id)sender;
-
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-
-@property AppDelegate *appDelegate;
-@property NSManagedObjectContext *context;
 
 @property (strong, nonatomic) IBOutlet UIButton *botaoMais;
 @end

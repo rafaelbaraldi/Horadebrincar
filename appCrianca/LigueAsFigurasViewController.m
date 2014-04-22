@@ -14,6 +14,8 @@
 
 @implementation LigueAsFigurasViewController
 
+@synthesize gesto = _gesto;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -25,47 +27,43 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
+    [[self tempDrawImage] setAlpha:1];
+    
     switch ([self faseAtual]) {
         case 1:
             [self setFiguras:[Figura retornaFiguraFase1]];
             [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
-            [[self tempDrawImage] setAlpha:1];
             [self setAnterior:[UIImage imageNamed:@"fase1.png"]];
             break;
             
         case 2:
             [self setFiguras:[Figura retornaFiguraFase2]];
             [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
-            [[self tempDrawImage] setAlpha:1];
             [self setAnterior:[UIImage imageNamed:@"fase2.png"]];
             break;
             
         case 3:
             [self setFiguras:[Figura retornaFiguraFase3]];
             [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
-            [[self tempDrawImage] setAlpha:1];
             [self setAnterior:[UIImage imageNamed:@"fase3.png"]];
             break;
             
         case 4:
             [self setFiguras:[Figura retornaFiguraFase4]];
             [[self tempDrawImage]setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fase%d.png", [self faseAtual]]]];
-            [[self tempDrawImage] setAlpha:1];
             [self setAnterior:[UIImage imageNamed:@"fase4.png"]];
             break;
             
         case 5:
-            
             [[self tempDrawImage] removeFromSuperview];
             
             [self setFiguras:[Figura retornaFiguraFaseRandom]];
             [[self tempDrawImage]setImage:[UIImage imageNamed:@"transparente.png"]];
-            [[self tempDrawImage] setAlpha:1];
             [self setAnterior:[UIImage imageNamed:@"transparente.png"]];
+            
             for(Figura *f in [self figuras]){
                 [[self view]addSubview: [f imgView]];
             }
-            
             [[self view] addSubview:[self tempDrawImage]];
             break;
             
@@ -131,10 +129,8 @@
     }
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    
-    //Remove linha do usuario
-    [[self tempDrawImage]setImage:[self anterior]];
+
+-(void)verificaJogada:(NSSet *)touches{
     
     UITouch *touch = [touches anyObject];
     CGPoint toque = [touch locationInView:[self view]];
@@ -172,6 +168,14 @@
             }
         }
     }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    //Remove linha do usuario
+    [[self tempDrawImage]setImage:[self anterior]];
+    
+    [self verificaJogada:touches];
     
     //Altera image anterior
     [self setAnterior:[[self tempDrawImage] image]];
@@ -180,91 +184,36 @@
     if([[self figuras] count] == 0 && ![self ganhou]){
         
         //Salva a fase vencida
-        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-        [prefs setBool:TRUE forKey:[NSString stringWithFormat:@"jogo %d - fase %d", 1, [self faseAtual]]];
+        [self salvaFaseVencida:0 faseAtual:[self faseAtual]];
+        
+        //Execute animacao no fim da fase
+        [self animacaoFimDaFase];
+        
+        [[self tempDrawImage] setAlpha:0.2];
         
         _gesto = [[GestoArcoIris alloc] initWithTarget:self action:@selector(metodoDogesto)];
-        [[self view] addGestureRecognizer:_gesto];
         
-        //Set Alpha do Jogo
-        [[self tempDrawImage] setAlpha:0.2];
-        [self setGanhou:YES];
-        
-        //OK
-        _ok = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ok.png"]];
-        [_ok setFrame:CGRectMake([[self view] bounds].size.width/2-75, CGRectGetMidY([self view].frame), 150, 150)];
-        [self.view addSubview:_ok];
-        [[_ok layer] setOpacity:0];
-        
-        CABasicAnimation *animacao = [CABasicAnimation animationWithKeyPath:@"opacity"];
-        animacao.duration = 3;
-        animacao.removedOnCompletion = NO;
-        animacao.fillMode = kCAFillModeForwards;
-        animacao.toValue = [NSNumber numberWithFloat:1.0f];
-        [[_ok layer] addAnimation:animacao forKey:nil];
-        
-        [self performSelector:@selector(animaArcoComDedo) withObject:nil afterDelay:1.2];
+        [[self view] addGestureRecognizer:[self gesto]];
     }
 }
 
-//Anima Arco e Dedo
--(void)animaArcoComDedo{
-    
-    //Adiciona arco-iris
-    _arcoiris = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arcoiris.png"]];
-    [_arcoiris setFrame:CGRectMake(35, 300, 700, 343)];
-    [self.view addSubview:_arcoiris];
-    
-    //Adiciona o dedo
-    _dedo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finger.png"]];
-    [_dedo setFrame:CGRectMake(95, 560, 156, 250)];
-    [_dedo setTransform:CGAffineTransformMakeRotation(-(M_PI / 4))];
-    [self.view addSubview:_dedo];
-    
-    //Roda dedo
-    CABasicAnimation *animRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    animRotation.toValue  = @(M_PI / 4);
-    animRotation.duration = 3;
-    animRotation.repeatCount = 3;
-    [[self dedo].layer addAnimation:animRotation forKey:@"position.z"];
-    
-    CGMutablePathRef caminho = CGPathCreateMutable();
-    CGPathMoveToPoint(caminho, NULL, 160, 700);
-    CGPathAddCurveToPoint(caminho, NULL, 260, 400, 530, 400, 590, 670);
-    
-    CAKeyframeAnimation *animaDedo = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    [animaDedo setPath:caminho];
-    [animaDedo setDuration:3];
-    [animaDedo setRepeatCount:3];
-    [animaDedo setRemovedOnCompletion:NO];
-    [animaDedo setFillMode:kCAFillModeForwards];
-    [[[self dedo] layer]addAnimation:animaDedo forKey:nil];
-    
-    //Gamb para sumir com o Dedo
-    [self performSelector:@selector(hiddenDedo) withObject:nil afterDelay:9];
-}
-
-//Some com o dedo
--(void)hiddenDedo{
-    [[self dedo]setHidden:YES];
-}
-
 -(void)metodoDogesto{
-    [_ok removeFromSuperview];
-    [_arcoiris removeFromSuperview];
-    [_dedo removeFromSuperview];
     
-    [[self view] removeGestureRecognizer:_gesto];
+    [[self ok] removeFromSuperview];
+    [[self arcoiris] removeFromSuperview];
+    [[self dedo] removeFromSuperview];
+    
+    [[self view] removeGestureRecognizer:[self gesto]];
     
     [self viewWillDisappear:NO];
-
-     _faseAtual++;
-
+    
+    _faseAtual++;
+    
     if(_faseAtual > 4){
         _faseAtual = 5;
     }
     
-     [self viewDidLoad];
+    [self viewDidLoad];
 }
 
 -(void)desenhaLinha:(CGPoint) inicial :(CGPoint) final{
