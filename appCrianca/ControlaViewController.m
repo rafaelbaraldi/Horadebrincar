@@ -73,7 +73,8 @@
         Usuario * u = (Usuario*)[faseAtual usuario];
         
         if([[[self getFases] objectAtIndex:i] numero] == verificaFase
-           && [u nome] == [[self getJogadorAtual] nome]){
+           && [u nome] == [[self getJogadorAtual] nome]
+           && [faseAtual jogo] == (Jogo*)[[self getJogos] objectAtIndex:numeroDoJogo]){
             return;
         }
     }
