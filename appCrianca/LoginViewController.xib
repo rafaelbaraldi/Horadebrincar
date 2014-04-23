@@ -17,25 +17,18 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="No7-Tu-gcD">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="768" placeholderIntrinsicHeight="1024" image="login.png" translatesAutoresizingMaskIntoConstraints="NO" id="No7-Tu-gcD">
                     <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="App4Criança" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCJ-yf-R1T">
-                    <rect key="frame" x="20" y="138" width="728" height="57"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="49"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKg-of-vZI">
-                    <rect key="frame" x="0.0" y="343" width="768" height="216"/>
+                <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKg-of-vZI" propertyAccessControl="all">
+                    <rect key="frame" x="0.0" y="411" width="768" height="216"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                 </pickerView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5E-cJ-dxA">
-                    <rect key="frame" x="384" y="571" width="22" height="22"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5E-cJ-dxA">
+                    <rect key="frame" x="229" y="635" width="333" height="130"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal">
+                    <state key="normal" image="adicionarCrianca.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -43,9 +36,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiC-Qt-t4k">
-                    <rect key="frame" x="229" y="819" width="333" height="103"/>
+                    <rect key="frame" x="229" y="847" width="333" height="130"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="jogar.png">
+                    <state key="normal" image="iniciar.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -63,11 +56,18 @@
                 </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="No7-Tu-gcD" secondAttribute="bottom" id="DS3-ZK-xY3"/>
+                <constraint firstItem="No7-Tu-gcD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H8t-wG-GT4"/>
+                <constraint firstItem="No7-Tu-gcD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gUt-2n-IGH"/>
+                <constraint firstAttribute="trailing" secondItem="No7-Tu-gcD" secondAttribute="trailing" id="sJ0-iz-k41"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
     <resources>
-        <image name="background.png" width="768" height="1024"/>
-        <image name="jogar.png" width="278" height="103"/>
+        <image name="adicionarCrianca.png" width="265" height="34"/>
+        <image name="iniciar.png" width="333" height="130"/>
+        <image name="login.png" width="720" height="1024"/>
     </resources>
 </document>

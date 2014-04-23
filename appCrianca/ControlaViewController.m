@@ -80,7 +80,6 @@
     }
     
     
-    
     Fase *newFase = [NSEntityDescription insertNewObjectForEntityForName:@"Fase" inManagedObjectContext:[self context]];
     
     NSNumber *faseVencida = [[NSNumber alloc] initWithInt:faseAtual];

@@ -39,14 +39,34 @@
     [tap setDelegate:self];
     [[self listaCriancas] addGestureRecognizer:tap];
     
-    //Inicia com Jogador 1
-//    NSUserDefaults *jogador = [NSUserDefaults standardUserDefaults];
-//    [jogador setInteger:0 forKey:@"jogador"];
-    
-    //    [self deletarUsuarios];
-    
     [self criaJogosNoBanco];
 }
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    UILabel* tView = (UILabel*)view;
+    if (!tView){
+        tView = [[UILabel alloc] init];
+        [tView setFont:[UIFont fontWithName:@"Arial" size:30]];
+        [tView setTextAlignment:NSTextAlignmentCenter];
+    }
+    
+    //Retorna nome do Usuario
+    NSString *nome =  ((Usuario*)[[self getUsuarios] objectAtIndex:row]).nome;
+    [tView setText:nome];
+    
+    //Check
+    UIImageView *check = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]];
+    [check setFrame:CGRectMake(30, 2, 30, 30)];
+    
+    
+    //Pinta linha selecionada
+//    [[pickerView viewForRow:row forComponent:0] setBackgroundColor:[UIColor colorWithRed:99.0/255.0 green:206.0/255.0 blue:250.0/255.0 alpha:1.0]];
+    [[pickerView viewForRow:row forComponent:0] setBackgroundColor:[UIColor whiteColor]];
+    [[pickerView viewForRow:row forComponent:0] addSubview:check];
+    
+    return tView;
+}
+
 
 -(void)criaJogosNoBanco{
     
@@ -83,20 +103,6 @@
     
     return [[self getUsuarios] count];
 }
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    
-    return ((Usuario*)[[self getUsuarios] objectAtIndex:row]).nome;
-}
-
-//- (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-//    
-//    //NSArray *objects = [[self context] executeFetchRequest:[self requestUsuario] error:nil];
-//    
-//    //Salva jogar atual
-//    NSUserDefaults *jogador = [NSUserDefaults standardUserDefaults];
-//    [jogador setInteger:row forKey:@"jogador"];
-//}
 
 -(BOOL)verificaJogador{
     
