@@ -19,6 +19,8 @@
 @property CGPoint lastPoint;
 @property UIImage* anterior;
 @property int faseAtual;
+@property int tagAcertos; //ajuda na logica para desenhar as linhas de acerto no autolauout 
+
 
 @property UILabel *labelInicial;
 @property NSMutableArray *equation; // guarda os labels para removelos da view quando sair da mesma

@@ -27,6 +27,8 @@
     
     NSMutableArray* conta = [Contas retornaContasFase: [self faseAtual]];
     
+    [self setTagAcertos: 0];
+    
     [self setEquation: [conta firstObject]];
     [self setSolution: [conta lastObject]];
     
@@ -60,14 +62,6 @@
     [[self tempDrawImage] setAlpha:1];
     
     if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)){
-//        CGFloat x = [[self tempDrawImage] frame].size.width;
-//        CGRect frame = [[self tempDrawImage] frame];
-//        
-//        frame.size.width = [[self tempDrawImage] frame].size.height;
-//        frame.size.height = x;
-//        
-//        [[self tempDrawImage] setFrame:frame];
-//        
         [[self tempDrawImage] setImage:[UIImage imageNamed:@"matematicaHorizontal.png"]];
         [self setAnterior:[UIImage imageNamed:@"matematicaHorizontal.png"]];
         
@@ -88,6 +82,24 @@
     int tamanhoVetores = [[self equation]count];
     
     for (int i = 0; i < tamanhoVetores ; i++) {
+        UILabel* lblCopiaEquation;
+        UILabel* lblCopiaSolution;
+        
+        for (UILabel* lbl in [self acertos]) {
+            if([lbl frame].origin.x == [[[self equation] objectAtIndex: i] frame].origin.x && [lbl frame].origin.y == [[[self equation] objectAtIndex: i] frame].origin.y){
+                lblCopiaEquation = lbl;
+                
+                [lblCopiaEquation setFrame: CGRectMake(self.tempDrawImage.image.size.width/9, posicao, 130 , 60)];
+            }
+            
+            if([lbl frame].origin.x == [[[self solution] objectAtIndex: i] frame].origin.x && [lbl frame].origin.y == [[[self solution] objectAtIndex: i] frame].origin.y){
+                lblCopiaSolution = lbl;
+                
+                [lblCopiaSolution setFrame: CGRectMake(self.tempDrawImage.image.size.width/9 + 400, posicao, 130 , 60)];
+            }
+        }
+        
+        
         //coloca os frames no labels e mosta eles
         [[[self equation] objectAtIndex: i] removeFromSuperview];
         [[[self equation] objectAtIndex: i] setFrame: CGRectMake(self.tempDrawImage.image.size.width/9, posicao, 130 , 60)];
@@ -108,6 +120,24 @@
     int tamanhoVetores = [[self equation]count];
     
     for (int i = 0; i < tamanhoVetores ; i++) {
+        UILabel* lblCopiaEquation;
+        UILabel* lblCopiaSolution;
+        
+        for (UILabel* lbl in [self acertos]) {
+            if([lbl frame].origin.x == [[[self equation] objectAtIndex: i] frame].origin.x && [lbl frame].origin.y == [[[self equation] objectAtIndex: i] frame].origin.y){
+                lblCopiaEquation = lbl;
+                
+                [lblCopiaEquation setFrame: CGRectMake(posicao, self.tempDrawImage.image.size.height/9, 130 , 60)];
+            }
+            
+            if([lbl frame].origin.x == [[[self solution] objectAtIndex: i] frame].origin.x && [lbl frame].origin.y == [[[self solution] objectAtIndex: i] frame].origin.y){
+                lblCopiaSolution = lbl;
+                
+                [lblCopiaSolution setFrame: CGRectMake(posicao, self.tempDrawImage.image.size.height/9 + 400, 130 , 60)];
+            }
+        }
+        
+        
         //coloca os frames no labels e mosta eles
         [[[self equation] objectAtIndex: i] removeFromSuperview];
         [[[self equation] objectAtIndex: i] setFrame: CGRectMake(posicao, self.tempDrawImage.image.size.height/9, 130 , 60)];
@@ -122,12 +152,46 @@
 }
 
 -(void)redesenhaLabelsAcertadas{
-    for (UILabel * label in [self acertos]) {
+    NSMutableArray *acertosEquation = [[NSMutableArray alloc]init];
+    int xyEsquerda = 10000;
+    for (UILabel *label in [self acertos]) {
+        if ( !UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) ){
+            if (label.frame.origin.y < xyEsquerda) {
+                xyEsquerda = label.frame.origin.y;
+            }
+            
+        }
+        else{
+            if (label.frame.origin.x < xyEsquerda) {
+                xyEsquerda = label.frame.origin.x;
+            }
+        }
+    }
+    
+    for (UILabel* label in [self acertos]) {
+        if ( !UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) ){
+            if (label.frame.origin.y == xyEsquerda) {
+                [acertosEquation addObject:label];
+            }
+        }
+        else{
+            
+            if (label.frame.origin.x == xyEsquerda) {
+                [acertosEquation addObject:label];
+            }
+        }
+    }
+    
+    for (UILabel * label in acertosEquation) {
+        
         for (int i = 0; i < [[self acertos] count]; i++) {
+            
             if(label != nil && [[self acertos] objectAtIndex:i] != nil){
                 
-                if ( [label tag] == [[[self acertos] objectAtIndex:i] tag] ) {
+                if ( [label tag] == [[[self acertos] objectAtIndex:i] tag]) {
+                    
                     if ( !UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) ){
+                        
                         if( [label frame].origin.x != [[[self acertos] objectAtIndex:i] frame].origin.x ){
                             //Desenha linha acertada entre os itens corretos
                             [self  desenhaLinha:label  :[[self acertos] objectAtIndex:i]];
@@ -250,12 +314,20 @@
 -(void)verificaParLabelcontasInicio: (UILabel*)inicio Final:(UILabel*)final{
     if(final != nil && inicio != nil){
         if ( [inicio tag] == [final tag] ) {
+            
             if ( !UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) ){
                 if( [inicio frame].origin.x != [final frame].origin.x){
                     //Desenha linha acertada entre os itens corretos
                     [self  desenhaLinha:inicio  :final];
-                    [[self acertos] addObject:inicio];
-                    [[self acertos] addObject: final];
+                    UILabel *copiaInicio = [self copiaDoLabel: inicio];
+                    UILabel *copiaFinal = [self copiaDoLabel: final];
+                    
+                    [copiaInicio setTag: [self tagAcertos]];
+                    [copiaFinal setTag: [self tagAcertos]];
+                    [self setTagAcertos:[self tagAcertos] +1];
+                    
+                    [[self acertos] addObject: copiaInicio];
+                    [[self acertos] addObject: copiaFinal];
                     
                     //Remove figuras acertadas do vetor
                     [[self contas] removeObject: final];
@@ -266,15 +338,44 @@
                 if( [inicio frame].origin.y != [final frame].origin.y){
                     //Desenha linha acertada entre os itens corretos
                     [self  desenhaLinha:inicio  :final];
-                    [[self acertos] addObject:inicio];
-                    [[self acertos] addObject: final];
+                    UILabel *copiaInicio = [self copiaDoLabel: inicio];
+                    UILabel *copiaFinal = [self copiaDoLabel: final];
                     
+                    [copiaInicio setTag: [self tagAcertos]];
+                    [copiaFinal setTag: [self tagAcertos]];
+                    [self setTagAcertos:[self tagAcertos] +1];
+                    
+                    [[self acertos] addObject: copiaInicio];
+                    [[self acertos] addObject: copiaFinal];
+                    
+                    //Remove figuras acertadas do vetor
                     [[self contas] removeObject: final];
                     [[self contas] removeObject: inicio];
                 }
             }
         }
     }
+}
+
+- (UILabel *)copiaDoLabel:(UILabel *)label {
+    UILabel *labelCopy = [[UILabel alloc] initWithFrame: [label frame]];
+    labelCopy.textColor = [UIColor blackColor];
+    
+    labelCopy.text = label.text;
+    [labelCopy setTag: [label tag]];
+    
+    //CornerRadius
+    CALayer *cornerlabelCopy = [labelCopy layer];
+    cornerlabelCopy.masksToBounds = YES;
+    cornerlabelCopy.cornerRadius = 10;
+    cornerlabelCopy.borderWidth = 2;
+    cornerlabelCopy.borderColor = [UIColor blackColor].CGColor;
+    
+    labelCopy.backgroundColor = [UIColor whiteColor];
+    [labelCopy setTextAlignment: NSTextAlignmentCenter];
+    labelCopy.font = [UIFont systemFontOfSize:40];
+    
+    return labelCopy;
 }
 
 
@@ -315,6 +416,7 @@
     UIGraphicsBeginImageContext(self.tempDrawImage.image.size);
     CGContextRef contexto = UIGraphicsGetCurrentContext();
     [[[self tempDrawImage] image] drawInRect:CGRectMake(0, 0, self.tempDrawImage.image.size.width, self.tempDrawImage.frame.size.height)];
+    
     CGContextMoveToPoint( contexto, inicial.x, inicial.y);     // ponto inicial da linha (farinha)
     CGContextAddLineToPoint( contexto, final.x, final.y); // ponto final da linha (pao) // falta descobrir o ponto exato
     CGContextSetLineCap( contexto, kCGLineCapRound);
