@@ -12,12 +12,18 @@
 
 @interface GameViewController : ControlaViewController
 
-@property UIButton *buttonFase1;
-@property UIButton *buttonFase2;
-@property UIButton *buttonFase3;
-@property UIButton *buttonFase4;
+//@property UIButton *buttonFase1;
+//@property UIButton *buttonFase2;
+//@property UIButton *buttonFase3;
+//@property UIButton *buttonFase4;
 
 - (IBAction)sair:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *numeroDeEstrelas;
+
+@property (strong, nonatomic) IBOutlet UIButton *buttonFase1;
+@property (strong, nonatomic) IBOutlet UILabel *lblTitle;
+@property (strong, nonatomic) IBOutlet UIButton *buttonFase2;
+@property (strong, nonatomic) IBOutlet UIButton *buttonFase3;
+@property (strong, nonatomic) IBOutlet UIButton *buttonFase4;
 
 @end

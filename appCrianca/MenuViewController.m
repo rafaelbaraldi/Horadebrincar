@@ -34,11 +34,11 @@
     [self setEstrelas:[[NSMutableArray alloc]init]];
     
     //Frase - Selecione o nivel
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 160, [self view].bounds.size.width, 60)];
-    [title setText:@"Selecione um nivel"];
-    [title setFont:[UIFont fontWithName:@"MarkerFelt-Thin" size:60.0f]];
-    [title setTextAlignment:NSTextAlignmentCenter];
-    [[self view]addSubview:title];
+//    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 160, [self view].bounds.size.width, 60)];
+    [[self lblTitle] setText:@"Selecione um nivel"];
+    [[self lblTitle] setFont:[UIFont fontWithName:@"MarkerFelt-Thin" size:60.0f]];
+    [[self lblTitle] setTextAlignment:NSTextAlignmentCenter];
+//    [[self view]addSubview:title];
     
     [self carregaFases];
 }
@@ -46,8 +46,8 @@
 -(void)carregaFases{
     
     //Button 1
-    [self setButtonFase1: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
-                                                                     [self view].bounds.size.height*2/8, 100, 100)] ];
+//    [self setButtonFase1: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
+//                                                                     [self view].bounds.size.height*2/8, 100, 100)] ];
     [[[self buttonFase1]titleLabel]setFont:[UIFont fontWithName:@"Chalkduster" size:36.0f]];
     [[self buttonFase1]setTitle:@"1" forState:UIControlStateNormal];
     [[self buttonFase1]setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -55,12 +55,12 @@
     [[self buttonFase1]setTag:1];
     [[[self buttonFase1] layer]setCornerRadius:20];
     [[self buttonFase1]addTarget:self action:@selector( botaoIrFaseSelecionada: ) forControlEvents:UIControlEventTouchDown];
-    [[self view] addSubview: [self buttonFase1]];
+//    [[self view] addSubview: [self buttonFase1]];
     [self controlaEstrela:[self  buttonFase1]];
     
     //Button 2
-    [self setButtonFase2: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
-                                                                     [self view].bounds.size.height*3/8, 100, 100)]];
+//    [self setButtonFase2: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
+//                                                                     [self view].bounds.size.height*3/8, 100, 100)]];
     [[[self buttonFase2]titleLabel]setFont:[UIFont fontWithName:@"Chalkduster" size:36.0f]];
     [[self buttonFase2]setTitle:@"2" forState:UIControlStateNormal];
     [[self buttonFase2]setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -68,12 +68,12 @@
     [[self buttonFase2]setTag:2];
     [[[self buttonFase2] layer]setCornerRadius:20];
     [[self buttonFase2]addTarget:self action:@selector(botaoIrFaseSelecionada:) forControlEvents:UIControlEventTouchDown];
-    [[self view] addSubview: [self buttonFase2]];
+//    [[self view] addSubview: [self buttonFase2]];
     [self controlaEstrela:[self  buttonFase2]];
     
     //Button 3
-    [self setButtonFase3: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
-                                                                     [self view].bounds.size.height*4/8, 100, 100)]];
+//    [self setButtonFase3: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
+//                                                                     [self view].bounds.size.height*4/8, 100, 100)]];
     [[[self buttonFase3]titleLabel]setFont:[UIFont fontWithName:@"Chalkduster" size:36.0f]];
     [[self buttonFase3]setTitle:@"3" forState:UIControlStateNormal];
     [[self buttonFase3]setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -81,12 +81,12 @@
     [[self buttonFase3]setTag:3];
     [[[self buttonFase3] layer]setCornerRadius:20];
     [[self buttonFase3]addTarget:self action:@selector(botaoIrFaseSelecionada:) forControlEvents:UIControlEventTouchDown];
-    [[self view] addSubview: [self buttonFase3]];
+//    [[self view] addSubview: [self buttonFase3]];
     [self controlaEstrela:[self  buttonFase3]];
     
     //Button 4
-    [self setButtonFase4: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
-                                                                     [self view].bounds.size.height*5/8, 100, 100)]];
+//    [self setButtonFase4: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
+//                                                                     [self view].bounds.size.height*5/8, 100, 100)]];
     [[[self buttonFase4]titleLabel]setFont:[UIFont fontWithName:@"Chalkduster" size:36.0f]];
     [[self buttonFase4]setTitle:@"4" forState:UIControlStateNormal];
     [[self buttonFase4]setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -94,7 +94,7 @@
     [[self buttonFase4]setTag:4];
     [[[self buttonFase4] layer]setCornerRadius:20];
     [[self buttonFase4]addTarget:self action:@selector(botaoIrFaseSelecionada:) forControlEvents:UIControlEventTouchDown];
-    [[self view] addSubview: [self buttonFase4]];
+//    [[self view] addSubview: [self buttonFase4]];
     [self controlaEstrela:[self  buttonFase4]];
 }
 
@@ -102,8 +102,9 @@
 -(void)viewWillAppear:(BOOL)animated{
     if([[self view]tag] == 1){
         //Button 5
-        [self setButtonFase5: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
-                                                                         ([self view].bounds.size.height*6/8), 100, 100)]];
+//        [self setButtonFase5: [[UIButton alloc] initWithFrame:CGRectMake([self view].bounds.size.width/2 -50,
+//                                                                         ([self view].bounds.size.height*6/8), 100, 100)]];
+        [[self buttonFase5]setHidden:NO];
         [[[self buttonFase5]titleLabel]setFont:[UIFont fontWithName:@"Chalkduster" size:36.0f]];
         [[self buttonFase5]setTitle:@"∞" forState:UIControlStateNormal];
         [[self buttonFase5]setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -111,7 +112,7 @@
         [[self buttonFase5]setTag:5];
         [[[self buttonFase5] layer]setCornerRadius:20];
         [[self buttonFase5]addTarget:self action:@selector(botaoIrFaseSelecionada:) forControlEvents:UIControlEventTouchDown];
-        [[self view] addSubview: [self buttonFase5]];
+//        [[self view] addSubview: [self buttonFase5]];
         [self controlaEstrela:[self  buttonFase5]];
     }
     
@@ -188,14 +189,14 @@
     }
 }
 
-- (NSUInteger)supportedInterfaceOrientations
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskPortrait;
-    } else {
-        return UIInterfaceOrientationMaskPortrait;
-    }
-}
+//- (NSUInteger)supportedInterfaceOrientations
+//{
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+//        return UIInterfaceOrientationMaskPortrait;
+//    } else {
+//        return UIInterfaceOrientationMaskPortrait;
+//    }
+//}
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];

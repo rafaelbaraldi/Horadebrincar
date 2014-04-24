@@ -41,11 +41,11 @@
 //    [self criaJogosNoBanco];
     
     //Frase - Selecione o nivel
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 180, [self view].bounds.size.width, 60)];
-    [title setText:@"Selecione um jogo"];
-    [title setFont:[UIFont fontWithName:@"MarkerFelt-Thin" size:60.0f]];
-    [title setTextAlignment:NSTextAlignmentCenter];
-    [[self view]addSubview:title];
+//    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 180, [self view].bounds.size.width, 60)];
+    [[self lblTitle] setText:@"Selecione um jogo"];
+    [[self lblTitle] setFont:[UIFont fontWithName:@"MarkerFelt-Thin" size:60.0f]];
+    [[self lblTitle] setTextAlignment:NSTextAlignmentCenter];
+//    [[self view]addSubview:title];
     
     [self carregaBotoes];
 }
@@ -71,43 +71,40 @@
 -(void)carregaBotoes{
     
     //Button 1
-    [self setButtonFase1:[[UIButton alloc] initWithFrame:CGRectMake(100, 300, 250, 250)]];
+//    [self setButtonFase1:[[UIButton alloc] initWithFrame:CGRectMake(100, 300, 250, 250)]];
     [[self buttonFase1] setBackgroundImage:[UIImage imageNamed:@"liguaAsFiguras.png"] forState:UIControlStateNormal];
     [[self buttonFase1]setTag:1];
     [[[self buttonFase1] layer] setBorderColor:[UIColor blackColor].CGColor];
     [[[self buttonFase1] layer] setBorderWidth:2];
     [[self buttonFase1]addTarget:self action:@selector( botaoIrFaseSelecionada: ) forControlEvents:UIControlEventTouchDown];
-    [[self view] addSubview: [self buttonFase1]];
+//    [[self view] addSubview: [self buttonFase1]];
     
     //Button 2
-    [self setButtonFase2:[[UIButton alloc] initWithFrame:CGRectMake((200+[self buttonFase1].bounds.size.width), 300, 250, 250)]];
+//    [self setButtonFase2:[[UIButton alloc] initWithFrame:CGRectMake((200+[self buttonFase1].bounds.size.width), 300, 250, 250)]];
     [[self buttonFase2] setBackgroundImage:[UIImage imageNamed:@"Liguematematica.png"] forState:UIControlStateNormal];
     [[self buttonFase2] setTag:2];
     [[[self buttonFase2] layer] setBorderColor:[UIColor blackColor].CGColor];
     [[[self buttonFase2] layer] setBorderWidth:2];
     [[self buttonFase2] addTarget:self action:@selector(botaoIrFaseSelecionada:) forControlEvents:UIControlEventTouchDown];
-    [[self view] addSubview: [self buttonFase2]];
+//    [[self view] addSubview: [self buttonFase2]];
     
     //Button 3
-    [self setButtonFase3:[[UIButton alloc] initWithFrame:CGRectMake(100, 600, 250, 250)]];
+//    [self setButtonFase3:[[UIButton alloc] initWithFrame:CGRectMake(100, 600, 250, 250)]];
     [[self buttonFase3] setBackgroundImage:[UIImage imageNamed:@"ligueOsPontos.jpg"] forState:UIControlStateNormal];
     [[[self buttonFase3] layer] setBorderColor:[UIColor blackColor].CGColor];
-    [[[self buttonFase3] layer] setBorderWidth:3];
+    [[[self buttonFase3] layer] setBorderWidth:2];
     [[self buttonFase3]setTag:3];
     [[self buttonFase3]addTarget:self action:@selector(botaoIrFaseSelecionada:) forControlEvents:UIControlEventTouchDown];
-    [[self view] addSubview: [self buttonFase3]];
+//    [[self view] addSubview: [self buttonFase3]];
     
     //Button 4
-    [self setButtonFase4:[[UIButton alloc] initWithFrame:CGRectMake((200+[self buttonFase1].bounds.size.width), 600, 250, 250)]];
+//    [self setButtonFase4:[[UIButton alloc] initWithFrame:CGRectMake((200+[self buttonFase1].bounds.size.width), 600, 250, 250)]];
     [[self buttonFase4] setBackgroundImage:[UIImage imageNamed:@"saiaDoLabirinto.png"] forState:UIControlStateNormal];
     [[[self buttonFase4] layer] setBorderColor:[UIColor blackColor].CGColor];
     [[[self buttonFase4] layer] setBorderWidth:2];
-    [[self buttonFase4]setTag:3];
-    [[self buttonFase4]addTarget:self action:@selector(botaoIrFaseSelecionada:) forControlEvents:UIControlEventTouchDown];
-    [[self view] addSubview: [self buttonFase4]];
     [[self buttonFase4]setTag:4];
     [[self buttonFase4]addTarget:self action:@selector(botaoIrFaseSelecionada:) forControlEvents:UIControlEventTouchDown];
-    [[self view] addSubview: [self buttonFase4]];
+//    [[self view] addSubview: [self buttonFase4]];
 }
 
 -(void)botaoIrFaseSelecionada: (id) sender {

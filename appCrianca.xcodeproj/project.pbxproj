@@ -24,6 +24,7 @@
 		1B871E1418EC9FF300162007 /* GestoLabirinto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B871E1318EC9FF300162007 /* GestoLabirinto.m */; };
 		1B8AC79B18E9E0E30083EBDD /* fase3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8AC79A18E9E0E30083EBDD /* fase3.png */; };
 		1B8AC79D18E9F31C0083EBDD /* fase4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8AC79C18E9F31C0083EBDD /* fase4.png */; };
+		1B8CAD4F1909834F00A3A5BE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CAD511909834F00A3A5BE /* LoginViewController.xib */; };
 		1B988A601900703A00EC54C8 /* matematicaFim.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B988A5F1900703A00EC54C8 /* matematicaFim.png */; };
 		1B988A621900713500EC54C8 /* matematicaHorizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B988A611900713500EC54C8 /* matematicaHorizontal.png */; };
 		1BC90EA118E611C7002E91E3 /* finger.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC90EA018E611C7002E91E3 /* finger.png */; };
@@ -118,7 +119,6 @@
 		31EDB13518F33D0400FFC301 /* Liguematematica.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB13418F33D0400FFC301 /* Liguematematica.png */; };
 		73A7ED9F1901D5080024FC15 /* ControlaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A7ED9E1901D5080024FC15 /* ControlaViewController.m */; };
 		73E470DF1900CE5500987461 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E470DD1900CE5500987461 /* LoginViewController.m */; };
-		73E470E01900CE5500987461 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E470DE1900CE5500987461 /* LoginViewController.xib */; };
 		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
 		F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A85CAD18EA013C00819310 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
@@ -160,6 +160,7 @@
 		1B871E1318EC9FF300162007 /* GestoLabirinto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoLabirinto.m; sourceTree = "<group>"; };
 		1B8AC79A18E9E0E30083EBDD /* fase3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fase3.png; sourceTree = "<group>"; };
 		1B8AC79C18E9F31C0083EBDD /* fase4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fase4.png; sourceTree = "<group>"; };
+		1B8CAD501909834F00A3A5BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginViewController.xib; sourceTree = "<group>"; };
 		1B988A5F1900703A00EC54C8 /* matematicaFim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matematicaFim.png; sourceTree = "<group>"; };
 		1B988A611900713500EC54C8 /* matematicaHorizontal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matematicaHorizontal.png; sourceTree = "<group>"; };
 		1BC90EA018E611C7002E91E3 /* finger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finger.png; sourceTree = "<group>"; };
@@ -267,7 +268,6 @@
 		73A7ED9E1901D5080024FC15 /* ControlaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlaViewController.m; sourceTree = "<group>"; };
 		73E470DC1900CE5500987461 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		73E470DD1900CE5500987461 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		73E470DE1900CE5500987461 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		F6A85CAB18EA013C00819310 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F6A85CAC18EA013C00819310 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F6A85CAD18EA013C00819310 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -388,7 +388,7 @@
 				310668E718E20BA800B48195 /* AppDelegate.m */,
 				73E470DC1900CE5500987461 /* LoginViewController.h */,
 				73E470DD1900CE5500987461 /* LoginViewController.m */,
-				73E470DE1900CE5500987461 /* LoginViewController.xib */,
+				1B8CAD511909834F00A3A5BE /* LoginViewController.xib */,
 				1B871E0B18EC9E8200162007 /* LabirintoViewController.h */,
 				1B871E0C18EC9E8200162007 /* LabirintoViewController.m */,
 				1B871E0D18EC9E8200162007 /* LabirintoViewController.xib */,
@@ -708,7 +708,7 @@
 				31A1648318E5F8B400FA391E /* ok.png in Resources */,
 				31EDB11C18F32C4E00FFC301 /* direita13.png in Resources */,
 				31EDB12118F32C4E00FFC301 /* direita18.png in Resources */,
-				73E470E01900CE5500987461 /* LoginViewController.xib in Resources */,
+				1B8CAD4F1909834F00A3A5BE /* LoginViewController.xib in Resources */,
 				31EDB12B18F32C4E00FFC301 /* esquerda18.png in Resources */,
 				1BF7762618EDE19F00FC7C18 /* florzinha.gif in Resources */,
 				1B871E0318EC8A8400162007 /* PontosViewController.xib in Resources */,
@@ -780,6 +780,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1B8CAD511909834F00A3A5BE /* LoginViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B8CAD501909834F00A3A5BE /* en */,
+			);
+			name = LoginViewController.xib;
+			sourceTree = "<group>";
+		};
 		310668E018E20BA800B48195 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
