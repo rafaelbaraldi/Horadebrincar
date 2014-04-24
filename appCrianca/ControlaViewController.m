@@ -29,6 +29,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self carregaListas];
+}
+
+-(void)carregaListas{
     _appDelegate =[[UIApplication sharedApplication]delegate];
     _context = [_appDelegate managedObjectContext];
     

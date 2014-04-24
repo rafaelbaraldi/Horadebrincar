@@ -31,7 +31,7 @@
 
 -(void)salvaFaseVencida :(NSInteger)numeroDoJogo faseAtual:(NSInteger)faseAtual;
 
-
+-(void)carregaListas;
 
 
 @property GestoArcoIris* gesto;

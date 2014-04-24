@@ -166,6 +166,8 @@
 -(void)metodoDogesto{
     //Salva a fase vencida
     ControlaViewController* cvc = [[ControlaViewController alloc]initWithNibName:@"ControlaViewController" bundle:nil];
+    [cvc carregaListas];
+    
     [cvc salvaFaseVencida:3 faseAtual:[self faseAtual]];
     
     [[self tempDrawImage] setImage:UIGraphicsGetImageFromCurrentImageContext()];
