@@ -117,11 +117,11 @@
 		31EDB13118F33A2800FFC301 /* liguaAsFiguras.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB12F18F33A2800FFC301 /* liguaAsFiguras.png */; };
 		31EDB13518F33D0400FFC301 /* Liguematematica.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB13418F33D0400FFC301 /* Liguematematica.png */; };
 		73A7ED9F1901D5080024FC15 /* ControlaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A7ED9E1901D5080024FC15 /* ControlaViewController.m */; };
-		73E470DF1900CE5500987461 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E470DD1900CE5500987461 /* LoginViewController.m */; };
-		73E470E01900CE5500987461 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E470DE1900CE5500987461 /* LoginViewController.xib */; };
 		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
 		F6A85CAF18EA013C00819310 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A85CAD18EA013C00819310 /* MenuViewController.xib */; };
 		F6B0ABBC18E4A971004F3C42 /* GestoArcoIris.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */; };
+		F6B6C0261909875A0028986A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B6C0241909875A0028986A /* LoginViewController.m */; };
+		F6B6C0271909875A0028986A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B6C0251909875A0028986A /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,14 +265,14 @@
 		31EDB13418F33D0400FFC301 /* Liguematematica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liguematematica.png; sourceTree = "<group>"; };
 		73A7ED9D1901D5080024FC15 /* ControlaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlaViewController.h; sourceTree = "<group>"; };
 		73A7ED9E1901D5080024FC15 /* ControlaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlaViewController.m; sourceTree = "<group>"; };
-		73E470DC1900CE5500987461 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		73E470DD1900CE5500987461 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		73E470DE1900CE5500987461 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		F6A85CAB18EA013C00819310 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F6A85CAC18EA013C00819310 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F6A85CAD18EA013C00819310 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		F6B0ABBA18E4A971004F3C42 /* GestoArcoIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoArcoIris.h; sourceTree = "<group>"; };
 		F6B0ABBB18E4A971004F3C42 /* GestoArcoIris.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoArcoIris.m; sourceTree = "<group>"; };
+		F6B6C0231909875A0028986A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F6B6C0241909875A0028986A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F6B6C0251909875A0028986A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,9 +386,9 @@
 				31A1648418E60AF800FA391E /* CBL */,
 				310668E618E20BA800B48195 /* AppDelegate.h */,
 				310668E718E20BA800B48195 /* AppDelegate.m */,
-				73E470DC1900CE5500987461 /* LoginViewController.h */,
-				73E470DD1900CE5500987461 /* LoginViewController.m */,
-				73E470DE1900CE5500987461 /* LoginViewController.xib */,
+				F6B6C0231909875A0028986A /* LoginViewController.h */,
+				F6B6C0241909875A0028986A /* LoginViewController.m */,
+				F6B6C0251909875A0028986A /* LoginViewController.xib */,
 				1B871E0B18EC9E8200162007 /* LabirintoViewController.h */,
 				1B871E0C18EC9E8200162007 /* LabirintoViewController.m */,
 				1B871E0D18EC9E8200162007 /* LabirintoViewController.xib */,
@@ -702,13 +702,13 @@
 				31EDB0FB18F3264700FFC301 /* esquerda1.png in Resources */,
 				31EDB11F18F32C4E00FFC301 /* direita16.png in Resources */,
 				2FFBC00C18EF01440079D699 /* 76.png in Resources */,
+				F6B6C0271909875A0028986A /* LoginViewController.xib in Resources */,
 				3199B7E418E9FBF6003F0E2E /* home.png in Resources */,
 				31C4190418EDF2A8004F83DE /* labirinto1.png in Resources */,
 				31A1648518E60AF800FA391E /* CBL in Resources */,
 				31A1648318E5F8B400FA391E /* ok.png in Resources */,
 				31EDB11C18F32C4E00FFC301 /* direita13.png in Resources */,
 				31EDB12118F32C4E00FFC301 /* direita18.png in Resources */,
-				73E470E01900CE5500987461 /* LoginViewController.xib in Resources */,
 				31EDB12B18F32C4E00FFC301 /* esquerda18.png in Resources */,
 				1BF7762618EDE19F00FC7C18 /* florzinha.gif in Resources */,
 				1B871E0318EC8A8400162007 /* PontosViewController.xib in Resources */,
@@ -747,7 +747,6 @@
 				1B871E0218EC8A8400162007 /* PontosViewController.m in Sources */,
 				1B8243D818FF262A00630835 /* Usuario.m in Sources */,
 				1B871E1418EC9FF300162007 /* GestoLabirinto.m in Sources */,
-				73E470DF1900CE5500987461 /* LoginViewController.m in Sources */,
 				1B8243D218FF096E00630835 /* Model.xcdatamodeld in Sources */,
 				2F5DE55A18EE58BE00AC13D8 /* GestoLabirintoFase3.m in Sources */,
 				312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */,
@@ -757,6 +756,7 @@
 				310668E418E20BA800B48195 /* main.m in Sources */,
 				1B871DFE18EC80C500162007 /* Contas.m in Sources */,
 				73A7ED9F1901D5080024FC15 /* ControlaViewController.m in Sources */,
+				F6B6C0261909875A0028986A /* LoginViewController.m in Sources */,
 				2F63489F18ECF0F900E5E7A8 /* Pontos.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

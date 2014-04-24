@@ -12,7 +12,7 @@
 
 @end
 
-@implementation LoginViewController 
+@implementation LoginViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -60,7 +60,7 @@
     
     
     //Pinta linha selecionada
-//    [[pickerView viewForRow:row forComponent:0] setBackgroundColor:[UIColor colorWithRed:99.0/255.0 green:206.0/255.0 blue:250.0/255.0 alpha:1.0]];
+    //    [[pickerView viewForRow:row forComponent:0] setBackgroundColor:[UIColor colorWithRed:99.0/255.0 green:206.0/255.0 blue:250.0/255.0 alpha:1.0]];
     [[pickerView viewForRow:row forComponent:0] setBackgroundColor:[UIColor whiteColor]];
     [[pickerView viewForRow:row forComponent:0] addSubview:check];
     
@@ -71,19 +71,19 @@
 -(void)criaJogosNoBanco{
     
     if([[self getJogos] count] == 0){
-    
+        
         Jogo *newJogo = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
         [newJogo setNome:@"ligueAsFiguras"];
-
+        
         Jogo *newJogo2 = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
         [newJogo2 setNome:@"ligueMatematica"];
-
+        
         Jogo *newJogo3 = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
         [newJogo3 setNome:@"ligueOsPontos"];
-
+        
         Jogo *newJogo4 = [NSEntityDescription insertNewObjectForEntityForName:@"Jogo" inManagedObjectContext:[self context]];
         [newJogo4 setNome:@"saiaDoLabirinto"];
-
+        
         [[self context] save:nil];
     }
 }
@@ -107,7 +107,7 @@
 -(BOOL)verificaJogador{
     
     if([[self getUsuarios] count] <= 0){
-    
+        
         NSLog(@"Adicione um Jogador");
         
         return false;
@@ -138,14 +138,14 @@
     [[self listaCriancas] setHidden:NO];
     
     Usuario *newContact = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:[self context]];
-
+    
     [newContact setNome:[textField text]];
     [newContact setFase1:nil];
-
+    
     [[self context] save:nil];
     
     [[self listaCriancas] reloadAllComponents];
-
+    
     [self dismissKeyboard];
     
     return YES;
