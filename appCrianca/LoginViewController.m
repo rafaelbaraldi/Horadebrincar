@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 RAFAEL CARDOSO DA SILVA. All rights reserved.
 //
 
+#define kOFFSET_FOR_KEYBOARD 260.0
+
 #import "LoginViewController.h"
 
 @interface LoginViewController ()
@@ -178,6 +180,9 @@
     [[self botaoMais]setHidden:NO];
     
     [[self textoNomeUsuario] setText:@""];
+    
+    //Controle de Landscape
+    [self keyboardWillHide];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -194,5 +199,110 @@
     
     [[self context] save:nil];
 }
+
+
+
+
+
+
+
+
+
+
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    if([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight){
+        [self keyboardWillShowRight];
+    }
+    else if([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft){
+        [self keyboardWillShowLeft];
+    }
+    return YES;
+}
+
+-(void)keyboardWillShowRight{
+    if (self.view.frame.origin.x >= 0){
+        [self setViewMovedUp:YES];
+    }
+}
+
+-(void)keyboardWillHide{
+    if([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight){
+        if (self.view.frame.origin.x > 0){
+            [self setViewMovedUp:YES];
+        }
+        else if (self.view.frame.origin.x < 0){
+            [self setViewMovedUp:NO];
+        }
+    }
+    else if([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft){
+        
+        //int x =self.view.frame.origin.x;
+        
+        if (self.view.frame.origin.x < 0){
+            [self setViewMovedDown:YES];
+        }
+        else if (self.view.frame.origin.x > 0){
+            [self setViewMovedDown:NO];
+        };
+    }
+}
+
+-(void)setViewMovedUp:(BOOL)movedUp{
+    [UIView beginAnimations:nil context:NULL];
+
+    CGRect texto = [[self textoNomeUsuario] frame];
+    CGRect rect = self.view.frame;
+    if (movedUp){
+        rect.origin.x -= kOFFSET_FOR_KEYBOARD;
+        rect.size.width += kOFFSET_FOR_KEYBOARD;
+        texto.origin.y -= 65;
+    }
+    else{
+        rect.origin.x += kOFFSET_FOR_KEYBOARD;
+        rect.size.width -= kOFFSET_FOR_KEYBOARD;
+        texto.origin.y += 87;
+    }
+    
+    [self textoNomeUsuario].frame = texto;
+    
+    self.view.frame = rect;
+    [UIView commitAnimations];
+}
+
+
+
+
+
+
+-(void)keyboardWillShowLeft{
+    if (self.view.frame.origin.x >= 0){
+        [self setViewMovedDown:YES];
+    }
+}
+
+-(void)setViewMovedDown:(BOOL)movedDown{
+    [UIView beginAnimations:nil context:NULL];
+    
+    CGRect texto = [[self textoNomeUsuario] frame];
+    CGRect rect = self.view.frame;
+    if (movedDown){
+        rect.origin.x += 60;
+        rect.size.width += 60;
+        texto.origin.y -= 75;
+    }
+    else{
+        rect.origin.x -= 60;
+        rect.size.width -= 60;
+        texto.origin.y += 75;
+    }
+    
+    [self textoNomeUsuario].frame = texto;
+    
+    self.view.frame = rect;
+    [UIView commitAnimations];
+}
+
+
 
 @end
