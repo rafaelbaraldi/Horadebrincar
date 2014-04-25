@@ -56,6 +56,7 @@
 		31078FD718F344CB00AB18C8 /* ligueOsPontos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31078FD618F344CB00AB18C8 /* ligueOsPontos.jpg */; };
 		31078FD918F3477300AB18C8 /* saiaDoLabirinto.png in Resources */ = {isa = PBXBuildFile; fileRef = 31078FD818F3477300AB18C8 /* saiaDoLabirinto.png */; };
 		31098FE1190712E400A38E1E /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 31098FE0190712E400A38E1E /* login.png */; };
+		310E40A8190AF203006C833A /* Descrição in Resources */ = {isa = PBXBuildFile; fileRef = 310E40A7190AF203006C833A /* Descrição */; };
 		31189DEB18E358E00072D5CB /* Figura.m in Sources */ = {isa = PBXBuildFile; fileRef = 31189DEA18E358E00072D5CB /* Figura.m */; };
 		312A54BD18EB5C0C0016DD32 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 312A54BB18EB5C0C0016DD32 /* GameViewController.m */; };
 		312A54BE18EB5C0C0016DD32 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 312A54BC18EB5C0C0016DD32 /* GameViewController.xib */; };
@@ -201,6 +202,7 @@
 		31078FD618F344CB00AB18C8 /* ligueOsPontos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ligueOsPontos.jpg; sourceTree = "<group>"; };
 		31078FD818F3477300AB18C8 /* saiaDoLabirinto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saiaDoLabirinto.png; sourceTree = "<group>"; };
 		31098FE0190712E400A38E1E /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		310E40A7190AF203006C833A /* Descrição */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Descrição"; sourceTree = "<group>"; };
 		31189DE918E358E00072D5CB /* Figura.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Figura.h; sourceTree = "<group>"; };
 		31189DEA18E358E00072D5CB /* Figura.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Figura.m; sourceTree = "<group>"; };
 		312A54BA18EB5C0C0016DD32 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				31A1648418E60AF800FA391E /* CBL */,
+				310E40A7190AF203006C833A /* Descrição */,
 				310668E618E20BA800B48195 /* AppDelegate.h */,
 				310668E718E20BA800B48195 /* AppDelegate.m */,
 				73E470DC1900CE5500987461 /* LoginViewController.h */,
@@ -705,6 +708,7 @@
 				3199B7E418E9FBF6003F0E2E /* home.png in Resources */,
 				31C4190418EDF2A8004F83DE /* labirinto1.png in Resources */,
 				31A1648518E60AF800FA391E /* CBL in Resources */,
+				310E40A8190AF203006C833A /* Descrição in Resources */,
 				31A1648318E5F8B400FA391E /* ok.png in Resources */,
 				31EDB11C18F32C4E00FFC301 /* direita13.png in Resources */,
 				31EDB12118F32C4E00FFC301 /* direita18.png in Resources */,
