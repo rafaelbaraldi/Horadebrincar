@@ -137,11 +137,15 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     
+    if([[[textField text] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]isEqualToString:@""]){
+        return NO;
+    }
+    
     [[self listaCriancas] setHidden:NO];
     
     Usuario *newContact = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:[self context]];
     
-    [newContact setNome:[textField text]];
+    [newContact setNome:[[textField text] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
     [newContact setFase1:nil];
     
     [[self context] save:nil];
