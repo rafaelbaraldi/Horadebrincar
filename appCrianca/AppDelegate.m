@@ -27,6 +27,8 @@
     
     [self.window setRootViewController:login];
     
+    [[UILabel appearance] setFont:[UIFont fontWithName:@"Big_Bottom_Cartoon" size:45]];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

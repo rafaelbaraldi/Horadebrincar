@@ -36,7 +36,6 @@
 		1BF7763318EE03B200FC7C18 /* GestoLabirintoFase2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF7763218EE03B200FC7C18 /* GestoLabirintoFase2.m */; };
 		2F5DE55A18EE58BE00AC13D8 /* GestoLabirintoFase3.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DE55918EE58BE00AC13D8 /* GestoLabirintoFase3.m */; };
 		2F63489F18ECF0F900E5E7A8 /* Pontos.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F63489E18ECF0F900E5E7A8 /* Pontos.m */; };
-		2FFBC00A18EF01310079D699 /* 152.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FFBC00918EF01310079D699 /* 152.png */; };
 		2FFBC00C18EF01440079D699 /* 76.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FFBC00B18EF01440079D699 /* 76.png */; };
 		310668D818E20BA800B48195 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310668D718E20BA800B48195 /* Foundation.framework */; };
 		310668DA18E20BA800B48195 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310668D918E20BA800B48195 /* CoreGraphics.framework */; };
@@ -65,6 +64,7 @@
 		312DB3B51908342800D392AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 312DB3B41908342800D392AC /* background.png */; };
 		312DD45618F467B600F30CE8 /* transparente.png in Resources */ = {isa = PBXBuildFile; fileRef = 312DD45518F467B600F30CE8 /* transparente.png */; };
 		312DD45818F4703700F30CE8 /* esquerda14.png in Resources */ = {isa = PBXBuildFile; fileRef = 312DD45718F4703700F30CE8 /* esquerda14.png */; };
+		31671D0C1A2F9A6500A79216 /* Big_Bottom_Typeface_Normal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31671D0B1A2F9A6500A79216 /* Big_Bottom_Typeface_Normal.otf */; };
 		31731E9019085E8900EA6EDF /* labirinto2.png in Resources */ = {isa = PBXBuildFile; fileRef = 31731E8F19085E8900EA6EDF /* labirinto2.png */; };
 		3189376E18E4A88B0033B277 /* arcoiris.png in Resources */ = {isa = PBXBuildFile; fileRef = 3189376D18E4A88B0033B277 /* arcoiris.png */; };
 		3199B7E418E9FBF6003F0E2E /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 3199B7E318E9FBF6003F0E2E /* home.png */; };
@@ -77,6 +77,7 @@
 		31C4190818EE0585004F83DE /* labirinto3.png in Resources */ = {isa = PBXBuildFile; fileRef = 31C4190718EE0585004F83DE /* labirinto3.png */; };
 		31E2E02819083C990035AFFC /* iniciar.png in Resources */ = {isa = PBXBuildFile; fileRef = 31E2E02719083C990035AFFC /* iniciar.png */; };
 		31E2E02C19083EBB0035AFFC /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 31E2E02B19083EBB0035AFFC /* check.png */; };
+		31EB53651A2FA04400CB572E /* newIniciar.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EB53641A2FA04400CB572E /* newIniciar.png */; };
 		31EDB0F118F3264700FFC301 /* direita0.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB0DF18F3264700FFC301 /* direita0.png */; };
 		31EDB0F218F3264700FFC301 /* direita1.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB0E018F3264700FFC301 /* direita1.png */; };
 		31EDB0F318F3264700FFC301 /* direita2.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB0E118F3264700FFC301 /* direita2.png */; };
@@ -118,6 +119,7 @@
 		31EDB12E18F32C4E00FFC301 /* direita9.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB11818F32C4E00FFC301 /* direita9.png */; };
 		31EDB13118F33A2800FFC301 /* liguaAsFiguras.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB12F18F33A2800FFC301 /* liguaAsFiguras.png */; };
 		31EDB13518F33D0400FFC301 /* Liguematematica.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EDB13418F33D0400FFC301 /* Liguematematica.png */; };
+		31F105241A2F938F00D9A25B /* newBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 31F105231A2F938F00D9A25B /* newBg.png */; };
 		73A7ED9F1901D5080024FC15 /* ControlaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A7ED9E1901D5080024FC15 /* ControlaViewController.m */; };
 		73E470DF1900CE5500987461 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E470DD1900CE5500987461 /* LoginViewController.m */; };
 		F6A85CAE18EA013C00819310 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A85CAC18EA013C00819310 /* MenuViewController.m */; };
@@ -177,22 +179,21 @@
 		2F5DE55918EE58BE00AC13D8 /* GestoLabirintoFase3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoLabirintoFase3.m; sourceTree = "<group>"; };
 		2F63489D18ECF0F900E5E7A8 /* Pontos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pontos.h; sourceTree = "<group>"; };
 		2F63489E18ECF0F900E5E7A8 /* Pontos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pontos.m; sourceTree = "<group>"; };
-		2FFBC00918EF01310079D699 /* 152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 152.png; sourceTree = "<group>"; };
 		2FFBC00B18EF01440079D699 /* 76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 76.png; sourceTree = "<group>"; };
-		310668D418E20BA800B48195 /* appCrianca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appCrianca.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		310668D418E20BA800B48195 /* Hora de brincar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hora de brincar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		310668D718E20BA800B48195 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		310668D918E20BA800B48195 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		310668DB18E20BA800B48195 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		310668DF18E20BA800B48195 /* appCrianca-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "appCrianca-Info.plist"; sourceTree = "<group>"; };
+		310668DF18E20BA800B48195 /* Hora de brincar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hora de brincar-Info.plist"; sourceTree = "<group>"; };
 		310668E118E20BA800B48195 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		310668E318E20BA800B48195 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		310668E518E20BA800B48195 /* appCrianca-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "appCrianca-Prefix.pch"; sourceTree = "<group>"; };
+		310668E518E20BA800B48195 /* Hora de brincar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hora de brincar-Prefix.pch"; sourceTree = "<group>"; };
 		310668E618E20BA800B48195 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		310668E718E20BA800B48195 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		310668E918E20BA800B48195 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		310668EF18E20BA800B48195 /* appCriancaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appCriancaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		310668EF18E20BA800B48195 /* Hora de brincarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hora de brincarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		310668F018E20BA800B48195 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		310668F818E20BA800B48195 /* appCriancaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "appCriancaTests-Info.plist"; sourceTree = "<group>"; };
+		310668F818E20BA800B48195 /* Hora de brincarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hora de brincarTests-Info.plist"; sourceTree = "<group>"; };
 		310668FA18E20BA800B48195 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		310668FC18E20BA800B48195 /* appCriancaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appCriancaTests.m; sourceTree = "<group>"; };
 		3106691C18E2110900B48195 /* fase1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fase1.png; sourceTree = "<group>"; };
@@ -213,6 +214,7 @@
 		312DB3B41908342800D392AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		312DD45518F467B600F30CE8 /* transparente.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparente.png; sourceTree = "<group>"; };
 		312DD45718F4703700F30CE8 /* esquerda14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esquerda14.png; sourceTree = "<group>"; };
+		31671D0B1A2F9A6500A79216 /* Big_Bottom_Typeface_Normal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Big_Bottom_Typeface_Normal.otf; sourceTree = "<group>"; };
 		31731E8F19085E8900EA6EDF /* labirinto2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = labirinto2.png; sourceTree = "<group>"; };
 		3189376D18E4A88B0033B277 /* arcoiris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcoiris.png; sourceTree = "<group>"; };
 		3199B7E318E9FBF6003F0E2E /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 		31C4190718EE0585004F83DE /* labirinto3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = labirinto3.png; sourceTree = "<group>"; };
 		31E2E02719083C990035AFFC /* iniciar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iniciar.png; sourceTree = "<group>"; };
 		31E2E02B19083EBB0035AFFC /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		31EB53641A2FA04400CB572E /* newIniciar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newIniciar.png; sourceTree = "<group>"; };
 		31EDB0DF18F3264700FFC301 /* direita0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita0.png; sourceTree = "<group>"; };
 		31EDB0E018F3264700FFC301 /* direita1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita1.png; sourceTree = "<group>"; };
 		31EDB0E118F3264700FFC301 /* direita2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita2.png; sourceTree = "<group>"; };
@@ -266,6 +269,7 @@
 		31EDB11818F32C4E00FFC301 /* direita9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direita9.png; sourceTree = "<group>"; };
 		31EDB12F18F33A2800FFC301 /* liguaAsFiguras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = liguaAsFiguras.png; sourceTree = "<group>"; };
 		31EDB13418F33D0400FFC301 /* Liguematematica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liguematematica.png; sourceTree = "<group>"; };
+		31F105231A2F938F00D9A25B /* newBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newBg.png; sourceTree = "<group>"; };
 		73A7ED9D1901D5080024FC15 /* ControlaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlaViewController.h; sourceTree = "<group>"; };
 		73A7ED9E1901D5080024FC15 /* ControlaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlaViewController.m; sourceTree = "<group>"; };
 		73E470DC1900CE5500987461 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -364,8 +368,8 @@
 		310668D518E20BA800B48195 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				310668D418E20BA800B48195 /* appCrianca.app */,
-				310668EF18E20BA800B48195 /* appCriancaTests.xctest */,
+				310668D418E20BA800B48195 /* Hora de brincar.app */,
+				310668EF18E20BA800B48195 /* Hora de brincarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -387,6 +391,9 @@
 			children = (
 				31A1648418E60AF800FA391E /* CBL */,
 				310E40A7190AF203006C833A /* Descrição */,
+				31671D0B1A2F9A6500A79216 /* Big_Bottom_Typeface_Normal.otf */,
+				31EB53641A2FA04400CB572E /* newIniciar.png */,
+				31F105231A2F938F00D9A25B /* newBg.png */,
 				310668E618E20BA800B48195 /* AppDelegate.h */,
 				310668E718E20BA800B48195 /* AppDelegate.m */,
 				73E470DC1900CE5500987461 /* LoginViewController.h */,
@@ -438,10 +445,10 @@
 		310668DE18E20BA800B48195 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				310668DF18E20BA800B48195 /* appCrianca-Info.plist */,
+				310668DF18E20BA800B48195 /* Hora de brincar-Info.plist */,
 				310668E018E20BA800B48195 /* InfoPlist.strings */,
 				310668E318E20BA800B48195 /* main.m */,
-				310668E518E20BA800B48195 /* appCrianca-Prefix.pch */,
+				310668E518E20BA800B48195 /* Hora de brincar-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -458,7 +465,7 @@
 		310668F718E20BA800B48195 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				310668F818E20BA800B48195 /* appCriancaTests-Info.plist */,
+				310668F818E20BA800B48195 /* Hora de brincarTests-Info.plist */,
 				310668F918E20BA800B48195 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -492,7 +499,6 @@
 				31E2E02719083C990035AFFC /* iniciar.png */,
 				312DB3B01908336300D392AC /* adicionarCrianca.png */,
 				3199B7E718EA06C9003F0E2E /* starBlack.png */,
-				2FFBC00918EF01310079D699 /* 152.png */,
 				3199B7E818EA06C9003F0E2E /* starYellow.png */,
 				312A54BF18EB61CD0016DD32 /* back.png */,
 				3199B7E318E9FBF6003F0E2E /* home.png */,
@@ -562,9 +568,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		310668D318E20BA800B48195 /* appCrianca */ = {
+		310668D318E20BA800B48195 /* Hora de brincar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3106690018E20BA800B48195 /* Build configuration list for PBXNativeTarget "appCrianca" */;
+			buildConfigurationList = 3106690018E20BA800B48195 /* Build configuration list for PBXNativeTarget "Hora de brincar" */;
 			buildPhases = (
 				310668D018E20BA800B48195 /* Sources */,
 				310668D118E20BA800B48195 /* Frameworks */,
@@ -574,14 +580,14 @@
 			);
 			dependencies = (
 			);
-			name = appCrianca;
+			name = "Hora de brincar";
 			productName = appCrianca;
-			productReference = 310668D418E20BA800B48195 /* appCrianca.app */;
+			productReference = 310668D418E20BA800B48195 /* Hora de brincar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		310668EE18E20BA800B48195 /* appCriancaTests */ = {
+		310668EE18E20BA800B48195 /* Hora de brincarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3106690318E20BA800B48195 /* Build configuration list for PBXNativeTarget "appCriancaTests" */;
+			buildConfigurationList = 3106690318E20BA800B48195 /* Build configuration list for PBXNativeTarget "Hora de brincarTests" */;
 			buildPhases = (
 				310668EB18E20BA800B48195 /* Sources */,
 				310668EC18E20BA800B48195 /* Frameworks */,
@@ -592,9 +598,9 @@
 			dependencies = (
 				310668F518E20BA800B48195 /* PBXTargetDependency */,
 			);
-			name = appCriancaTests;
+			name = "Hora de brincarTests";
 			productName = appCriancaTests;
-			productReference = 310668EF18E20BA800B48195 /* appCriancaTests.xctest */;
+			productReference = 310668EF18E20BA800B48195 /* Hora de brincarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -614,7 +620,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 310668CF18E20BA800B48195 /* Build configuration list for PBXProject "appCrianca" */;
+			buildConfigurationList = 310668CF18E20BA800B48195 /* Build configuration list for PBXProject "Hora de brincar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -626,8 +632,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				310668D318E20BA800B48195 /* appCrianca */,
-				310668EE18E20BA800B48195 /* appCriancaTests */,
+				310668D318E20BA800B48195 /* Hora de brincar */,
+				310668EE18E20BA800B48195 /* Hora de brincarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -685,13 +691,15 @@
 				31EDB12A18F32C4E00FFC301 /* esquerda17.png in Resources */,
 				31EDB12718F32C4E00FFC301 /* esquerda13.png in Resources */,
 				31EDB0FE18F3264700FFC301 /* esquerda4.png in Resources */,
+				31EB53651A2FA04400CB572E /* newIniciar.png in Resources */,
 				31EDB12418F32C4E00FFC301 /* esquerda10.png in Resources */,
 				31EDB11D18F32C4E00FFC301 /* direita14.png in Resources */,
 				31EDB0F718F3264700FFC301 /* direita6.png in Resources */,
+				31671D0C1A2F9A6500A79216 /* Big_Bottom_Typeface_Normal.otf in Resources */,
 				31731E9019085E8900EA6EDF /* labirinto2.png in Resources */,
-				2FFBC00A18EF01310079D699 /* 152.png in Resources */,
 				1BF7762718EDE19F00FC7C18 /* abelhinha.jpg in Resources */,
 				31EDB12218F32C4E00FFC301 /* direita19.png in Resources */,
+				31F105241A2F938F00D9A25B /* newBg.png in Resources */,
 				31EDB0F318F3264700FFC301 /* direita2.png in Resources */,
 				310668E218E20BA800B48195 /* InfoPlist.strings in Resources */,
 				31EDB11A18F32C4E00FFC301 /* direita11.png in Resources */,
@@ -778,7 +786,7 @@
 /* Begin PBXTargetDependency section */
 		310668F518E20BA800B48195 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 310668D318E20BA800B48195 /* appCrianca */;
+			target = 310668D318E20BA800B48195 /* Hora de brincar */;
 			targetProxy = 310668F418E20BA800B48195 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -891,10 +899,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "appCrianca/appCrianca-Prefix.pch";
-				INFOPLIST_FILE = "appCrianca/appCrianca-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "appCrianca/Hora de brincar-Prefix.pch";
+				INFOPLIST_FILE = "appCrianca/Hora de brincar-Info.plist";
+				PRODUCT_NAME = "Hora de brincar";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -907,10 +916,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "appCrianca/appCrianca-Prefix.pch";
-				INFOPLIST_FILE = "appCrianca/appCrianca-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "appCrianca/Hora de brincar-Prefix.pch";
+				INFOPLIST_FILE = "appCrianca/Hora de brincar-Info.plist";
+				PRODUCT_NAME = "Hora de brincar";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -930,8 +940,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "appCriancaTests/appCriancaTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "appCriancaTests/Hora de brincarTests-Info.plist";
+				PRODUCT_NAME = "Hora de brincarTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -948,8 +958,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "appCrianca/appCrianca-Prefix.pch";
-				INFOPLIST_FILE = "appCriancaTests/appCriancaTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "appCriancaTests/Hora de brincarTests-Info.plist";
+				PRODUCT_NAME = "Hora de brincarTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -958,7 +968,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		310668CF18E20BA800B48195 /* Build configuration list for PBXProject "appCrianca" */ = {
+		310668CF18E20BA800B48195 /* Build configuration list for PBXProject "Hora de brincar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				310668FE18E20BA800B48195 /* Debug */,
@@ -967,7 +977,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3106690018E20BA800B48195 /* Build configuration list for PBXNativeTarget "appCrianca" */ = {
+		3106690018E20BA800B48195 /* Build configuration list for PBXNativeTarget "Hora de brincar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3106690118E20BA800B48195 /* Debug */,
@@ -976,7 +986,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3106690318E20BA800B48195 /* Build configuration list for PBXNativeTarget "appCriancaTests" */ = {
+		3106690318E20BA800B48195 /* Build configuration list for PBXNativeTarget "Hora de brincarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3106690418E20BA800B48195 /* Debug */,

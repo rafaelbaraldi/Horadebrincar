@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "310668D318E20BA800B48195"
-               BuildableName = "appCrianca.app"
-               BlueprintName = "appCrianca"
-               ReferencedContainer = "container:appCrianca.xcodeproj">
+               BuildableName = "Hora de brincar.app"
+               BlueprintName = "Hora de brincar"
+               ReferencedContainer = "container:Hora de brincar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "310668EE18E20BA800B48195"
-               BuildableName = "appCriancaTests.xctest"
-               BlueprintName = "appCriancaTests"
-               ReferencedContainer = "container:appCrianca.xcodeproj">
+               BuildableName = "Hora de brincarTests.xctest"
+               BlueprintName = "Hora de brincarTests"
+               ReferencedContainer = "container:Hora de brincar.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "310668D318E20BA800B48195"
-            BuildableName = "appCrianca.app"
-            BlueprintName = "appCrianca"
-            ReferencedContainer = "container:appCrianca.xcodeproj">
+            BuildableName = "Hora de brincar.app"
+            BlueprintName = "Hora de brincar"
+            ReferencedContainer = "container:Hora de brincar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "310668D318E20BA800B48195"
-            BuildableName = "appCrianca.app"
-            BlueprintName = "appCrianca"
-            ReferencedContainer = "container:appCrianca.xcodeproj">
+            BuildableName = "Hora de brincar.app"
+            BlueprintName = "Hora de brincar"
+            ReferencedContainer = "container:Hora de brincar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "310668D318E20BA800B48195"
-            BuildableName = "appCrianca.app"
-            BlueprintName = "appCrianca"
-            ReferencedContainer = "container:appCrianca.xcodeproj">
+            BuildableName = "Hora de brincar.app"
+            BlueprintName = "Hora de brincar"
+            ReferencedContainer = "container:Hora de brincar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -18,5 +18,13 @@
 - (IBAction)addUsuario:(id)sender;
 - (IBAction)jogar:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UILabel *lblhora;
+@property (strong, nonatomic) IBOutlet UILabel *lblde;
+@property (strong, nonatomic) IBOutlet UILabel *lblbrincar;
+
+
+
+@property (strong, nonatomic) IBOutlet UIButton *btnIniciar;
+
 @property (strong, nonatomic) IBOutlet UIButton *botaoMais;
 @end

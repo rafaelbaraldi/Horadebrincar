@@ -25,11 +25,9 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
+
     [[self listaCriancas] setDelegate:self];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -42,6 +40,19 @@
     [[self listaCriancas] addGestureRecognizer:tap];
     
     [self criaJogosNoBanco];
+    
+    
+//    [self.view setBackgroundColor:[UIColor colorWithRed:0.773 green:0.294 blue:0.251 alpha:1] /*#c64b40*/];
+    UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"newBg.png"]];
+    background.frame = CGRectMake(0, 0, 1536, 2048);
+    [self.view addSubview:background];
+    [self.view sendSubviewToBack:background];
+    
+    [_lblbrincar setFont:[UIFont fontWithName:@"Big_Bottom_Cartoon" size:70]];
+    [_lblhora setFont:[UIFont fontWithName:@"Big_Bottom_Cartoon" size:70]];
+    [_lblde setFont:[UIFont fontWithName:@"Big_Bottom_Cartoon" size:70]];
+    
+
 }
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
