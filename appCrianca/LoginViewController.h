@@ -23,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblbrincar;
 
 
+@property (weak, nonatomic) IBOutlet UIImageView *target;
 
 @property (strong, nonatomic) IBOutlet UIButton *btnIniciar;
 

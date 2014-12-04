@@ -10,6 +10,8 @@
 
 #import "LoginViewController.h"
 
+#import "IHKeyboardAvoiding.h"
+
 @interface LoginViewController ()
 
 @end
@@ -40,6 +42,8 @@
     [[self listaCriancas] addGestureRecognizer:tap];
     
     [self criaJogosNoBanco];
+    
+    [IHKeyboardAvoiding setAvoidingView:self.view withTarget:_target];
     
     
 //    [self.view setBackgroundColor:[UIColor colorWithRed:0.773 green:0.294 blue:0.251 alpha:1] /*#c64b40*/];
