@@ -19,6 +19,9 @@
 
 - (IBAction)sair:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *numeroDeEstrelas;
+@property (strong, nonatomic) IBOutlet UILabel *lblNome;
+@property (strong, nonatomic) IBOutlet UILabel *lblBemVindo;
+@property (strong, nonatomic) IBOutlet UILabel *lblBrincar;
 
 @property (strong, nonatomic) IBOutlet UIButton *buttonFase1;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;

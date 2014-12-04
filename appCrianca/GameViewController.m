@@ -30,6 +30,13 @@
 -(void)viewWillAppear:(BOOL)animated{
 
     [self carregaNumeroDeEstrelas];
+    
+//    [self getUsuarios]
+    
+    //Salva jogar atual
+    Usuario *u = [self getJogadorAtual];
+    _lblNome.text = u.nome;
+    
 }
 
 - (void)viewDidLoad
@@ -46,6 +53,10 @@
     [[self lblTitle] setFont:[UIFont fontWithName:@"MarkerFelt-Thin" size:60.0f]];
     [[self lblTitle] setTextAlignment:NSTextAlignmentCenter];
 //    [[self view]addSubview:title];
+    
+    _lblBemVindo.font = [UIFont fontWithName:@"Big_Bottom_Cartoon" size:70];
+    _lblNome.font = [UIFont fontWithName:@"Big_Bottom_Cartoon" size:70];
+    _lblBrincar.font = [UIFont fontWithName:@"Big_Bottom_Cartoon" size:26];
     
     [self carregaBotoes];
 }
